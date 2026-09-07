@@ -46,9 +46,7 @@ function initWiltshireCountyOutline(map) {
         pane: paneName,
         interactive: false
       }).addTo(countyBoundary);
-      try {
-        map.fitBounds(L.polygon(exteriors).getBounds(), { padding: [16, 16] });
-      } catch (e) {}
+      // Zoom owned by generate.py fitBounds(COUNTY_OUTLINE_BOUNDS); do not re-fit here.
     })
     .catch(function(err) { console.warn("Wiltshire outline:", err); });
 }

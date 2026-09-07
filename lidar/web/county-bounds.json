@@ -24,16 +24,16 @@
     296.6251220703125
   ],
   "png_pixels": [
-    1739,
-    2345
+    1761,
+    2375
   ],
-  "png_mb": 4.707,
+  "png_mb": 4.67,
   "label": "County terrain",
   "web_asset": "county-hillshade.jpg",
   "web_pixels": [
-    1187,
+    1186,
     1600
   ],
-  "web_mb": 0.259,
+  "web_mb": 0.257,
   "web_note": "Mobile JPEG derivative (max dim 1600, q78); full PNG retained"
 }

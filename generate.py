@@ -464,9 +464,9 @@ ROWS.forEach(h => {{
 
 const group = L.featureGroup(Object.values(markers));
 if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
-  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [16, 16] }});
+  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [4, 4] }});
 }} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
-  map.fitBounds(COUNTY_BOUNDS, {{ padding: [12, 12] }});
+  map.fitBounds(COUNTY_BOUNDS, {{ padding: [4, 4] }});
 }} else {{
   map.fitBounds(group.getBounds().pad(0.08));
 }}

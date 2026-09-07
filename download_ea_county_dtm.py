@@ -1,9 +1,12 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Download county-wide EA LIDAR Composite DTM via WCS (heavily downsampled).
 
 Default OSGB bbox covers ceremonial Wiltshire outline (geojson) + ~2 km margin.
 SCALEFACTOR 0.05 → ~20 m cells so a full-county mosaic stays manageable.
 Override with WILTS_COUNTY_BBOX=e0,e1,n0,n1.
+
+Strips overlap (STRIP_OVERLAP_M) so abutting easting windows share valid pixels;
+merge prefers valid data over nodata so hillshade does not paint edge gaps black.
 """
 from __future__ import annotations
 
@@ -30,6 +33,8 @@ UA = {"User-Agent": "wiltshire-long-barrows/1.0 (sarsen.org research)"}
 DEFAULT_BBOX = (372000.0, 438000.0, 114000.0, 203000.0)
 SCALEFACTOR = 0.05  # 1 m × 0.05 → ~20 m
 STRIP_W_M = 14000.0  # wide strips OK at 20 m
+STRIP_OVERLAP_M = 1000.0  # metres of easting overlap between consecutive strips
+NODATA = -9999.0
 
 
 def fetch_strip(e0, e1, n0, n1, out: Path, scalefactor: float) -> Path:
@@ -67,42 +72,80 @@ def fetch_strip(e0, e1, n0, n1, out: Path, scalefactor: float) -> Path:
     return out
 
 
+def _fill_nodata_nearest(grid: np.ndarray, nodata: float) -> np.ndarray:
+    """Fill remaining nodata with nearest valid elevation (keeps hillshade continuous)."""
+    try:
+        from scipy import ndimage
+    except ImportError:
+        print("scipy unavailable — leaving residual nodata unfilled")
+        return grid
+    out = grid.astype(np.float32, copy=True)
+    mask = ~np.isfinite(out) | (out == nodata) | (out < -1000)
+    if not mask.any() or mask.all():
+        return out
+    valid = ~mask
+    idx = ndimage.distance_transform_edt(mask, return_distances=False, return_indices=True)
+    filled = out[tuple(idx)]
+    out[mask] = filled[mask]
+    # Only fill interior gaps; keep true outside envelope as nodata if original edge was nodata
+    # (distance fill above fills everything — acceptable for county mosaic hillshade)
+    return out
+
+
 def main() -> None:
     env = os.environ.get("WILTS_COUNTY_BBOX")
     if env:
         e0, e1, n0, n1 = [float(x) for x in env.split(",")]
     else:
         e0, e1, n0, n1 = DEFAULT_BBOX
-    print(f"county target E {e0:.0f}–{e1:.0f} N {n0:.0f}–{n1:.0f}  SCALEFACTOR={SCALEFACTOR}")
+    print(
+        f"county target E {e0:.0f}–{e1:.0f} N {n0:.0f}–{n1:.0f}  "
+        f"SCALEFACTOR={SCALEFACTOR}  overlap={STRIP_OVERLAP_M:.0f} m"
+    )
 
     strips_dir = OUT_DIR / "strips"
     strips_dir.mkdir(exist_ok=True)
+    # Invalidate abutting (no-overlap) caches — windows differ once overlap is used
+    for old in strips_dir.glob("strip_*.tif"):
+        # Keep only strips named with overlap tag below
+        if "_ov" not in old.name:
+            print("remove obsolete abutting strip", old.name)
+            old.unlink(missing_ok=True)
+
     paths: list[Path] = []
     e = e0
     idx = 0
+    ov_tag = f"ov{int(STRIP_OVERLAP_M)}"
     while e < e1:
         ee = min(e + STRIP_W_M, e1)
-        out = strips_dir / f"strip_{idx:02d}.tif"
+        out = strips_dir / f"strip_{ov_tag}_{idx:02d}.tif"
         if out.is_file() and out.stat().st_size > 50_000:
             try:
                 with rasterio.open(out) as ds:
                     ds.read(1, window=Window(ds.width - 32, ds.height - 32, 32, 32))
                 print("reuse", out)
                 paths.append(out)
-                e = ee
-                idx += 1
-                continue
             except Exception:
                 print("bad cache", out, "— redownloading")
-        fetch_strip(e, ee, n0, n1, out, SCALEFACTOR)
-        paths.append(out)
-        e = ee
+                fetch_strip(e, ee, n0, n1, out, SCALEFACTOR)
+                paths.append(out)
+        else:
+            fetch_strip(e, ee, n0, n1, out, SCALEFACTOR)
+            paths.append(out)
+
+        if ee >= e1:
+            break
+        step = STRIP_W_M - STRIP_OVERLAP_M
+        if step <= 0:
+            raise SystemExit("STRIP_OVERLAP_M must be < STRIP_W_M")
+        e = e + step
         idx += 1
 
-    print("merging", len(paths), "strips…")
+    print("merging", len(paths), "strips (method=first, prefer valid over nodata)…")
     srcs = [rasterio.open(p) for p in paths]
     try:
-        mosaic, transform = merge(srcs, nodata=np.nan)
+        # Use numeric nodata — merge(nodata=nan) cannot detect NaN via equality
+        mosaic, transform = merge(srcs, nodata=NODATA, method="first")
         meta = srcs[0].meta.copy()
     finally:
         for s in srcs:
@@ -116,12 +159,20 @@ def main() -> None:
             "tiled": True,
             "blockxsize": 256,
             "blockysize": 256,
-            "nodata": -9999.0,
+            "nodata": NODATA,
+            "dtype": "float32",
         }
     )
     grid = mosaic[0].astype(np.float32)
-    grid[~np.isfinite(grid)] = -9999.0
-    grid[grid < -1000] = -9999.0
+    bad = ~np.isfinite(grid) | (grid == NODATA) | (grid < -1000)
+    n_bad = int(bad.sum())
+    print(f"nodata/invalid: {n_bad} ({100.0 * n_bad / grid.size:.3f}%)")
+    if os.environ.get("WILTS_FILL_NODATA") == "1" and n_bad and n_bad < grid.size:
+        grid = _fill_nodata_nearest(grid, NODATA)
+        bad = ~np.isfinite(grid) | (grid == NODATA) | (grid < -1000)
+        print(f"nodata/invalid after fill: {int(bad.sum())}")
+    grid[bad] = NODATA
+
     out = OUT_DIR / "wiltshire_county_dtm.tif"
     with rasterio.open(out, "w", **meta) as dst:
         dst.write(grid, 1)
