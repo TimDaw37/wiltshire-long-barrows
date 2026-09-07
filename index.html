@@ -35,63 +35,87 @@
     color: var(--muted); font-size: .82rem;
   }
   .layout {
-    display: grid; grid-template-columns: 1fr 340px; gap: 0;
+    display: flex; flex-direction: column; gap: 0;
     max-width: 1400px; margin: 0 auto; border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
+    width: 100%; overflow-x: hidden;
   }
   #map {
-    height: 68vh; min-height: 420px; background: #0d0c0a;
+    width: 100%; height: 62vh; min-height: 420px; background: #0d0c0a;
     position: relative; z-index: 0; overflow: hidden; touch-action: pan-x pan-y;
     -webkit-transform: translateZ(0);
   }
-  .side {
-    background: var(--panel); border-left: 1px solid var(--line);
-    display: flex; flex-direction: column; max-height: 68vh; min-height: 420px;
+  .detail {
+    width: 100%; margin: 0; padding: 1rem 1.25rem 1.15rem;
+    background: #18160f; border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
-  .filters { padding: .65rem .75rem .35rem; }
+  .detail-inner {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    gap: 1.1rem 1.5rem; align-items: start;
+  }
+  .detail h2 { margin: 0 0 .35rem; color: var(--gold); font-size: 1.35rem; }
+  .detail .meta { color: var(--muted); font-size: .88rem; }
+  .detail .placeholder { color: var(--muted); font-size: .95rem; margin: .35rem 0; }
+  .detail dl {
+    display: grid; grid-template-columns: 8rem 1fr; gap: .25rem .65rem;
+    margin: .65rem 0 0; font-size: .9rem;
+  }
+  .detail dt { color: var(--muted); }
+  .detail dd { margin: 0; }
+  .detail .chip-figure {
+    margin: 0; justify-self: end; width: 100%; max-width: 420px;
+  }
+  .detail .chip-figure img {
+    display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain;
+    border-radius: 6px; border: 1px solid var(--line); background: #0d0c0a;
+  }
+  .detail .chip-figure figcaption {
+    color: var(--muted); font-size: .75rem; margin-top: .35rem;
+  }
+  .detail .chip-missing {
+    color: var(--muted); font-size: .85rem; margin: 0;
+    padding: 1rem; border: 1px dashed var(--line); border-radius: 6px;
+    background: #12100e; min-height: 8rem; display: flex; align-items: center;
+  }
+  .gazetteer {
+    width: 100%; background: var(--panel);
+    display: flex; flex-direction: column; min-height: 0;
+  }
+  .gazetteer-head {
+    padding: .75rem 1.25rem .35rem; display: flex; flex-wrap: wrap;
+    gap: .55rem .85rem; align-items: baseline;
+  }
+  .gazetteer-head h2 {
+    margin: 0; color: var(--gold); font-size: 1.05rem; font-weight: 650;
+  }
+  .filters { padding: .35rem 1.25rem .35rem; max-width: 42rem; }
   .filters input {
     width: 100%; background: #12100e; color: var(--ink); border: 1px solid var(--line);
-    border-radius: 4px; padding: .45rem .55rem; font: inherit;
+    border-radius: 4px; padding: .5rem .65rem; font: inherit;
   }
-  .chip-row { padding: 0 .75rem .45rem; display: flex; flex-wrap: wrap; gap: .35rem; }
+  .chip-row { padding: 0 1.25rem .55rem; display: flex; flex-wrap: wrap; gap: .35rem; }
   .chip {
     border: 1px solid var(--line); background: #12100e; color: var(--muted);
     border-radius: 999px; padding: .2rem .55rem; font-size: .72rem; cursor: pointer;
   }
   .chip.on { border-color: var(--gold); color: var(--gold); }
-  .list { overflow: auto; flex: 1; min-height: 0; padding: 0 .4rem .6rem; }
+  .list {
+    overflow: auto; max-height: 48vh; min-height: 12rem;
+    padding: 0 1rem .85rem;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: .25rem .45rem; align-content: start;
+  }
   .item {
-    padding: .45rem .5rem; border-radius: 4px; cursor: pointer;
-    border: 1px solid transparent; margin-bottom: .2rem;
+    padding: .5rem .55rem; border-radius: 4px; cursor: pointer;
+    border: 1px solid transparent; margin: 0;
   }
   .item:hover, .item.active { background: #242018; border-color: var(--line); }
-  .item .nm { font-weight: 600; font-size: .88rem; }
+  .item .nm { font-weight: 600; font-size: .9rem; }
   .item .meta { color: var(--muted); font-size: .72rem; margin-top: .1rem; }
   .dot {
     display: inline-block; width: .55rem; height: .55rem; border-radius: 50%;
     margin-right: .35rem; vertical-align: middle;
-  }
-  .detail {
-    flex: 0 0 auto; max-height: 42%; overflow: auto;
-    margin: 0; padding: .65rem .75rem .75rem;
-    background: #18160f; border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-  .detail h2 { margin: 0 0 .35rem; color: var(--gold); font-size: 1.05rem; }
-  .detail .meta { color: var(--muted); font-size: .8rem; }
-  .detail .placeholder { color: var(--muted); font-size: .85rem; margin: 0; }
-  .detail dl {
-    display: grid; grid-template-columns: 7.5rem 1fr; gap: .2rem .55rem;
-    margin: .55rem 0 0; font-size: .82rem;
-  }
-  .detail dt { color: var(--muted); }
-  .detail dd { margin: 0; }
-  .detail .chip-preview img {
-    display: block; max-width: 220px; width: 100%; height: auto;
-    border-radius: 4px; border: 1px solid var(--line); margin-top: .15rem;
-  }
-  @media (max-width: 900px) {
-    .detail .chip-preview { display: none; }
   }
   .notes {
     max-width: 1400px; margin: 0 auto; padding: 1.2rem 1.5rem 2rem;
@@ -119,16 +143,20 @@
     stroke: #e8e0d4;
   }
   @media (max-width: 900px) {
-    .layout { grid-template-columns: 1fr; }
     #map {
       height: 48vh; min-height: 260px; max-height: none;
       width: 100%; overflow: hidden;
     }
-    .side {
-      max-height: none; border-left: 0; border-top: 1px solid var(--line);
+    .detail { padding: .85rem 1rem; }
+    .detail-inner { grid-template-columns: 1fr; }
+    .detail h2 { font-size: 1.15rem; }
+    .detail .chip-figure { justify-self: stretch; max-width: none; }
+    .detail .chip-figure img { max-height: 320px; }
+    .list {
+      max-height: 42vh; grid-template-columns: 1fr;
+      padding: 0 .75rem .75rem;
     }
-    .detail { max-height: none; }
-    .list { max-height: 42vh; }
+    .filters, .chip-row, .gazetteer-head { padding-left: 1rem; padding-right: 1rem; }
   }
 </style>
 </head>
@@ -164,14 +192,20 @@
 
 <div class="layout">
   <div id="map"></div>
-  <div class="side">
+  <section class="detail" id="detail" aria-live="polite">
+    <div class="detail-inner">
+      <div class="detail-copy">
+        <p class="placeholder">Select a long barrow on the map or in the gazetteer to see its description and 1&nbsp;m LiDAR hillshade.</p>
+      </div>
+      <div class="chip-missing">1&nbsp;m EA LiDAR chip appears here when a barrow is selected (desktop &amp; mobile).</div>
+    </div>
+  </section>
+  <div class="gazetteer">
+    <div class="gazetteer-head"><h2>Gazetteer</h2></div>
     <div class="filters">
       <input id="q" type="search" placeholder="Search name, HER, NHLE, parish, notes…"/>
     </div>
     <div class="chip-row" id="chips"></div>
-    <section class="detail" id="detail">
-      <p class="placeholder">Select a long barrow.</p>
-    </section>
     <div class="list" id="list"></div>
   </div>
 </div>
@@ -440,7 +474,15 @@ function select(id, pan) {
     if (h.he_url && u === h.he_url) return;
     links.push('<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u.replace(/^https?:\/\//,'').slice(0,48)) + '</a>');
   });
-  det.innerHTML = '<h2>' + esc(h.display_name || h.id) + '</h2>'
+  const cp = barrowChips && barrowChips.getChipPath ? barrowChips.getChipPath(id) : null;
+  const chipHtml = cp
+    ? ('<figure class="chip-figure"><img src="' + esc(cp)
+      + '" alt="EA 1 m DTM hillshade (~380 m around ' + esc(h.display_name || h.id) + ')"/>'
+      + '<figcaption>EA Composite DTM 1&nbsp;m hillshade · ~380&nbsp;m square · OGL</figcaption></figure>')
+    : '<p class="chip-missing">No 1&nbsp;m LiDAR chip for this barrow yet.</p>';
+  det.innerHTML = '<div class="detail-inner">'
+    + '<div class="detail-copy">'
+    + '<h2>' + esc(h.display_name || h.id) + '</h2>'
     + '<p class="meta">' + esc(STATUS_LABEL[h.status] || h.status)
     + (h.scheduled ? ' · scheduled monument' : ' · not matched to NHLE in v1')
     + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</p>'
@@ -455,15 +497,11 @@ function select(id, pan) {
     + '<dt>Front / façade</dt><dd>' + esc(h.front_end || 'unknown (not asserted in v1)') + '</dd>'
     + '<dt>Length × width</dt><dd>' + (h.length_m != null ? (h.length_m + ' × ' + (h.width_m ?? '—') + ' m (approx.)') : '—') + '</dd>'
     + '<dt>Refs</dt><dd>' + (links.join(' · ') || '—') + '</dd>'
-    + (function() {
-        const cp = barrowChips && barrowChips.getChipPath ? barrowChips.getChipPath(id) : null;
-        return cp
-          ? ('<dt>1 m LiDAR</dt><dd class="chip-preview"><img src="' + esc(cp)
-            + '" alt="EA 1 m DTM hillshade (~380 m)" loading="lazy"/></dd>')
-          : '';
-      })()
     + '<dt>Notes</dt><dd>' + esc(h.notes || '') + '</dd>'
-    + '</dl>';
+    + '</dl>'
+    + '</div>'
+    + chipHtml
+    + '</div>';
   try {
     det.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   } catch (e) {
