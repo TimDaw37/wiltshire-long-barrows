@@ -261,9 +261,9 @@ const SUNRISE = {sunrise_json};
 const HAS_LIDAR = {json.dumps(not placeholder)};
 
 const map = L.map('map', {{ zoomControl: true }});
-const osm = L.tileLayer('https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
+const osm = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
   maxZoom: 19,
-  attribution: '&copy; OpenStreetMap &copy; CARTO'
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }}).addTo(map);
 
 let eaLayer = null;
@@ -330,7 +330,7 @@ map.fitBounds(group.getBounds().pad(0.08));
 
 const overlays = {{ 'Long barrows': layer, 'Orientation ticks': ticks }};
 if (eaLayer) overlays['EA LiDAR hillshade'] = eaLayer;
-L.control.layers({{ 'Carto dark': osm }}, overlays, {{ collapsed: true }}).addTo(map);
+L.control.layers({{ 'OSM': osm }}, overlays, {{ collapsed: true }}).addTo(map);
 
 // sunrise reference rays (centre of map, decorative — not a claim)
 const sunLayer = L.layerGroup();
