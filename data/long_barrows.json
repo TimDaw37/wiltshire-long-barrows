@@ -3538,7 +3538,7 @@
   },
   {
     "id": "SU15NW614",
-    "name": null,
+    "name": "Cat's Brain",
     "easting": 411850.0,
     "northing": 157887.0,
     "lat": 51.319968,
@@ -3549,21 +3549,24 @@
     "azimuth_deg": null,
     "azimuth_method": null,
     "front_end": null,
-    "parish": null,
+    "parish": "North Newnton",
     "her_ref": null,
     "her_alt_ref": "SU15NW614",
     "he_list_entry": null,
     "he_url": null,
-    "status": "possible",
+    "status": "certain",
     "scheduled": false,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Cat's Brain long barrow, field Cats Brain SE of Hilcott, parish North Newnton (Vale of Pewsey). HE Research Records Hob 1483725; Wiltshire SMR Su15NW614; NMR SU 15 NW 143; NGR SU1185157891. Cropmark U-ditch ~26\u00d720 m E\u2013W, open to the east; plough-levelled. University of Reading Vale of Pewsey Project (Jim Leary); main excavation 2017 revealed an early Neolithic trapezoidal timber hall (~19\u201320 m \u00d7 ~10 m at the front) with flanking ditches; no human remains; decorated chalk blocks in a posthole. Marshall, Leary et al., HE Research Report 97/2024 (Jan 2025): timber hall 38th century cal BC; extended ~3700 cal BC; chalk barrow wrapping in the first half of the 37th century cal BC. barrow_type=earthen (excavated chalk-wrapped timber hall / long barrow).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
+      "https://www.heritagegateway.org.uk/Gateway/Results_Single.aspx?uid=1483725&resourceID=19191",
+      "https://historicengland.org.uk/research/results/reports/97-2024",
+      "https://theconversation.com/6-000-year-old-monument-offers-a-tantalising-glimpse-of-britains-neolithic-civilisation-87730"
     ],
-    "cluster": "North Wiltshire chalk",
+    "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "SU15NW614"
+    "display_name": "Cat's Brain"
   },
   {
     "id": "ST86SE643",
