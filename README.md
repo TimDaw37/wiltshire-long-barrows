@@ -13,8 +13,7 @@ Modelled on the Fremington Clay and A303 corridor maps (scientific honesty over 
 - Gazetteer from open Wiltshire HER extracts (Zenodo) + NHLE scheduled polygons (OGL)
 - Circle markers with rim arrows for undirected long-axis azimuth (NHLE footprint PCA)
 - Search / filter (certain vs possible; has azimuth; Cotswold–Severn vs earthen)
-- Optional sunrise-ref overlay (midsummer / equinox / midwinter ≈51.2°N) — illustrative only, not site alignments
-- County-wide coarse EA Composite DTM hillshade
+- County-wide EA Composite DTM hillshade (always on; map uses mobile JPEG `lidar/web/county-hillshade.jpg`)
 - Cotswold–Severn (stone-chambered) vs earthen filter (seven peer-cited Cotswold sites)
 
 ## Build
@@ -36,6 +35,14 @@ python generate.py
 ```
 
 Do **not** commit `lidar/**/*.tif` (gitignored). No `git push` from this box — laptop later.
+
+## Mobile hillshade
+
+The full `county-hillshade.png` is ~4.8 MB / 1722×2214 and can fail to paint as a Leaflet
+`imageOverlay` on mobile Safari. The map loads `county-hillshade.jpg` instead (long side
+1600, quality ~78, flattened onto the dark map background; ~0.27 MB / 1244×1600). Rebuild
+with `scripts/_make_web_hillshade.py` after regenerating the PNG. Bounds in
+`lidar/web/county-bounds.json` (`wgs84_leaflet`) are unchanged.
 
 ## Orientation note
 

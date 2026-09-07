@@ -32,8 +32,17 @@ def load_rows() -> list[dict]:
 
 def load_bounds(name: str) -> dict | None:
     p = ROOT / "lidar" / "web" / f"{name}-bounds.json"
-    if p.is_file() and (ROOT / "lidar" / "web" / f"{name}-hillshade.png").is_file():
-        return json.loads(p.read_text(encoding="utf-8"))
+    web = ROOT / "lidar" / "web"
+    asset = None
+    for ext in (".jpg", ".jpeg", ".png"):
+        cand = web / f"{name}-hillshade{ext}"
+        if cand.is_file():
+            asset = cand
+            break
+    if p.is_file() and asset is not None:
+        meta = json.loads(p.read_text(encoding="utf-8"))
+        meta["_asset"] = asset.name
+        return meta
     return None
 
 
@@ -87,10 +96,11 @@ def html_page(
     label_json = json.dumps(STATUS_LABEL)
     county_bounds_json = json.dumps((county_bounds or {}).get("wgs84_leaflet"))
     county_outline_bounds_json = json.dumps(county_outline_bounds)
-    sunrise_json = json.dumps(SUNRISE_AZ)
+    county_asset = (county_bounds or {}).get("_asset") or "county-hillshade.png"
+    county_asset_json = json.dumps(county_asset)
     cluster_bits = ", ".join(f"{k}: {v}" for k, v in sorted(clusters.items()))
     if has_county:
-        lidar_legend = "County terrain hillshade overlay (EA Composite DTM, coarse)."
+        lidar_legend = "County terrain hillshade always on (EA Composite DTM; mobile JPEG)."
     else:
         lidar_legend = (
             "LiDAR hillshade: placeholder — run download_ea_county_dtm.py / "
@@ -138,7 +148,11 @@ def html_page(
     max-width: 1400px; margin: 0 auto; border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }}
-  #map {{ height: 68vh; min-height: 420px; background: #0d0c0a; }}
+  #map {{
+    height: 68vh; min-height: 420px; background: #0d0c0a;
+    position: relative; z-index: 0; overflow: hidden; touch-action: pan-x pan-y;
+    -webkit-transform: translateZ(0);
+  }}
   .side {{
     background: var(--panel); border-left: 1px solid var(--line);
     display: flex; flex-direction: column; max-height: 68vh; min-height: 420px;
@@ -203,19 +217,14 @@ def html_page(
   .lb-icon.selected svg .lb-head {{
     stroke: #e8e0d4;
   }}
-  .sun-label {{
-    background: transparent; border: none;
-    color: #e8e0d4; font: 700 12px/1.2 system-ui, sans-serif;
-    white-space: nowrap; pointer-events: none;
-  }}
-  .sun-label span {{
-    display: inline-block; padding: 2px 7px; border-radius: 4px;
-    background: rgba(20,18,16,.88); border: 1px solid rgba(232,224,212,.35);
-  }}
   @media (max-width: 900px) {{
     .layout {{ grid-template-columns: 1fr; }}
-    #map {{ height: 52vh; min-height: 52vh; }}
+    #map {{
+      height: 55vh; min-height: 280px; max-height: none;
+      width: 100%; overflow: hidden;
+    }}
     .side {{ max-height: 40vh; border-left: 0; border-top: 1px solid var(--line); }}
+    .leaflet-control-layers {{ font-size: 12px; }}
   }}
 </style>
 </head>
@@ -228,10 +237,8 @@ def html_page(
     extracts and Historic England scheduling polygons. Orientation is treated carefully:
     <b>long-axis azimuth</b> (undirected, degrees from north) is derived from NHLE footprints
     where matched — <b>not</b> claimed as a measured façade → sunrise alignment.
-    County-wide terrain hillshade from EA Composite DTM (coarse). Cotswold–Severn
+    County-wide terrain hillshade from EA Composite DTM (coarse; mobile JPEG). Cotswold–Severn
     (stone-chambered) vs earthen long barrows are filterable — membership cited, not invented.
-    Sunrise refs (chip) are flat-horizon true-solar sunrise bearings at ~51.2°N for visual
-    comparison with long axes — <b>not</b> site alignments.
   </p>
 </header>
 
@@ -247,9 +254,8 @@ def html_page(
   Gold = HER certain · grey = possible.
   Circle markers with rim arrows show undirected long-axis from NHLE polygon PCA (where available);
   plain circles have no derived azimuth.
-  Gold county outline = ceremonial Wiltshire (UA + Swindon); LiDAR hillshade as backdrop where available.
+  Gold county outline = ceremonial Wiltshire (UA + Swindon); county terrain hillshade always on where available.
   {lidar_legend}
-  Sunrise refs = county-scale flat-horizon bearings for comparison only — not claimed alignments.
 </p>
 
 <div class="layout">
@@ -343,7 +349,7 @@ const ROWS = {holes_json};
 const COLOUR = {colour_json};
 const STATUS_LABEL = {label_json};
 const COUNTY_BOUNDS = {county_bounds_json};
-const SUNRISE = {sunrise_json};
+const COUNTY_ASSET = {county_asset_json};
 const HAS_COUNTY = {json.dumps(has_county)};
 const HAS_OUTLINE = {json.dumps(has_outline)};
 const COUNTY_OUTLINE_BOUNDS = {county_outline_bounds_json};
@@ -355,18 +361,26 @@ const osm = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.
 }}).addTo(map);
 
 let countyLayer = null;
+if (!map.getPane('terrain')) {{
+  map.createPane('terrain');
+  map.getPane('terrain').style.zIndex = 350;
+  map.getPane('terrain').style.pointerEvents = 'none';
+}}
 if (HAS_COUNTY) {{
-  countyLayer = L.imageOverlay('lidar/web/county-hillshade.png', COUNTY_BOUNDS, {{
-    opacity: 0.7,
+  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET, COUNTY_BOUNDS, {{
+    opacity: 0.72,
     interactive: false,
+    pane: 'terrain',
     attribution: 'EA LiDAR Composite DTM (county coarse) © Environment Agency / OGL'
   }}).addTo(map);
 }}
 
-if (!map.getPane('county')) {{ map.createPane('county'); map.getPane('county').style.zIndex = 640; }}
+if (!map.getPane('county')) {{
+  map.createPane('county');
+  map.getPane('county').style.zIndex = 450;
+  map.getPane('county').style.pointerEvents = 'none';
+}}
 if (!map.getPane('barrows')) {{ map.createPane('barrows'); map.getPane('barrows').style.zIndex = 650; }}
-if (!map.getPane('sunrise')) {{ map.createPane('sunrise'); map.getPane('sunrise').style.zIndex = 700; map.getPane('sunrise').style.pointerEvents = 'none'; }}
-
 function esc(s) {{
   return String(s ?? '').replace(/[&<>"']/g, c => ({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}}[c]));
 }}
@@ -452,81 +466,10 @@ if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
   map.fitBounds(group.getBounds().pad(0.08));
 }}
 
-// Sunrise reference bearings — above hillshade; full diameter through map centre (illustrative only)
-const sunLayer = L.layerGroup();
-let sunOn = false;
-const SUN_COLOURS = {{
-  midsummer: '#ffb000',
-  equinox: '#ffe566',
-  midwinter: '#6ec8ff'
-}};
-const SUN_LEN_M = 90000; // ~90 km each way so they cross the county view
-
-function drawSunRays() {{
-  sunLayer.clearLayers();
-  const c = map.getCenter();
-  const mLat = 1 / 111320;
-  const mLon = 1 / (111320 * Math.cos(c.lat * Math.PI / 180));
-  Object.entries(SUNRISE).forEach(([k, az]) => {{
-    const rad = az * Math.PI / 180;
-    const dLat = Math.cos(rad) * SUN_LEN_M * mLat;
-    const dLon = Math.sin(rad) * SUN_LEN_M * mLon;
-    // Undirected bearing line through centre (sunrise direction and opposite)
-    const a = [c.lat - dLat, c.lon - dLon];
-    const b = [c.lat + dLat, c.lon + dLon];
-    const mid = [c.lat + dLat * 0.35, c.lon + dLon * 0.35];
-    const col = SUN_COLOURS[k] || '#ffe566';
-    L.polyline([a, b], {{
-      color: col,
-      weight: 4,
-      opacity: 0.95,
-      pane: 'sunrise',
-      interactive: false,
-      className: 'sun-ray'
-    }}).addTo(sunLayer);
-    const label = k + ' sunrise ≈' + Math.round(az) + '°';
-    L.marker(mid, {{
-      interactive: false,
-      keyboard: false,
-      pane: 'sunrise',
-      icon: L.divIcon({{
-        className: 'sun-label',
-        html: '<span style="color:' + col + '">' + label + '</span>',
-        iconSize: [168, 20],
-        iconAnchor: [84, 10]
-      }})
-    }}).addTo(sunLayer);
-  }});
-}}
-
-function setSunriseRefs(on) {{
-  sunOn = !!on;
-  if (sunOn) {{
-    drawSunRays();
-    if (!map.hasLayer(sunLayer)) sunLayer.addTo(map);
-  }} else {{
-    if (map.hasLayer(sunLayer)) map.removeLayer(sunLayer);
-    sunLayer.clearLayers();
-  }}
-  if (sunBtn) {{
-    sunBtn.classList.toggle('on', sunOn);
-    sunBtn.setAttribute('aria-pressed', sunOn ? 'true' : 'false');
-  }}
-}}
-let sunBtn = null;
-
-function onSunMapMove() {{
-  if (sunOn) drawSunRays();
-}}
-map.on('moveend', onSunMapMove);
-map.on('zoomend', onSunMapMove);
-
-const overlays = {{ 'Long barrows': layer, 'Sunrise refs': sunLayer }};
-if (countyLayer) overlays['County terrain'] = countyLayer;
-if (typeof initWiltshireCountyOutline === 'function') initWiltshireCountyOutline(map, overlays);
-L.control.layers({{ 'OSM': osm }}, overlays, {{ collapsed: false }}).addTo(map);
-map.on('overlayadd', e => {{ if (e.layer === sunLayer) setSunriseRefs(true); }});
-map.on('overlayremove', e => {{ if (e.layer === sunLayer) setSunriseRefs(false); }});
+// County outline + terrain always on (not in layer control). Only barrows toggle.
+const overlays = {{ 'Long barrows': layer }};
+if (typeof initWiltshireCountyOutline === 'function') initWiltshireCountyOutline(map);
+L.control.layers({{ 'OSM': osm }}, overlays, {{ collapsed: true }}).addTo(map);
 
 let filterStatus = 'all';
 let filterAz = 'all';
@@ -643,15 +586,6 @@ const azChips = [];
   azChips.push(b);
   chips.appendChild(b);
 }});
-sunBtn = document.createElement('button');
-sunBtn.type = 'button';
-sunBtn.className = 'chip';
-sunBtn.textContent = 'Sunrise refs';
-sunBtn.title = 'Flat-horizon sunrise bearings at ~51.2°N (not site alignments)';
-sunBtn.setAttribute('aria-pressed', 'false');
-sunBtn.onclick = () => setSunriseRefs(!sunOn);
-chips.appendChild(sunBtn);
-
 document.getElementById('q').addEventListener('input', renderList);
 renderList();
 </script>

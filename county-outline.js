@@ -1,13 +1,13 @@
-/* Wiltshire ceremonial county outline + outside mask */
-function initWiltshireCountyOutline(map, overlays) {
+/* Wiltshire ceremonial county outline + outside mask (always on, non-interactive) */
+function initWiltshireCountyOutline(map) {
   if (!map || !window.L) return;
   var paneName = "county";
   if (!map.getPane(paneName)) {
     map.createPane(paneName);
-    map.getPane(paneName).style.zIndex = 640;
+    map.getPane(paneName).style.zIndex = 450;
   }
-  var countyBoundary = L.layerGroup().addTo(map);
-  if (overlays) overlays["Wiltshire county"] = countyBoundary;
+  map.getPane(paneName).style.pointerEvents = "none";
+  var countyBoundary = L.layerGroup({ interactive: false }).addTo(map);
   function buildOutsideMask(exteriors) {
     var world = [[90, -180], [90, 180], [-90, 180], [-90, -180]];
     return L.polygon([world].concat(exteriors), {
