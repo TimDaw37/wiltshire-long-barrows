@@ -33,7 +33,7 @@ UA = {"User-Agent": "wiltshire-long-barrows/1.0 (sarsen.org research)"}
 DEFAULT_BBOX = (372000.0, 438000.0, 114000.0, 203000.0)
 SCALEFACTOR = 0.05  # 1 m × 0.05 → ~20 m
 STRIP_W_M = 14000.0  # wide strips OK at 20 m
-STRIP_OVERLAP_M = 1000.0  # metres of easting overlap between consecutive strips
+STRIP_OVERLAP_M = 2000.0  # metres of easting overlap between consecutive strips
 NODATA = -9999.0
 
 
@@ -141,10 +141,29 @@ def main() -> None:
         e = e + step
         idx += 1
 
-    print("merging", len(paths), "strips (method=first, prefer valid over nodata)…")
-    srcs = [rasterio.open(p) for p in paths]
+    print("merging", len(paths), "strips (normalize EA float-min nodata → -9999, method=first)…")
+    # EA WCS GeoTIFFs use nodata ≈ -3.4e38; merge(nodata=-9999) would treat those as
+    # *valid* and let strip-edge holes overwrite overlapping valid pixels. Normalize first.
+    norm_dir = strips_dir / "_norm"
+    norm_dir.mkdir(exist_ok=True)
+    norm_paths: list[Path] = []
+    for src_path in paths:
+        with rasterio.open(src_path) as s:
+            a = s.read(1).astype(np.float32)
+            nd = s.nodata
+            bad = ~np.isfinite(a) | (a < -1000)
+            if nd is not None:
+                bad |= a == nd
+            a[bad] = NODATA
+            meta_s = s.meta.copy()
+            meta_s.update(dtype="float32", nodata=NODATA, compress="lzw")
+            outp = norm_dir / src_path.name
+            with rasterio.open(outp, "w", **meta_s) as dst:
+                dst.write(a, 1)
+            norm_paths.append(outp)
+
+    srcs = [rasterio.open(p) for p in norm_paths]
     try:
-        # Use numeric nodata — merge(nodata=nan) cannot detect NaN via equality
         mosaic, transform = merge(srcs, nodata=NODATA, method="first")
         meta = srcs[0].meta.copy()
     finally:
@@ -167,10 +186,25 @@ def main() -> None:
     bad = ~np.isfinite(grid) | (grid == NODATA) | (grid < -1000)
     n_bad = int(bad.sum())
     print(f"nodata/invalid: {n_bad} ({100.0 * n_bad / grid.size:.3f}%)")
-    if os.environ.get("WILTS_FILL_NODATA") == "1" and n_bad and n_bad < grid.size:
-        grid = _fill_nodata_nearest(grid, NODATA)
-        bad = ~np.isfinite(grid) | (grid == NODATA) | (grid < -1000)
-        print(f"nodata/invalid after fill: {int(bad.sum())}")
+    # Always close residual strip-edge / coverage holes from nearest valid elev
+    # (never leave them to be painted black in the web JPEG). Far exterior stays nodata.
+    if n_bad and n_bad < grid.size:
+        try:
+            from scipy import ndimage
+            mask = bad
+            dist = ndimage.distance_transform_edt(mask)
+            idx = ndimage.distance_transform_edt(
+                mask, return_distances=False, return_indices=True
+            )
+            filled = grid[tuple(idx)]
+            # ~800 m at 20 m cells — covers strip seams without inventing oceans of terrain
+            close = mask & (dist <= 40)
+            grid = grid.copy()
+            grid[close] = filled[close]
+            bad = ~np.isfinite(grid) | (grid == NODATA) | (grid < -1000)
+            print(f"nodata/invalid after near-fill: {int(bad.sum())} (filled {int(close.sum())})")
+        except ImportError:
+            print("scipy unavailable — skip near-fill")
     grid[bad] = NODATA
 
     out = OUT_DIR / "wiltshire_county_dtm.tif"

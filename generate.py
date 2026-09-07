@@ -380,7 +380,7 @@ if (!map.getPane('terrain')) {{
   map.getPane('terrain').style.pointerEvents = 'none';
 }}
 if (HAS_COUNTY) {{
-  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET, COUNTY_BOUNDS, {{
+  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=3', COUNTY_BOUNDS, {{
     opacity: 0.72,
     interactive: false,
     pane: 'terrain',
@@ -472,9 +472,9 @@ ROWS.forEach(h => {{
 
 const group = L.featureGroup(Object.values(markers));
 if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
-  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [16, 16] }});
+  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [2, 2] }});
 }} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
-  map.fitBounds(COUNTY_BOUNDS, {{ padding: [12, 12] }});
+  map.fitBounds(COUNTY_BOUNDS, {{ padding: [2, 2] }});
 }} else {{
   map.fitBounds(group.getBounds().pad(0.08));
 }}
