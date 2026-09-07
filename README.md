@@ -2,7 +2,7 @@
 
 Leaflet / dark-theme gazetteer of Wiltshire Neolithic long barrows — HER seed,
 NHLE footprints, Cotswold–Severn vs earthen type, first-pass long-axis orientation,
-county EA terrain hillshade + Stonehenge detail overlay.
+county EA terrain hillshade.
 
 Author: **Tim Daw / [sarsen.org](https://www.sarsen.org/)** · **CC BY-SA 4.0**
 
@@ -11,10 +11,10 @@ Modelled on the Fremington Clay and A303 corridor maps (scientific honesty over 
 ## v1 contents
 
 - Gazetteer from open Wiltshire HER extracts (Zenodo) + NHLE scheduled polygons (OGL)
-- Orientation ticks where NHLE footprint PCA yields an undirected long-axis azimuth
-- Search / filter (certain vs possible; has azimuth)
-- Optional sunrise-ray overlay (midsummer / equinox / midwinter ≈51.2°N) — illustrative only
-- County-wide coarse EA Composite DTM hillshade + Stonehenge-cluster detail overlay
+- Circle markers with rim arrows for undirected long-axis azimuth (NHLE footprint PCA)
+- Search / filter (certain vs possible; has azimuth; Cotswold–Severn vs earthen)
+- Optional sunrise-ref overlay (midsummer / equinox / midwinter ≈51.2°N) — illustrative only, not site alignments
+- County-wide coarse EA Composite DTM hillshade
 - Cotswold–Severn (stone-chambered) vs earthen filter (seven peer-cited Cotswold sites)
 
 ## Build
@@ -28,7 +28,7 @@ python generate.py
 python download_ea_county_dtm.py
 python make_county_hillshade.py
 
-# optional Stonehenge-cluster detail (override WILTS_LB_BBOX=e0,e1,n0,n1)
+# optional offline Stonehenge-cluster detail assets (not wired into the map)
 python download_ea_dtm.py
 python make_ea1m_hillshade.py
 

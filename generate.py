@@ -37,7 +37,7 @@ def load_bounds(name: str) -> dict | None:
     return None
 
 
-def html_page(rows: list[dict], county_bounds: dict | None, ea_bounds: dict | None) -> str:
+def html_page(rows: list[dict], county_bounds: dict | None) -> str:
     n = len(rows)
     n_cert = sum(1 for r in rows if r.get("status") == "certain")
     n_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
@@ -45,28 +45,19 @@ def html_page(rows: list[dict], county_bounds: dict | None, ea_bounds: dict | No
     n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
     clusters = Counter(r.get("cluster") or "—" for r in rows)
     has_county = county_bounds is not None
-    has_ea = ea_bounds is not None
 
     holes_json = json.dumps(rows, ensure_ascii=False)
     colour_json = json.dumps(STATUS_COLOUR)
     label_json = json.dumps(STATUS_LABEL)
     county_bounds_json = json.dumps((county_bounds or {}).get("wgs84_leaflet"))
-    ea_bounds_json = json.dumps((ea_bounds or {}).get("wgs84_leaflet"))
     sunrise_json = json.dumps(SUNRISE_AZ)
     cluster_bits = ", ".join(f"{k}: {v}" for k, v in sorted(clusters.items()))
-    if has_county and has_ea:
-        lidar_legend = (
-            "Terrain overlays: County terrain (EA DTM ~20 m) on by default; "
-            "EA detail (Stonehenge) toggleable."
-        )
-    elif has_county:
+    if has_county:
         lidar_legend = "County terrain hillshade overlay (EA Composite DTM, coarse)."
-    elif has_ea:
-        lidar_legend = "EA LiDAR Composite DTM detail hillshade (Stonehenge cluster)."
     else:
         lidar_legend = (
             "LiDAR hillshade: placeholder — run download_ea_county_dtm.py / "
-            "make_county_hillshade.py (and optional detail download)."
+            "make_county_hillshade.py."
         )
 
     return f"""<!DOCTYPE html>
@@ -160,8 +151,26 @@ def html_page(rows: list[dict], county_bounds: dict | None, ea_bounds: dict | No
     max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 2rem;
     color: var(--muted); font-size: .8rem;
   }}
-  .orient-tick {{
+  .lb-icon {{
     background: transparent; border: none;
+  }}
+  .lb-icon svg {{
+    display: block; overflow: visible;
+    filter: drop-shadow(0 0 1px #0d0c0a);
+  }}
+  .lb-icon.selected svg .lb-ring {{
+    stroke: #e8e0d4;
+    stroke-width: 3.2;
+  }}
+  .lb-icon.selected svg .lb-shaft,
+  .lb-icon.selected svg .lb-head {{
+    stroke: #e8e0d4;
+  }}
+  .sun-label {{
+    background: transparent; border: none;
+    color: #e8e0d4; font: 600 11px/1.2 system-ui, sans-serif;
+    text-shadow: 0 0 3px #0d0c0a, 0 1px 2px #0d0c0a;
+    white-space: nowrap; pointer-events: none;
   }}
   @media (max-width: 900px) {{
     .layout {{ grid-template-columns: 1fr; }}
@@ -179,9 +188,10 @@ def html_page(rows: list[dict], county_bounds: dict | None, ea_bounds: dict | No
     extracts and Historic England scheduling polygons. Orientation is treated carefully:
     <b>long-axis azimuth</b> (undirected, degrees from north) is derived from NHLE footprints
     where matched — <b>not</b> claimed as a measured façade → sunrise alignment.
-    County-wide terrain hillshade from EA Composite DTM (coarse) with optional
-    Stonehenge-cluster EA detail. Cotswold–Severn (stone-chambered) vs earthen
-    long barrows are filterable — membership cited, not invented.
+    County-wide terrain hillshade from EA Composite DTM (coarse). Cotswold–Severn
+    (stone-chambered) vs earthen long barrows are filterable — membership cited, not invented.
+    Sunrise refs (chip) are flat-horizon true-solar sunrise bearings at ~51.2°N for visual
+    comparison with long axes — <b>not</b> site alignments.
   </p>
 </header>
 
@@ -195,8 +205,10 @@ def html_page(rows: list[dict], county_bounds: dict | None, ea_bounds: dict | No
 </div>
 <p class="legend">
   Gold = HER certain · grey = possible.
-  Short ticks show undirected long-axis from NHLE polygon PCA (where available).
+  Circle markers with rim arrows show undirected long-axis from NHLE polygon PCA (where available);
+  plain circles have no derived azimuth.
   {lidar_legend}
+  Sunrise refs = county-scale flat-horizon bearings for comparison only — not claimed alignments.
 </p>
 
 <div class="layout">
@@ -254,7 +266,7 @@ def html_page(rows: list[dict], county_bounds: dict | None, ea_bounds: dict | No
     <li>Historic England NHLE Scheduled Monuments (OGL) — footprint + List Entry via ArcGIS FeatureServer.</li>
     <li>Cotswold–Severn typology: Corcoran 1969; Darvill 2004 <i>Long Barrows of the Cotswolds</i>; Crawford 1925; site reports (Piggott &amp; Atkinson; Whittle; Thurnam).</li>
     <li>Catalogue / orientation literature: Ashbee; Field 2006; Kinnes 1992; Ruggles 1997/1999; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
-    <li>EA LiDAR Composite DTM — OGL; county coarse hillshade (~20 m WCS) + Stonehenge-cluster detail.</li>
+    <li>EA LiDAR Composite DTM — OGL; county coarse hillshade (~20 m WCS).</li>
   </ul>
 
   <h2>Honesty gaps</h2>
@@ -288,10 +300,8 @@ const ROWS = {holes_json};
 const COLOUR = {colour_json};
 const STATUS_LABEL = {label_json};
 const COUNTY_BOUNDS = {county_bounds_json};
-const EA_BOUNDS = {ea_bounds_json};
 const SUNRISE = {sunrise_json};
 const HAS_COUNTY = {json.dumps(has_county)};
-const HAS_EA = {json.dumps(has_ea)};
 
 const map = L.map('map', {{ zoomControl: true }});
 const osm = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
@@ -300,7 +310,6 @@ const osm = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.
 }}).addTo(map);
 
 let countyLayer = null;
-let eaLayer = null;
 if (HAS_COUNTY) {{
   countyLayer = L.imageOverlay('lidar/web/county-hillshade.png', COUNTY_BOUNDS, {{
     opacity: 0.7,
@@ -308,64 +317,83 @@ if (HAS_COUNTY) {{
     attribution: 'EA LiDAR Composite DTM (county coarse) © Environment Agency / OGL'
   }}).addTo(map);
 }}
-if (HAS_EA) {{
-  eaLayer = L.imageOverlay('lidar/web/ea1m-hillshade.png', EA_BOUNDS, {{
-    opacity: 0.75,
-    interactive: false,
-    attribution: 'EA LiDAR Composite DTM (Stonehenge detail) © Environment Agency / OGL'
-  }});
-  // detail off by default when county base present; on alone if no county
-  if (!HAS_COUNTY) eaLayer.addTo(map);
-}}
 
 if (!map.getPane('barrows')) {{ map.createPane('barrows'); map.getPane('barrows').style.zIndex = 650; }}
-if (!map.getPane('ticks')) {{ map.createPane('ticks'); map.getPane('ticks').style.zIndex = 660; }}
 
 function esc(s) {{
   return String(s ?? '').replace(/[&<>"']/g, c => ({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}}[c]));
 }}
 
-function tickLatLngs(h, halfLenM) {{
-  // undirected axis: draw both ways from centre; halfLen in metres ≈ degrees
-  const az = h.azimuth_deg;
-  if (az == null) return null;
-  const rad = az * Math.PI / 180;
-  // metres to deg approx at lat
-  const mLat = 1 / 111320;
-  const mLon = 1 / (111320 * Math.cos(h.lat * Math.PI / 180));
-  // az from N toward E: dN = cos, dE = sin
-  const dLat = Math.cos(rad) * halfLenM * mLat;
-  const dLon = Math.sin(rad) * halfLenM * mLon;
-  return [[h.lat - dLat, h.lon - dLon], [h.lat + dLat, h.lon + dLon]];
+/** SVG DivIcon: filled circle; with azimuth, bidirectional arrows from the rim. */
+function makeIconHtml(h, selected) {{
+  const col = COLOUR[h.status] || '#888';
+  const hasAz = h.azimuth_deg != null;
+  const size = hasAz ? 36 : 18;
+  const cx = size / 2, cy = size / 2;
+  const r = hasAz ? 7 : 5.5;
+  const ringW = selected ? 3.2 : 1.4;
+  const ringCol = selected ? '#e8e0d4' : '#1a1814';
+  let inner = '<circle class="lb-ring" cx="' + cx + '" cy="' + cy + '" r="' + r +
+    '" fill="' + col + '" stroke="' + ringCol + '" stroke-width="' + ringW + '"/>';
+  if (hasAz) {{
+    // Shaft from rim to near arrowhead tip both ways; arrowheads outside circumference.
+    // ViewBox y-up after CSS rotate? We draw along +x then rotate whole SVG by az.
+    // Azimuth from north toward east ≡ CSS rotate(az deg) with shaft along +y (up = north).
+    const tip = size / 2 - 1;
+    const rim = r + 0.5;
+    const head = 4.5;
+    const shaftCol = selected ? '#e8e0d4' : '#f2ebe0';
+    // Draw shaft along vertical (north–south in unrotated coords), rotate by az.
+    inner =
+      '<g transform="rotate(' + h.azimuth_deg + ' ' + cx + ' ' + cy + ')">' +
+      '<line class="lb-shaft" x1="' + cx + '" y1="' + (cy - tip) + '" x2="' + cx + '" y2="' + (cy - rim) +
+        '" stroke="' + shaftCol + '" stroke-width="2.2" stroke-linecap="round"/>' +
+      '<line class="lb-shaft" x1="' + cx + '" y1="' + (cy + rim) + '" x2="' + cx + '" y2="' + (cy + tip) +
+        '" stroke="' + shaftCol + '" stroke-width="2.2" stroke-linecap="round"/>' +
+      '<polygon class="lb-head" points="' +
+        cx + ',' + (cy - tip) + ' ' +
+        (cx - head * 0.55) + ',' + (cy - tip + head) + ' ' +
+        (cx + head * 0.55) + ',' + (cy - tip + head) +
+        '" fill="' + shaftCol + '"/>' +
+      '<polygon class="lb-head" points="' +
+        cx + ',' + (cy + tip) + ' ' +
+        (cx - head * 0.55) + ',' + (cy + tip - head) + ' ' +
+        (cx + head * 0.55) + ',' + (cy + tip - head) +
+        '" fill="' + shaftCol + '"/>' +
+      '<circle class="lb-ring" cx="' + cx + '" cy="' + cy + '" r="' + r +
+        '" fill="' + col + '" stroke="' + ringCol + '" stroke-width="' + ringW + '"/>' +
+      '</g>';
+  }}
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="' + size + '" height="' + size +
+    '" viewBox="0 0 ' + size + ' ' + size + '">' + inner + '</svg>';
+}}
+
+function makeIcon(h, selected) {{
+  const hasAz = h.azimuth_deg != null;
+  const size = hasAz ? 36 : 18;
+  return L.divIcon({{
+    className: 'lb-icon' + (selected ? ' selected' : ''),
+    html: makeIconHtml(h, !!selected),
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2]
+  }});
 }}
 
 const markers = {{}};
-const tickLayers = {{}};
+const rowById = {{}};
+ROWS.forEach(h => {{ rowById[h.id] = h; }});
 const layer = L.layerGroup().addTo(map);
-const ticks = L.layerGroup().addTo(map);
+let selectedId = null;
 
 ROWS.forEach(h => {{
-  const col = COLOUR[h.status] || '#888';
-  const m = L.circleMarker([h.lat, h.lon], {{
-    radius: h.scheduled ? 7 : 5.5,
-    color: '#1a1814',
-    weight: 1.2,
-    fillColor: col,
-    fillOpacity: 0.92,
-    pane: 'barrows'
+  const m = L.marker([h.lat, h.lon], {{
+    icon: makeIcon(h, false),
+    pane: 'barrows',
+    riseOnHover: true
   }}).bindTooltip((h.display_name || h.id) + (h.azimuth_deg != null ? ' · az ' + h.azimuth_deg + '°' : ''));
   m.on('click', () => select(h.id, true));
   markers[h.id] = m;
   m.addTo(layer);
-
-  const ll = tickLatLngs(h, Math.max(28, Math.min(70, (h.length_m || 50) * 0.45)));
-  if (ll) {{
-    const t = L.polyline(ll, {{
-      color: '#e8e0d4', weight: 2, opacity: 0.75, pane: 'ticks', interactive: false
-    }});
-    tickLayers[h.id] = t;
-    t.addTo(ticks);
-  }}
 }});
 
 const group = L.featureGroup(Object.values(markers));
@@ -375,29 +403,58 @@ if (HAS_COUNTY && COUNTY_BOUNDS) {{
   map.fitBounds(group.getBounds().pad(0.08));
 }}
 
-const overlays = {{ 'Long barrows': layer, 'Orientation ticks': ticks }};
+const overlays = {{ 'Long barrows': layer }};
 if (countyLayer) overlays['County terrain'] = countyLayer;
-if (eaLayer) overlays['EA detail (Stonehenge)'] = eaLayer;
 L.control.layers({{ 'OSM': osm }}, overlays, {{ collapsed: false }}).addTo(map);
 
-// sunrise reference rays (centre of map, decorative — not a claim)
+// Sunrise reference rays — county-scale, redrawn from map centre; illustrative only
 const sunLayer = L.layerGroup();
+const SUN_COLOURS = {{
+  midsummer: '#e8a838',
+  equinox: '#c9a227',
+  midwinter: '#5b9fd4'
+}};
+const SUN_LEN_M = 50000; // ~50 km
+
 function drawSunRays() {{
   sunLayer.clearLayers();
   const c = map.getCenter();
-  const lenM = 1800;
   Object.entries(SUNRISE).forEach(([k, az]) => {{
     const rad = az * Math.PI / 180;
     const mLat = 1 / 111320;
     const mLon = 1 / (111320 * Math.cos(c.lat * Math.PI / 180));
-    const dLat = Math.cos(rad) * lenM * mLat;
-    const dLon = Math.sin(rad) * lenM * mLon;
-    L.polyline([[c.lat, c.lon], [c.lat + dLat, c.lon + dLon]], {{
-      color: k === 'equinox' ? '#c9a227' : '#6d9e6b',
-      weight: 1, opacity: 0.35, dashArray: '4 6', interactive: false
-    }}).bindTooltip('sunrise ' + k + ' ≈ ' + az + '°').addTo(sunLayer);
+    const dLat = Math.cos(rad) * SUN_LEN_M * mLat;
+    const dLon = Math.sin(rad) * SUN_LEN_M * mLon;
+    const end = [c.lat + dLat, c.lon + dLon];
+    const mid = [c.lat + dLat * 0.55, c.lon + dLon * 0.55];
+    const col = SUN_COLOURS[k] || '#6d9e6b';
+    L.polyline([[c.lat, c.lon], end], {{
+      color: col,
+      weight: 2.8,
+      opacity: 0.65,
+      dashArray: '8 10',
+      interactive: false
+    }}).addTo(sunLayer);
+    const label = k + ' ≈' + Math.round(az) + '°';
+    L.marker(mid, {{
+      interactive: false,
+      keyboard: false,
+      icon: L.divIcon({{
+        className: 'sun-label',
+        html: '<span style="color:' + col + '">' + label + '</span>',
+        iconSize: [120, 16],
+        iconAnchor: [60, 8]
+      }})
+    }}).addTo(sunLayer);
   }});
 }}
+
+function onSunMapMove() {{
+  if (map.hasLayer(sunLayer)) drawSunRays();
+}}
+map.on('moveend', onSunMapMove);
+map.on('zoomend', onSunMapMove);
+
 let filterStatus = 'all';
 let filterAz = 'all';
 let filterType = 'all';
@@ -420,13 +477,13 @@ function renderList() {{
   ROWS.forEach(h => {{
     const show = matches(h, q);
     if (markers[h.id]) {{
-      if (show) {{ markers[h.id].addTo(layer); if (tickLayers[h.id]) tickLayers[h.id].addTo(ticks); }}
-      else {{ layer.removeLayer(markers[h.id]); if (tickLayers[h.id]) ticks.removeLayer(tickLayers[h.id]); }}
+      if (show) {{ markers[h.id].addTo(layer); }}
+      else {{ layer.removeLayer(markers[h.id]); }}
     }}
     if (!show) return;
     n++;
     const div = document.createElement('div');
-    div.className = 'item';
+    div.className = 'item' + (h.id === selectedId ? ' active' : '');
     div.dataset.id = h.id;
     const col = COLOUR[h.status] || '#888';
     div.innerHTML = '<div class="nm"><span class="dot" style="background:' + col + '"></span>' + esc(h.display_name || h.id) + '</div>'
@@ -445,9 +502,14 @@ function renderList() {{
 function select(id, pan) {{
   const h = ROWS.find(r => r.id === id);
   if (!h) return;
+  selectedId = id;
   document.querySelectorAll('.item').forEach(n => n.classList.toggle('active', n.dataset.id === id));
-  Object.values(markers).forEach(m => m.setStyle({{ weight: 1.2 }}));
-  if (markers[id]) markers[id].setStyle({{ weight: 3 }});
+  // Rebuild DivIcons for selection highlight (no setStyle on DivIcon markers)
+  Object.keys(markers).forEach(mid => {{
+    const row = rowById[mid];
+    if (!row) return;
+    markers[mid].setIcon(makeIcon(row, mid === id));
+  }});
   if (pan && markers[id]) map.panTo(markers[id].getLatLng());
   const det = document.getElementById('detail');
   const links = [];
@@ -510,7 +572,7 @@ const azChips = [];
 }});
 const sunBtn = document.createElement('button');
 sunBtn.className = 'chip';
-sunBtn.textContent = 'Sunrise rays';
+sunBtn.textContent = 'Sunrise refs';
 sunBtn.onclick = () => {{
   if (map.hasLayer(sunLayer)) {{ map.removeLayer(sunLayer); sunBtn.classList.remove('on'); }}
   else {{ drawSunRays(); sunLayer.addTo(map); sunBtn.classList.add('on'); }}
@@ -528,15 +590,14 @@ renderList();
 def main() -> None:
     rows = load_rows()
     county_bounds = load_bounds("county")
-    ea_bounds = load_bounds("ea1m")
+    # ea1m detail intentionally unused on the map (optional offline scripts remain)
     out = ROOT / "index.html"
-    out.write_text(html_page(rows, county_bounds, ea_bounds), encoding="utf-8")
+    out.write_text(html_page(rows, county_bounds), encoding="utf-8")
     n_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
     n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
     print(
         f"wrote {out} ({len(rows)} barrows, {n_az} with azimuth, "
-        f"{n_cots} Cotswold–Severn; county_lidar={county_bounds is not None}, "
-        f"ea_detail={ea_bounds is not None})"
+        f"{n_cots} Cotswold–Severn; county_lidar={county_bounds is not None})"
     )
 
 
