@@ -495,20 +495,26 @@ function makeIcon(h, selected) {{
   }});
 }}
 
+function rowKey(h) {{
+  // Stable unique key so duplicate gazetteer ids cannot clobber markers/rowById
+  return [h.id, h.her_ref || '', h.easting, h.northing].join('|');
+}}
+
 const markers = {{}};
 const rowById = {{}};
-ROWS.forEach(h => {{ rowById[h.id] = h; }});
+ROWS.forEach(h => {{ rowById[rowKey(h)] = h; }});
 const layer = L.layerGroup().addTo(map);
-let selectedId = null;
+let selectedKey = null;
 
 ROWS.forEach(h => {{
+  const key = rowKey(h);
   const m = L.marker([h.lat, h.lon], {{
     icon: makeIcon(h, false),
     pane: 'barrows',
     riseOnHover: true
   }}).bindTooltip((h.display_name || h.id) + (h.azimuth_deg != null ? ' · az ' + h.azimuth_deg + '°' : ''));
-  m.on('click', () => select(h.id, true));
-  markers[h.id] = m;
+  m.on('click', () => select(key, true));
+  markers[key] = m;
   m.addTo(layer);
 }});
 
@@ -548,16 +554,17 @@ function renderList() {{
   const frag = document.createDocumentFragment();
   let n = 0;
   ROWS.forEach(h => {{
+    const key = rowKey(h);
     const show = matches(h, q);
-    if (markers[h.id]) {{
-      if (show) {{ markers[h.id].addTo(layer); }}
-      else {{ layer.removeLayer(markers[h.id]); }}
+    if (markers[key]) {{
+      if (show) {{ markers[key].addTo(layer); }}
+      else {{ layer.removeLayer(markers[key]); }}
     }}
     if (!show) return;
     n++;
     const div = document.createElement('div');
-    div.className = 'item' + (h.id === selectedId ? ' active' : '');
-    div.dataset.id = h.id;
+    div.className = 'item' + (key === selectedKey ? ' active' : '');
+    div.dataset.key = key;
     const col = COLOUR[h.status] || '#888';
     div.innerHTML = '<div class="nm"><span class="dot" style="background:' + col + '"></span>' + esc(h.display_name || h.id) + '</div>'
       + '<div class="meta">' + esc(STATUS_LABEL[h.status] || h.status)
@@ -565,34 +572,61 @@ function renderList() {{
       + (h.barrow_type === 'cotswold_severn' ? ' · Cotswold–Severn' : '')
       + (h.scheduled ? ' · scheduled' : '')
       + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</div>';
-    div.onclick = () => select(h.id, true);
+    div.onclick = () => select(key, true);
     frag.appendChild(div);
   }});
   el.innerHTML = '';
   el.appendChild(frag);
 }}
 
-function select(id, pan) {{
-  const h = ROWS.find(r => r.id === id);
+function sourceLinkLabel(u) {{
+  const her = (u.match(/ViewHERItem\\?HER=(MWI\\d+)/i) || [])[1];
+  if (her) return 'Wiltshire HER ' + her.toUpperCase();
+  if (/HistoryEnvRecord\\/Home\\/Index/i.test(u)) return null;
+  if (/zenodo\\.org/i.test(u)) return 'Zenodo dataset';
+  if (/historicengland\\.org\\.uk\\/listing/i.test(u)) {{
+    const le = (u.match(/list-entry\\/(\\d+)/i) || [])[1];
+    return le ? ('NHLE ' + le) : 'Historic England';
+  }}
+  try {{
+    const host = u.replace(/^https?:\\/\\//i, '').split('/')[0];
+    return host || u;
+  }} catch (e) {{
+    return u;
+  }}
+}}
+
+function select(key, pan) {{
+  const h = rowById[key] || ROWS.find(r => rowKey(r) === key);
   if (!h) return;
-  selectedId = id;
-  document.querySelectorAll('.item').forEach(n => n.classList.toggle('active', n.dataset.id === id));
+  selectedKey = key;
+  document.querySelectorAll('.item').forEach(n => n.classList.toggle('active', n.dataset.key === key));
   // Rebuild DivIcons for selection highlight (no setStyle on DivIcon markers)
   Object.keys(markers).forEach(mid => {{
     const row = rowById[mid];
     if (!row) return;
-    markers[mid].setIcon(makeIcon(row, mid === id));
+    markers[mid].setIcon(makeIcon(row, mid === key));
   }});
-  if (pan && markers[id]) map.panTo(markers[id].getLatLng());
+  if (pan && markers[key]) map.panTo(markers[key].getLatLng());
   const det = document.getElementById('detail');
   const links = [];
   if (h.he_url) links.push('<a href="' + esc(h.he_url) + '" target="_blank" rel="noopener">NHLE ' + esc(h.he_list_entry) + '</a>');
-  if (h.her_ref) links.push('HER ' + esc(h.her_ref));
-  (h.source_urls || []).slice(0, 4).forEach(u => {{
+  const herView = h.her_ref && String(h.her_ref).indexOf('MWI') === 0
+    ? ('https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=' + h.her_ref)
+    : null;
+  if (herView) {{
+    links.push('<a href="' + esc(herView) + '" target="_blank" rel="noopener">Wiltshire HER ' + esc(h.her_ref) + '</a>');
+  }}
+  (h.source_urls || []).forEach(u => {{
+    if (!u) return;
     if (h.he_url && u === h.he_url) return;
-    links.push('<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u.replace(/^https?:\\/\\//,'').slice(0,48)) + '</a>');
+    if (herView && u === herView) return;
+    if (/HistoryEnvRecord\\/Home\\/Index/i.test(u)) return;
+    const lab = sourceLinkLabel(u);
+    if (!lab) return;
+    links.push('<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(lab) + '</a>');
   }});
-  const cp = barrowChips && barrowChips.getChipPath ? barrowChips.getChipPath(id) : null;
+  const cp = barrowChips && barrowChips.getChipPath ? barrowChips.getChipPath(h.id) : null;
   const chipHtml = cp
     ? ('<figure class="chip-figure"><img src="' + esc(cp)
       + '" alt="EA 1 m DTM hillshade (~380 m around ' + esc(h.display_name || h.id) + ')"/>'

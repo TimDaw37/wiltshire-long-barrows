@@ -166,18 +166,23 @@ def load_wheatley() -> list[dict]:
                     ),
                     "source_urls": [
                         "https://doi.org/10.5281/zenodo.11005373",
-                        "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
                     ],
                     "cluster": None,
                 }
             )
+            her = rows[-1]["her_ref"]
+            if her and str(her).startswith("MWI"):
+                rows[-1]["source_urls"].append(
+                    "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem"
+                    f"?HER={her}"
+                )
     return rows
 
 
 def load_kutty() -> list[dict]:
     path = DATA / "CSV_longbarrows_data.csv"
     out = []
-    with path.open(encoding="utf-8") as f:
+    with path.open(encoding="utf-8-sig") as f:
         for r in csv.DictReader(f):
             e, n = float(r["x"]), float(r["y"])
             url = (r.get("Source") or "").strip()
@@ -543,6 +548,96 @@ def to_geojson(rows: list[dict]) -> dict:
     return {"type": "FeatureCollection", "features": feats}
 
 
+
+HER_INDEX_URL = "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+HER_VIEW_TMPL = (
+    "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER={her}"
+)
+
+
+def scrub_source_urls(rows: list[dict]) -> None:
+    """Drop useless HER Index URLs; ensure ViewHERItem for every MWI her_ref."""
+    for r in rows:
+        her = r.get("her_ref")
+        cleaned: list[str] = []
+        seen: set[str] = set()
+        for u in r.get("source_urls") or []:
+            if not u:
+                continue
+            if "HistoryEnvRecord/Home/Index" in u:
+                continue
+            if u in seen:
+                continue
+            seen.add(u)
+            cleaned.append(u)
+        if her and str(her).startswith("MWI"):
+            view = HER_VIEW_TMPL.format(her=her)
+            if view not in seen:
+                cleaned.insert(0, view)
+                seen.add(view)
+            else:
+                # Prefer her_ref ViewHER first
+                cleaned = [view] + [u for u in cleaned if u != view]
+        r["source_urls"] = cleaned
+
+
+def resolve_duplicate_ref_nos(rows: list[dict]) -> list[dict]:
+    """Fix known Wheatley duplicate Ref_no SU16NW133 (two sites, one id).
+
+    Keep Avebury White Hill (E414364 N167444) as SU16NW133.
+    Rogue Stonehenge-area point (~537 m from MWI13689) is a wrong-sheet
+    duplicate — re-id provisionally rather than silent drop (>200 m apart).
+    """
+    from collections import defaultdict
+
+    by_id: dict[str, list[dict]] = defaultdict(list)
+    for r in rows:
+        by_id[r["id"]].append(r)
+
+    out: list[dict] = []
+    for rid, group in by_id.items():
+        if len(group) == 1 or rid != "SU16NW133":
+            if len(group) > 1:
+                print(f"WARN: duplicate id {rid} x{len(group)} — leaving as-is")
+            out.extend(group)
+            continue
+        keep, reids = [], []
+        for r in group:
+            # Avebury / White Hill seed coords
+            if abs(r["easting"] - 414364.0) < 80 and abs(r["northing"] - 167444.0) < 80:
+                keep.append(r)
+            else:
+                reids.append(r)
+        if not keep and reids:
+            # Fallback: keep northernmost as SU16NW133 (sheet-correct)
+            reids.sort(key=lambda r: r["northing"], reverse=True)
+            keep = [reids.pop(0)]
+        if len(keep) > 1:
+            print(f"WARN: multiple Avebury candidates for {rid}; keeping first")
+            reids.extend(keep[1:])
+            keep = keep[:1]
+        out.extend(keep)
+        for r in reids:
+            old = r["id"]
+            new_id = "SU15SE152198"
+            d_mwi = math.hypot(r["easting"] - 419884.0, r["northing"] - 151661.0)
+            r["id"] = new_id
+            if not r.get("her_alt_ref"):
+                r["her_alt_ref"] = old
+            r["notes"] = (
+                (r.get("notes") or "").rstrip()
+                + f" Wheatley Zenodo duplicate Ref_no {old} at wrong sheet; "
+                f"re-id {new_id} (unverified; ~{d_mwi:.0f} m from MWI13689/"
+                "SU15SE100). No independent HER matched."
+            )
+            print(
+                f"re-id Wheatley duplicate {old} E{r['easting']:.0f} "
+                f"N{r['northing']:.0f} → {new_id} (dist MWI13689 {d_mwi:.0f} m)"
+            )
+            out.append(r)
+    return out
+
+
 def main() -> None:
     rows = load_wheatley()
     # Drop clear coordinate errors / far outliers (Wiltshire chalk envelope)
@@ -558,11 +653,13 @@ def main() -> None:
         for r in dropped:
             print(f"  {r['id']} E{r['easting']:.0f} N{r['northing']:.0f}")
     rows = kept
+    rows = resolve_duplicate_ref_nos(rows)
     kutty = load_kutty()
     nhle = load_nhle()
     rows = enrich(rows, kutty, nhle)
     rows = add_missing_cotswold_from_nhle(rows, nhle)
     assign_barrow_type(rows)
+    scrub_source_urls(rows)
     # stable sort
     rows.sort(key=lambda r: (0 if r["status"] == "certain" else 1, r["northing"], r["easting"], r["id"]))
     for r in rows:

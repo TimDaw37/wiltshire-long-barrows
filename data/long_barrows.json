@@ -21,8 +21,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "South Wiltshire / Chase fringe",
     "barrow_type": "earthen",
@@ -51,7 +50,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1004752"
     ],
     "cluster": "South Wiltshire / Chase fringe",
@@ -80,8 +78,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "South Wiltshire / Chase fringe",
     "barrow_type": "earthen",
@@ -110,7 +107,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1003004"
     ],
     "cluster": "South Wiltshire / Chase fringe",
@@ -140,7 +136,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1015703"
     ],
     "cluster": "South Wiltshire / Chase fringe",
@@ -170,7 +165,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1015935"
     ],
     "cluster": "South Wiltshire / Chase fringe",
@@ -200,7 +194,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1015701"
     ],
     "cluster": "South Wiltshire / Chase fringe",
@@ -229,8 +222,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "South Wiltshire / Chase fringe",
     "barrow_type": "earthen",
@@ -258,8 +250,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -288,7 +279,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1005611"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
@@ -297,7 +287,7 @@
   },
   {
     "id": "SU13SW106",
-    "name": null,
+    "name": "Rocks Hill",
     "easting": 414157.0,
     "northing": 133493.0,
     "lat": 51.100568,
@@ -317,13 +307,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11102"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11102",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI11102"
+    "display_name": "Rocks Hill"
   },
   {
     "id": "ST83SE102",
@@ -348,7 +337,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1016195"
     ],
     "cluster": "Wiltshire chalk",
@@ -377,8 +365,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -406,8 +393,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -435,8 +421,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -465,7 +450,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010463"
     ],
     "cluster": "Wiltshire chalk",
@@ -494,8 +478,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -524,7 +507,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1012047"
     ],
     "cluster": "Wiltshire chalk",
@@ -533,7 +515,7 @@
   },
   {
     "id": "SU13NW151",
-    "name": null,
+    "name": "Northwest of Camp Plantation",
     "easting": 410076.0,
     "northing": 137710.0,
     "lat": 51.138573,
@@ -553,13 +535,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI10607"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI10607",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI10607"
+    "display_name": "Northwest of Camp Plantation"
   },
   {
     "id": "ST83NW100",
@@ -583,8 +564,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -613,7 +593,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010416"
     ],
     "cluster": "Wiltshire chalk",
@@ -643,7 +622,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010520"
     ],
     "cluster": "Wiltshire chalk",
@@ -672,8 +650,8 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI78750",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -681,7 +659,7 @@
   },
   {
     "id": "SU14SW133",
-    "name": null,
+    "name": "Lake Group",
     "easting": 410794.0,
     "northing": 140157.0,
     "lat": 51.160563,
@@ -701,13 +679,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12493"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12493",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI12493"
+    "display_name": "Lake Group"
   },
   {
     "id": "ST94SW100",
@@ -732,7 +709,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010518"
     ],
     "cluster": "Wiltshire chalk",
@@ -741,7 +717,7 @@
   },
   {
     "id": "MWI75694",
-    "name": null,
+    "name": "Southeast of Longbarrow Crossroads",
     "easting": 410084.0,
     "northing": 140580.0,
     "lat": 51.16438,
@@ -761,17 +737,16 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI75694"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI75694",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI75694"
+    "display_name": "Southeast of Longbarrow Crossroads"
   },
   {
     "id": "SU14SW129",
-    "name": "Long barrow 350m south west of the Normanton Down round barrow cemetery",
+    "name": "Normanton Down 2",
     "easting": 411410.0,
     "northing": 141069.0,
     "lat": 51.168752,
@@ -791,18 +766,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12489",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009621"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow 350m south west of the Normanton Down round barrow cemetery"
+    "display_name": "Normanton Down 2"
   },
   {
     "id": "SU14SW126",
-    "name": "Long barrow on Wilsford Down 300m north of The Diamond",
+    "name": "Wilsford Down",
     "easting": 410403.0,
     "northing": 141177.0,
     "lat": 51.169742,
@@ -822,18 +796,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12486",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010830"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow on Wilsford Down 300m north of The Diamond"
+    "display_name": "Wilsford Down"
   },
   {
     "id": "SU14SW128",
-    "name": "Long barrow and 18 round barrows, forming the greater part of Normanton Down round barrow cemetery",
+    "name": "Normanton Down",
     "easting": 411882.0,
     "northing": 141284.0,
     "lat": 51.170676,
@@ -853,18 +826,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12488",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009614"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow and 18 round barrows, forming the greater part of Normanton Down round barrow cemetery"
+    "display_name": "Normanton Down"
   },
   {
     "id": "SU14SW125",
-    "name": "Long barrow north east of Winterbourne Stoke crossroads",
+    "name": "Winterbourne Stoke Crossroads",
     "easting": 409996.0,
     "northing": 141505.0,
     "lat": 51.172699,
@@ -884,18 +856,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12485",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1011841"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow north east of Winterbourne Stoke crossroads"
+    "display_name": "Winterbourne Stoke Crossroads"
   },
   {
     "id": "SU14SW127",
-    "name": "Long barrow 250m north of Normanton Gorse",
+    "name": "North of Normanton Gorse",
     "easting": 411540.0,
     "northing": 141729.0,
     "lat": 51.174684,
@@ -915,18 +886,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12487",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1008953"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow 250m north of Normanton Gorse"
+    "display_name": "North of Normanton Gorse"
   },
   {
     "id": "SU04SE100",
-    "name": "Long barrow on Winterbourne Stoke Down",
+    "name": "Winterbourne Stoke Down",
     "easting": 409160.0,
     "northing": 142793.0,
     "lat": 51.184294,
@@ -946,18 +916,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6918",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1015021"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow on Winterbourne Stoke Down"
+    "display_name": "Winterbourne Stoke Down"
   },
   {
     "id": "SU14SW10W",
-    "name": null,
+    "name": "South of Fargo Road",
     "easting": 414602.0,
     "northing": 142849.0,
     "lat": 51.184686,
@@ -977,17 +946,16 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12463"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12463",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI12463"
+    "display_name": "South of Fargo Road"
   },
   {
     "id": "SU14SE103",
-    "name": "Long barrow at Longbarrow Clump",
+    "name": "Southwest of Bulford",
     "easting": 416361.0,
     "northing": 143039.0,
     "lat": 51.186347,
@@ -1007,14 +975,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11878",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1015215"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow at Longbarrow Clump"
+    "display_name": "Southwest of Bulford"
   },
   {
     "id": "SU14SW102",
@@ -1038,8 +1005,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -1068,7 +1034,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009882"
     ],
     "cluster": "Wiltshire chalk",
@@ -1077,7 +1042,7 @@
   },
   {
     "id": "SU14SW100",
-    "name": "Long barrow in Larkhill Camp",
+    "name": "Knighton Down",
     "easting": 412473.0,
     "northing": 144383.0,
     "lat": 51.198529,
@@ -1097,14 +1062,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12435",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1012167"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow in Larkhill Camp"
+    "display_name": "Knighton Down"
   },
   {
     "id": "ST84SE100",
@@ -1129,7 +1093,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010399"
     ],
     "cluster": "Wiltshire chalk",
@@ -1159,7 +1122,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009938"
     ],
     "cluster": "Wiltshire chalk",
@@ -1188,9 +1150,8 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11703",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010052"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
@@ -1199,7 +1160,7 @@
   },
   {
     "id": "MWI73372",
-    "name": null,
+    "name": "Brigmerston Field",
     "easting": 416645.0,
     "northing": 145611.0,
     "lat": 51.209466,
@@ -1219,17 +1180,16 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI73372"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI73372",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI73372"
+    "display_name": "Brigmerston Field"
   },
   {
     "id": "SU14NW108",
-    "name": "Long barrow east/south-east of Robin Hood's Ball",
+    "name": "South of Robin Hood Ball Clump",
     "easting": 410889.0,
     "northing": 145878.0,
     "lat": 51.212004,
@@ -1249,14 +1209,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11708",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009600"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow east/south-east of Robin Hood's Ball"
+    "display_name": "South of Robin Hood Ball Clump"
   },
   {
     "id": "ST94NW102",
@@ -1281,7 +1240,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009895"
     ],
     "cluster": "Wiltshire chalk",
@@ -1311,7 +1269,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009894"
     ],
     "cluster": "Wiltshire chalk",
@@ -1320,7 +1277,7 @@
   },
   {
     "id": "SU14NE101",
-    "name": "A long barrow and a disc barrow in Brigmerston Field",
+    "name": "North of Milston Firs",
     "easting": 418965.0,
     "northing": 145990.0,
     "lat": 51.212802,
@@ -1340,14 +1297,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11397",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009482"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "A long barrow and a disc barrow in Brigmerston Field"
+    "display_name": "North of Milston Firs"
   },
   {
     "id": "SU24NW102",
@@ -1371,8 +1327,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -1401,7 +1356,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009878"
     ],
     "cluster": "Wiltshire chalk",
@@ -1430,8 +1384,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -1439,7 +1392,7 @@
   },
   {
     "id": "SU14NW110",
-    "name": "Long barrow north of Robin Hood Ball Clump",
+    "name": "North of Robin Hood Ball Clump",
     "easting": 410885.0,
     "northing": 146620.0,
     "lat": 51.218676,
@@ -1459,18 +1412,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11710",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010091"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow north of Robin Hood Ball Clump"
+    "display_name": "North of Robin Hood Ball Clump"
   },
   {
     "id": "SU14NW103",
-    "name": "Long barrow east of Netheravon Bake",
+    "name": "Northeast of Robin Hood Ball Clump",
     "easting": 411429.0,
     "northing": 146675.0,
     "lat": 51.21916,
@@ -1490,14 +1442,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11704",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009520"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow east of Netheravon Bake"
+    "display_name": "Northeast of Robin Hood Ball Clump"
   },
   {
     "id": "ST94NW100",
@@ -1522,7 +1473,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009808"
     ],
     "cluster": "Wiltshire chalk",
@@ -1531,7 +1481,7 @@
   },
   {
     "id": "SU04NW101",
-    "name": "Long barrow and Old Ditch linear earthwork, on Tilshead Down",
+    "name": "Tilshead Down",
     "easting": 402303.0,
     "northing": 146837.0,
     "lat": 51.220725,
@@ -1551,14 +1501,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6790",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009297"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow and Old Ditch linear earthwork, on Tilshead Down"
+    "display_name": "Tilshead Down"
   },
   {
     "id": "SU04NW100",
@@ -1582,9 +1531,8 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6789",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1018159"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
@@ -1593,7 +1541,7 @@
   },
   {
     "id": "SU14NW104",
-    "name": "Long barrow north of Netheravon Bake",
+    "name": "Northeast of Robin Hood Ball Clump 2",
     "easting": 411233.0,
     "northing": 146869.0,
     "lat": 51.220909,
@@ -1613,14 +1561,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11705",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009516"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow north of Netheravon Bake"
+    "display_name": "Northeast of Robin Hood Ball Clump 2"
   },
   {
     "id": "ST84NE100",
@@ -1645,7 +1592,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009918"
     ],
     "cluster": "Wiltshire chalk",
@@ -1675,7 +1621,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009798"
     ],
     "cluster": "Wiltshire chalk",
@@ -1684,7 +1629,7 @@
   },
   {
     "id": "SU04NW102",
-    "name": "Long barrow south of Horse Down",
+    "name": "Northwest of Tilshead Lodge",
     "easting": 402107.0,
     "northing": 147521.0,
     "lat": 51.226876,
@@ -1704,14 +1649,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6791",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009446"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow south of Horse Down"
+    "display_name": "Northwest of Tilshead Lodge"
   },
   {
     "id": "SU04NW103",
@@ -1735,9 +1679,8 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6792"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6792",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -1766,7 +1709,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010027"
     ],
     "cluster": "Wiltshire chalk",
@@ -1775,7 +1717,7 @@
   },
   {
     "id": "SU14NE100",
-    "name": null,
+    "name": "Sheer Barrow",
     "easting": 416860.0,
     "northing": 148229.0,
     "lat": 51.233,
@@ -1795,17 +1737,16 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11396"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11396",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI11396"
+    "display_name": "Sheer Barrow"
   },
   {
     "id": "SU04NE100",
-    "name": "Long barrow in Barrow Plantation, East Down",
+    "name": "East Down",
     "easting": 405961.0,
     "northing": 149467.0,
     "lat": 51.244348,
@@ -1825,14 +1766,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6714",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009936"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Long barrow in Barrow Plantation, East Down"
+    "display_name": "East Down"
   },
   {
     "id": "SU05SE100",
@@ -1856,9 +1796,8 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI7485",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009758"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
@@ -1887,8 +1826,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -1896,7 +1834,7 @@
   },
   {
     "id": "SU15SE100",
-    "name": null,
+    "name": "Southeast of Comesdeane Well",
     "easting": 419884.0,
     "northing": 151661.0,
     "lat": 51.263763,
@@ -1916,16 +1854,15 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI13689"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI13689",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI13689"
+    "display_name": "Southeast of Comesdeane Well"
   },
   {
-    "id": "SU16NW133",
+    "id": "SU15SE152198",
     "name": null,
     "easting": 419897.0,
     "northing": 152198.0,
@@ -1944,14 +1881,13 @@
     "he_url": null,
     "status": "certain",
     "scheduled": false,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Wheatley Zenodo duplicate Ref_no SU16NW133 at wrong sheet; re-id SU15SE152198 (unverified; ~537 m from MWI13689/SU15SE100). No independent HER matched.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "SU16NW133"
+    "display_name": "SU15SE152198"
   },
   {
     "id": "ST95SW102",
@@ -1976,7 +1912,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1009783"
     ],
     "cluster": "Wiltshire chalk",
@@ -2005,8 +1940,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -2034,8 +1968,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -2063,12 +1996,39 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
     "display_name": "Tow"
+  },
+  {
+    "id": "SU15NW614",
+    "name": "Cat's Brain",
+    "easting": 411850.0,
+    "northing": 157887.0,
+    "lat": 51.319968,
+    "lon": -1.831342,
+    "ngr": "SU1185057887",
+    "length_m": null,
+    "width_m": null,
+    "azimuth_deg": null,
+    "azimuth_method": null,
+    "front_end": null,
+    "parish": null,
+    "her_ref": null,
+    "her_alt_ref": "SU15NW614",
+    "he_list_entry": null,
+    "he_url": null,
+    "status": "certain",
+    "scheduled": false,
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
+    "source_urls": [
+      "https://doi.org/10.5281/zenodo.11005373"
+    ],
+    "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
+    "display_name": "Cat's Brain"
   },
   {
     "id": "SU25NE100",
@@ -2092,8 +2052,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -2121,9 +2080,8 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Adam's Grave; HE scheduling (sarsen chamber, Thurnam 1860); commonly classed Severn\u2013Cotswold / Cotswold\u2013Severn).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14864",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1013032"
     ],
     "cluster": "Avebury / Pewsey",
@@ -2132,7 +2090,7 @@
   },
   {
     "id": "SU06SE101",
-    "name": "Kitchen Barrow: a long barrow on Kitchen Barrow Hill",
+    "name": "Kitchen",
     "easting": 406683.0,
     "northing": 164797.0,
     "lat": 51.382183,
@@ -2152,18 +2110,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8502",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1012519"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "Kitchen Barrow: a long barrow on Kitchen Barrow Hill"
+    "display_name": "Kitchen"
   },
   {
     "id": "SU16NE102",
-    "name": "Long barrow in Barrow Copse",
+    "name": "West Woods",
     "easting": 415683.0,
     "northing": 165625.0,
     "lat": 51.389453,
@@ -2183,18 +2140,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14049",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1012429"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "Long barrow in Barrow Copse"
+    "display_name": "West Woods"
   },
   {
     "id": "SU06NE104",
-    "name": null,
+    "name": "Roughridge Hill",
     "easting": 405465.0,
     "northing": 165772.0,
     "lat": 51.390963,
@@ -2214,13 +2170,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6443"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6443",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "MWI6443"
+    "display_name": "Roughridge Hill"
   },
   {
     "id": "SU06NE115",
@@ -2245,7 +2200,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1013141"
     ],
     "cluster": "Avebury / Pewsey",
@@ -2254,7 +2208,7 @@
   },
   {
     "id": "SU06NW107",
-    "name": "Long barrow on King's Play Hill, 430m north west of Hill Cottage",
+    "name": "Kings Play Hill",
     "easting": 401067.0,
     "northing": 165986.0,
     "lat": 51.392912,
@@ -2274,18 +2228,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8169",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1013360"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "Long barrow on King's Play Hill, 430m north west of Hill Cottage"
+    "display_name": "Kings Play Hill"
   },
   {
     "id": "SU06NW109",
-    "name": "Long barrow 650m WSW of Shepherds' Shore",
+    "name": "West of Old Shepherds Shore",
     "easting": 403872.0,
     "northing": 166080.0,
     "lat": 51.393745,
@@ -2305,18 +2258,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8171",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1014030"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "Long barrow 650m WSW of Shepherds' Shore"
+    "display_name": "West of Old Shepherds Shore"
   },
   {
     "id": "SU06NE106",
-    "name": "Long barrow on Easton Down",
+    "name": "Easton Down",
     "easting": 406373.0,
     "northing": 166093.0,
     "lat": 51.39384,
@@ -2336,14 +2288,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6445",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1013366"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "Long barrow on Easton Down"
+    "display_name": "Easton Down"
   },
   {
     "id": "SU16NW101",
@@ -2367,9 +2318,8 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (East Kennet; Barker Avebury chambered-tomb inventory; HE notes protruding sarsens / probable chambers).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14279",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1012323"
     ],
     "cluster": "Avebury / Pewsey",
@@ -2378,7 +2328,7 @@
   },
   {
     "id": "SU06NE133",
-    "name": null,
+    "name": "Beckhampton Plantation",
     "easting": 409001.0,
     "northing": 167147.0,
     "lat": 51.403282,
@@ -2398,17 +2348,16 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI7728"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI7728",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "MWI7728"
+    "display_name": "Beckhampton Plantation"
   },
   {
     "id": "SU16NW133",
-    "name": null,
+    "name": "White Hill",
     "easting": 414364.0,
     "northing": 167444.0,
     "lat": 51.405843,
@@ -2428,17 +2377,16 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14311"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14311",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "MWI14311"
+    "display_name": "White Hill"
   },
   {
     "id": "SU06NE108",
-    "name": "Long barrow and abutting bowl barrow 700m WSW of Beckhampton Buildings, forming the focus of a barrow cemetery on North Down",
+    "name": "Beckhampton Road",
     "easting": 406654.0,
     "northing": 167734.0,
     "lat": 51.408592,
@@ -2458,14 +2406,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI7703",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1013239"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "Long barrow and abutting bowl barrow 700m WSW of Beckhampton Buildings, forming the focus of a barrow cemetery on North Down"
+    "display_name": "Beckhampton Road"
   },
   {
     "id": "SU16NW100",
@@ -2489,9 +2436,8 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (West Kennet; Darvill 2004; Piggott & Atkinson 1955\u201356 (transepted chambers)).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14278",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010628"
     ],
     "cluster": "Avebury / Pewsey",
@@ -2500,7 +2446,7 @@
   },
   {
     "id": "SU06NE107",
-    "name": "Long Stones long barrow 150m north of Beckhampton House",
+    "name": "Long Stones",
     "easting": 408703.0,
     "northing": 169143.0,
     "lat": 51.421234,
@@ -2520,18 +2466,17 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6446",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1008126"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "Long Stones long barrow 150m north of Beckhampton House"
+    "display_name": "Long Stones"
   },
   {
     "id": "SU06NE105",
-    "name": "South Street long barrow, 70m south east of the Long Stones",
+    "name": "South Street",
     "easting": 408992.0,
     "northing": 169278.0,
     "lat": 51.422443,
@@ -2551,14 +2496,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6444",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1008103"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "South Street long barrow, 70m south east of the Long Stones"
+    "display_name": "South Street"
   },
   {
     "id": "SU06NW105",
@@ -2583,7 +2527,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010135"
     ],
     "cluster": "Avebury / Pewsey",
@@ -2612,8 +2555,8 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI73097",
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI9030",
       "https://historicengland.org.uk/listing/the-list/list-entry/1008449"
     ],
@@ -2623,7 +2566,7 @@
   },
   {
     "id": "SU17SW111",
-    "name": null,
+    "name": "Manton Down",
     "easting": 414771.0,
     "northing": 171306.0,
     "lat": 51.440558,
@@ -2643,13 +2586,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI15526"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI15526",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "MWI15526"
+    "display_name": "Manton Down"
   },
   {
     "id": "SU17SW110",
@@ -2673,8 +2615,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
@@ -2702,9 +2643,8 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. barrow_type=cotswold_severn (Millbarrow; Whittle et al. Millbarrow excavation; Cotswold\u2013Severn type chambered long barrow (destroyed)).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI9031"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI9031",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "cotswold_severn",
@@ -2712,7 +2652,7 @@
   },
   {
     "id": "SU17SW101",
-    "name": null,
+    "name": "Temple Bottom",
     "easting": 414859.0,
     "northing": 172506.0,
     "lat": 51.451346,
@@ -2732,13 +2672,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI15517"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI15517",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "MWI15517"
+    "display_name": "Temple Bottom"
   },
   {
     "id": "SU27SE101",
@@ -2762,8 +2701,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -2792,7 +2730,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Lanhill; Corcoran 1969; Darvill 2004 (Cotswold\u2013Severn chambered)).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010908"
     ],
     "cluster": "North Wiltshire chalk",
@@ -2822,7 +2759,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010396"
     ],
     "cluster": "North Wiltshire chalk",
@@ -2852,7 +2788,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Lugbury; Corcoran 1969; Darvill 2004 (Cotswold\u2013Severn; aka Littleton Drew)).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010397"
     ],
     "cluster": "North Wiltshire chalk",
@@ -2881,8 +2816,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -2911,7 +2845,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010395"
     ],
     "cluster": "North Wiltshire chalk",
@@ -2969,8 +2902,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -2998,8 +2930,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -3027,8 +2958,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -3056,8 +2986,8 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI77205",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -3085,8 +3015,8 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI77115",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -3115,7 +3045,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1005688"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
@@ -3124,7 +3053,7 @@
   },
   {
     "id": "SU14SW997",
-    "name": "Bowl barrow 400m south east of Longbarrow Cross Roads, east of A360",
+    "name": "South-southeast of Longbarrow Crossroads",
     "easting": 410101.0,
     "northing": 140893.0,
     "lat": 51.167194,
@@ -3144,14 +3073,13 @@
     "scheduled": true,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI13159",
+      "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1011046"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "Bowl barrow 400m south east of Longbarrow Cross Roads, east of A360"
+    "display_name": "South-southeast of Longbarrow Crossroads"
   },
   {
     "id": "ST94SW103",
@@ -3176,7 +3104,6 @@
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1017603"
     ],
     "cluster": "Wiltshire chalk",
@@ -3185,7 +3112,7 @@
   },
   {
     "id": "SU14SW11B",
-    "name": null,
+    "name": "North of West Amesbury",
     "easting": 414179.0,
     "northing": 141939.0,
     "lat": 51.176514,
@@ -3205,17 +3132,16 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12478"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12478",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI12478"
+    "display_name": "North of West Amesbury"
   },
   {
     "id": "SU14SW105",
-    "name": null,
+    "name": "West of Stonehenge",
     "easting": 411936.0,
     "northing": 142162.0,
     "lat": 51.17857,
@@ -3235,13 +3161,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12440"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12440",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI12440"
+    "display_name": "West of Stonehenge"
   },
   {
     "id": "ST94SW742",
@@ -3265,8 +3190,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -3274,7 +3198,7 @@
   },
   {
     "id": "SU14SE600",
-    "name": null,
+    "name": "South of Woodhenge",
     "easting": 415134.0,
     "northing": 143157.0,
     "lat": 51.187442,
@@ -3294,13 +3218,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11877"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11877",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI11877"
+    "display_name": "South of Woodhenge"
   },
   {
     "id": "SU14SW654",
@@ -3324,8 +3247,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -3333,7 +3255,7 @@
   },
   {
     "id": "MWI74325",
-    "name": null,
+    "name": "North of Durrington Field",
     "easting": 414588.0,
     "northing": 144909.0,
     "lat": 51.20321,
@@ -3353,13 +3275,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI74325"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI74325",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI74325"
+    "display_name": "North of Durrington Field"
   },
   {
     "id": "SU24NW629",
@@ -3383,8 +3304,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -3412,8 +3332,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
@@ -3421,7 +3340,7 @@
   },
   {
     "id": "SU14NE782",
-    "name": null,
+    "name": "Northeast of Barrow Clump",
     "easting": 416831.0,
     "northing": 147345.0,
     "lat": 51.225052,
@@ -3441,13 +3360,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11612"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11612",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
     "barrow_type": "earthen",
-    "display_name": "MWI11612"
+    "display_name": "Northeast of Barrow Clump"
   },
   {
     "id": "SU25SW781",
@@ -3471,8 +3389,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -3500,8 +3417,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
     "barrow_type": "earthen",
@@ -3529,44 +3445,11 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
     "display_name": "SU25NE104"
-  },
-  {
-    "id": "SU15NW614",
-    "name": "Cat's Brain",
-    "easting": 411850.0,
-    "northing": 157887.0,
-    "lat": 51.319968,
-    "lon": -1.831342,
-    "ngr": "SU1185057887",
-    "length_m": null,
-    "width_m": null,
-    "azimuth_deg": null,
-    "azimuth_method": null,
-    "front_end": null,
-    "parish": "North Newnton",
-    "her_ref": null,
-    "her_alt_ref": "SU15NW614",
-    "he_list_entry": null,
-    "he_url": null,
-    "status": "certain",
-    "scheduled": false,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Cat's Brain long barrow, field Cats Brain SE of Hilcott, parish North Newnton (Vale of Pewsey). HE Research Records Hob 1483725; Wiltshire SMR Su15NW614; NMR SU 15 NW 143; NGR SU1185157891. Cropmark U-ditch ~26\u00d720 m E\u2013W, open to the east; plough-levelled. University of Reading Vale of Pewsey Project (Jim Leary); main excavation 2017 revealed an early Neolithic trapezoidal timber hall (~19\u201320 m \u00d7 ~10 m at the front) with flanking ditches; no human remains; decorated chalk blocks in a posthole. Marshall, Leary et al., HE Research Report 97/2024 (Jan 2025): timber hall 38th century cal BC; extended ~3700 cal BC; chalk barrow wrapping in the first half of the 37th century cal BC. barrow_type=earthen (excavated chalk-wrapped timber hall / long barrow).",
-    "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://www.heritagegateway.org.uk/Gateway/Results_Single.aspx?uid=1483725&resourceID=19191",
-      "https://historicengland.org.uk/research/results/reports/97-2024",
-      "https://theconversation.com/6-000-year-old-monument-offers-a-tantalising-glimpse-of-britains-neolithic-civilisation-87730"
-    ],
-    "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
-    "display_name": "Cat's Brain"
   },
   {
     "id": "ST86SE643",
@@ -3590,8 +3473,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -3599,7 +3481,7 @@
   },
   {
     "id": "SU06NW108",
-    "name": null,
+    "name": "Southeast of Hill Farm",
     "easting": 400379.0,
     "northing": 165284.0,
     "lat": 51.3866,
@@ -3619,13 +3501,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Avebury Henge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8170"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8170",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "MWI8170"
+    "display_name": "Southeast of Hill Farm"
   },
   {
     "id": "SU26NE100",
@@ -3649,8 +3530,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -3678,8 +3558,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
@@ -3707,8 +3586,7 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
@@ -3716,7 +3594,7 @@
   },
   {
     "id": "SU06NW106",
-    "name": null,
+    "name": "West of Oldbury",
     "easting": 404434.0,
     "northing": 169327.0,
     "lat": 51.422937,
@@ -3736,13 +3614,12 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Avebury Henge.",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8168"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8168",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
-    "display_name": "MWI8168"
+    "display_name": "West of Oldbury"
   },
   {
     "id": "MWI76495",
@@ -3766,8 +3643,8 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI76495",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
     "barrow_type": "earthen",
@@ -3795,8 +3672,8 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI73199",
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
@@ -3824,41 +3701,10 @@
     "scheduled": false,
     "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible).",
     "source_urls": [
-      "https://doi.org/10.5281/zenodo.11005373",
-      "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
+      "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
     "display_name": "ST98NW635"
-  },
-  {
-    "id": "MODERN_ALL_CANNINGS",
-    "name": "All Cannings long barrow",
-    "easting": 407280.0,
-    "northing": 162740.0,
-    "lat": 51.36368,
-    "lon": -1.896822,
-    "ngr": "SU07286274",
-    "length_m": null,
-    "width_m": null,
-    "azimuth_deg": null,
-    "azimuth_method": null,
-    "front_end": null,
-    "parish": "All Cannings",
-    "her_ref": null,
-    "her_alt_ref": null,
-    "he_list_entry": null,
-    "he_url": null,
-    "status": "modern",
-    "scheduled": false,
-    "notes": "Modern (2014\u2013) stone-chambered long barrow built by Tim Daw at All Cannings (Cotswold\u2013Severn form / novolithic); NOT a Neolithic HER entry \u2014 included for context. NGR SU 0728 6274 (Geograph, ~10 m). See https://www.thelongbarrow.com/",
-    "source_urls": [
-      "https://www.thelongbarrow.com/",
-      "https://en.wikipedia.org/wiki/All_Cannings",
-      "https://www.geograph.org.uk/"
-    ],
-    "cluster": "Avebury / Pewsey",
-    "barrow_type": "cotswold_severn",
-    "display_name": "All Cannings long barrow (modern)"
   }
 ]
