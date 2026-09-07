@@ -1,6 +1,5 @@
-/* Wiltshire ceremonial county outline (always on, non-interactive).
-   Outside mask uses a local bbox + hole (not a world polygon) — world-hole
-   masks often fill the whole map black on mobile Safari. */
+/* Wiltshire ceremonial county outline only (always on, non-interactive).
+   No outside-fill mask — hole polygons blanked the map black on Safari/desktop. */
 function initWiltshireCountyOutline(map) {
   if (!map || !window.L) return;
   var paneName = "county";
@@ -10,32 +9,6 @@ function initWiltshireCountyOutline(map) {
   }
   map.getPane(paneName).style.pointerEvents = "none";
   var countyBoundary = L.layerGroup({ interactive: false }).addTo(map);
-
-  function buildOutsideMask(exteriors) {
-    // Local padded bbox around the county — safer than [[90,-180],...] world ring
-    var bounds = L.latLngBounds(exteriors[0]);
-    for (var i = 1; i < exteriors.length; i++) bounds.extend(L.latLngBounds(exteriors[i]));
-    var sw = bounds.getSouthWest();
-    var ne = bounds.getNorthEast();
-    var pad = 0.35; // degrees ~25–40 km
-    var outer = [
-      [sw.lat - pad, sw.lng - pad],
-      [sw.lat - pad, ne.lng + pad],
-      [ne.lat + pad, ne.lng + pad],
-      [ne.lat + pad, sw.lng - pad]
-    ];
-    // Skip heavy mask on narrow screens — outline alone is enough
-    if (window.matchMedia && window.matchMedia("(max-width: 900px)").matches) {
-      return null;
-    }
-    return L.polygon([outer].concat(exteriors), {
-      stroke: false,
-      fillColor: "#0d0c0a",
-      fillOpacity: 0.4,
-      pane: paneName,
-      interactive: false
-    });
-  }
 
   fetch("data/wiltshire-county.geojson")
     .then(function(r) {
@@ -56,8 +29,6 @@ function initWiltshireCountyOutline(map) {
         }
       });
       if (!exteriors.length) return;
-      var mask = buildOutsideMask(exteriors);
-      if (mask) mask.addTo(countyBoundary);
       L.polygon(exteriors, {
         color: "#e8d48b",
         weight: 3,
