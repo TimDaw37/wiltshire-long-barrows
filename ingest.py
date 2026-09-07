@@ -308,6 +308,125 @@ def nearest(rows_en: list[tuple[float, float, int]], e: float, n: float, limit: 
     return None, None
 
 
+# Peer-attested Cotswold–Severn (stone-chambered) sites in Wiltshire (~7).
+# Membership only where chambered Cotswold–Severn architecture is cited —
+# do not invent. Keys: HE List Entry (int) and/or gazetteer id (str).
+COTSWOLD_SEVERN_BY_HE = {
+    1010628: {  # West Kennet
+        "cite": "Darvill 2004; Piggott & Atkinson 1955–56 (transepted chambers)",
+        "label": "West Kennet",
+    },
+    1012323: {  # East Kennet
+        "cite": "Barker Avebury chambered-tomb inventory; HE notes protruding sarsens / probable chambers",
+        "label": "East Kennet",
+    },
+    1013032: {  # Adam's Grave
+        "cite": "HE scheduling (sarsen chamber, Thurnam 1860); commonly classed Severn–Cotswold / Cotswold–Severn",
+        "label": "Adam's Grave",
+    },
+    1010908: {  # Lanhill
+        "cite": "Corcoran 1969; Darvill 2004 (Cotswold–Severn chambered)",
+        "label": "Lanhill",
+    },
+    1010397: {  # Lugbury / Littleton Drew
+        "cite": "Corcoran 1969; Darvill 2004 (Cotswold–Severn; aka Littleton Drew)",
+        "label": "Lugbury",
+    },
+    1010394: {  # Giant's Cave, Luckington
+        "cite": "Crawford 1925 Long Barrows of the Cotswolds; Darvill 2004; HE 'chambered long barrow'",
+        "label": "Giant's Cave (Luckington)",
+    },
+}
+COTSWOLD_SEVERN_BY_ID = {
+    "SU07SE105": {  # Millbarrow (largely destroyed; Whittle excavation)
+        "cite": "Whittle et al. Millbarrow excavation; Cotswold–Severn type chambered long barrow (destroyed)",
+        "label": "Millbarrow",
+    },
+}
+
+# NHLE List Entries to ensure present even if absent from Wheatley HER seed
+ENSURE_NHLE_COTSWOLD = {1010394}
+
+
+def assign_barrow_type(rows: list[dict]) -> None:
+    """Set barrow_type: cotswold_severn | earthen | uncertain (cited membership only)."""
+    for r in rows:
+        he = r.get("he_list_entry")
+        info = None
+        if he is not None and int(he) in COTSWOLD_SEVERN_BY_HE:
+            info = COTSWOLD_SEVERN_BY_HE[int(he)]
+        elif r.get("id") in COTSWOLD_SEVERN_BY_ID:
+            info = COTSWOLD_SEVERN_BY_ID[r["id"]]
+        if info:
+            r["barrow_type"] = "cotswold_severn"
+            note = f" barrow_type=cotswold_severn ({info['label']}; {info['cite']})."
+            if note.strip() not in (r.get("notes") or ""):
+                r["notes"] = (r.get("notes") or "") + note
+        else:
+            # Default Wiltshire chalk long mounds are earthen (Wessex) tradition
+            r["barrow_type"] = "earthen"
+
+
+def add_missing_cotswold_from_nhle(rows: list[dict], nhle: list[dict]) -> list[dict]:
+    """Add peer Cotswold–Severn NHLE sites missing from the HER seed (e.g. Giant's Cave)."""
+    have = {int(r["he_list_entry"]) for r in rows if r.get("he_list_entry") is not None}
+    by_le = {int(h["list_entry"]): h for h in nhle if h.get("list_entry") is not None}
+    for le in ENSURE_NHLE_COTSWOLD:
+        if le in have:
+            continue
+        h = by_le.get(le)
+        if not h:
+            print(f"WARN: Cotswold NHLE {le} not in nhle_long_barrows_raw.geojson")
+            continue
+        e, n = h["easting"], h["northing"]
+        info = COTSWOLD_SEVERN_BY_HE[le]
+        row = {
+            "id": f"NHLE{le}",
+            "name": h.get("name"),
+            "easting": round(e, 1),
+            "northing": round(n, 1),
+            "lat": round(h["lat"], 6),
+            "lon": round(h["lon"], 6),
+            "ngr": h.get("ngr") or osgb_to_ngr(e, n),
+            "length_m": h.get("length_m"),
+            "width_m": h.get("width_m"),
+            "azimuth_deg": h.get("azimuth_deg"),
+            "azimuth_method": "nhle_polygon_pca" if h.get("azimuth_deg") is not None else None,
+            "front_end": None,
+            "parish": None,
+            "her_ref": None,
+            "her_alt_ref": None,
+            "he_list_entry": le,
+            "he_url": h.get("url"),
+            "status": "certain",
+            "scheduled": True,
+            "notes": (
+                f"Added from NHLE (not in Wheatley HER seed). "
+                f"Cotswold–Severn chambered long barrow: {info['cite']}."
+                + (
+                    " Long-axis azimuth from PCA of NHLE scheduling polygon "
+                    "(undirected 0–180° from N; scheduling outline ≠ mound crest)."
+                    if h.get("azimuth_deg") is not None
+                    else ""
+                )
+                + (
+                    " Length/width approx. from NHLE polygon extents."
+                    if h.get("length_m") is not None
+                    else ""
+                )
+            ),
+            "source_urls": [
+                "https://doi.org/10.5281/zenodo.11005373",
+                h["url"],
+            ] if h.get("url") else ["https://doi.org/10.5281/zenodo.11005373"],
+            "cluster": assign_cluster(e, n),
+            "barrow_type": "cotswold_severn",
+        }
+        rows.append(row)
+        print(f"added missing Cotswold–Severn from NHLE: {le} {h.get('name')}")
+    return rows
+
+
 def assign_cluster(e: float, n: float) -> str:
     # rough chalk clusters from seed extent
     if 160000 <= n <= 180000 and 398000 <= e <= 420000:
@@ -442,6 +561,8 @@ def main() -> None:
     kutty = load_kutty()
     nhle = load_nhle()
     rows = enrich(rows, kutty, nhle)
+    rows = add_missing_cotswold_from_nhle(rows, nhle)
+    assign_barrow_type(rows)
     # stable sort
     rows.sort(key=lambda r: (0 if r["status"] == "certain" else 1, r["northing"], r["easting"], r["id"]))
     for r in rows:
@@ -489,6 +610,8 @@ def main() -> None:
     print(f"  certain={n_cert} possible={n-n_cert} named={n_named} scheduled_NHLE={n_sched} with_azimuth={n_az}")
     print(f"  OSGB bbox E {min(es):.0f}–{max(es):.0f} N {min(ns):.0f}–{max(ns):.0f}")
     print(f"  NHLE polygons matched: {len(nhle_fc['features'])}")
+    from collections import Counter
+    print(f"  barrow_type: {dict(Counter(r.get('barrow_type') for r in rows))}")
 
 
 if __name__ == "__main__":

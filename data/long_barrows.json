@@ -25,6 +25,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "ST91NW100"
   },
   {
@@ -54,6 +55,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1004752"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "Vernditch Chase long barrow"
   },
   {
@@ -82,6 +84,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "Kitts Grave"
   },
   {
@@ -111,6 +114,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1003004"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 600yds (550m) SE of Vanity"
   },
   {
@@ -140,6 +144,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015703"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Little Toyd Down, 760m south west of Grims Lodge Farm"
   },
   {
@@ -169,6 +174,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015935"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "Giants Grave"
   },
   {
@@ -198,6 +204,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015701"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 170m south west of triangulation pillar on White Sheet Hill"
   },
   {
@@ -226,6 +233,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "South Wiltshire / Chase fringe",
+    "barrow_type": "earthen",
     "display_name": "ST92NE107"
   },
   {
@@ -254,6 +262,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Cockey Down"
   },
   {
@@ -283,6 +292,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1005611"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Fussells Lodge"
   },
   {
@@ -312,6 +322,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11102"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI11102"
   },
   {
@@ -341,6 +352,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1016195"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Keysley Down, 1020m NNE of Chapel Field Barn"
   },
   {
@@ -369,6 +381,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU23SW101"
   },
   {
@@ -397,6 +410,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU23SW100"
   },
   {
@@ -425,6 +439,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "ST83NW103"
   },
   {
@@ -454,6 +469,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010463"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Pertwood Down, 1400m north-west of Lower Pertwood"
   },
   {
@@ -482,6 +498,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Woodford G2"
   },
   {
@@ -511,6 +528,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012047"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow in Barrow Clump, Stockton Down"
   },
   {
@@ -540,6 +558,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI10607"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI10607"
   },
   {
@@ -568,6 +587,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "ST83NW100"
   },
   {
@@ -597,6 +617,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010416"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Cold Kitchen Hill"
   },
   {
@@ -626,6 +647,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010520"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 250m east of Boyton Field Barn"
   },
   {
@@ -654,6 +676,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "MWI78750"
   },
   {
@@ -683,6 +706,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12493"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI12493"
   },
   {
@@ -712,6 +736,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010518"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Corton"
   },
   {
@@ -741,6 +766,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI75694"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI75694"
   },
   {
@@ -771,6 +797,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009621"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 350m south west of the Normanton Down round barrow cemetery"
   },
   {
@@ -801,6 +828,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010830"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Wilsford Down 300m north of The Diamond"
   },
   {
@@ -831,6 +859,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009614"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow and 18 round barrows, forming the greater part of Normanton Down round barrow cemetery"
   },
   {
@@ -861,6 +890,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1011841"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow north east of Winterbourne Stoke crossroads"
   },
   {
@@ -891,6 +921,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008953"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 250m north of Normanton Gorse"
   },
   {
@@ -921,6 +952,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015021"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Winterbourne Stoke Down"
   },
   {
@@ -950,6 +982,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12463"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI12463"
   },
   {
@@ -980,6 +1013,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015215"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow at Longbarrow Clump"
   },
   {
@@ -1008,6 +1042,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Amesbury 42"
   },
   {
@@ -1037,6 +1072,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009882"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "West Hill long barrow"
   },
   {
@@ -1067,6 +1103,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012167"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow in Larkhill Camp"
   },
   {
@@ -1096,6 +1133,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010399"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "King Barrow"
   },
   {
@@ -1125,6 +1163,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009938"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Knock"
   },
   {
@@ -1155,6 +1194,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010052"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Knighton"
   },
   {
@@ -1184,6 +1224,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI73372"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI73372"
   },
   {
@@ -1214,6 +1255,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009600"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow east/south-east of Robin Hood's Ball"
   },
   {
@@ -1243,6 +1285,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009895"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Norton Down long barrow"
   },
   {
@@ -1272,6 +1315,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009894"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Middleton Down long barrow"
   },
   {
@@ -1302,6 +1346,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009482"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "A long barrow and a disc barrow in Brigmerston Field"
   },
   {
@@ -1330,6 +1375,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU24NW102"
   },
   {
@@ -1359,6 +1405,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009878"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Knook Down"
   },
   {
@@ -1387,6 +1434,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU24NW101"
   },
   {
@@ -1417,6 +1465,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010091"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow north of Robin Hood Ball Clump"
   },
   {
@@ -1447,6 +1496,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009520"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow east of Netheravon Bake"
   },
   {
@@ -1476,6 +1526,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009808"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Bowls"
   },
   {
@@ -1506,6 +1557,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009297"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow and Old Ditch linear earthwork, on Tilshead Down"
   },
   {
@@ -1536,6 +1588,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1018159"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Whitebarrow"
   },
   {
@@ -1566,6 +1619,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009516"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow north of Netheravon Bake"
   },
   {
@@ -1595,6 +1649,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009918"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Colloway Clump long barrow"
   },
   {
@@ -1624,6 +1679,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009798"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Oxendean Down long barrow"
   },
   {
@@ -1654,6 +1710,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009446"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow south of Horse Down"
   },
   {
@@ -1683,6 +1740,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6792"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Kill"
   },
   {
@@ -1712,6 +1770,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010027"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow south-west of Imber"
   },
   {
@@ -1741,6 +1800,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11396"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI11396"
   },
   {
@@ -1771,6 +1831,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009936"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Long barrow in Barrow Plantation, East Down"
   },
   {
@@ -1801,6 +1862,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009758"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Ell Barrow"
   },
   {
@@ -1829,6 +1891,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "ST95SW100"
   },
   {
@@ -1858,6 +1921,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI13689"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI13689"
   },
   {
@@ -1886,6 +1950,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU16NW133"
   },
   {
@@ -1915,6 +1980,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009783"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow, Tinhead Hill"
   },
   {
@@ -1943,6 +2009,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU25NE103"
   },
   {
@@ -1971,6 +2038,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU25NE102"
   },
   {
@@ -1999,6 +2067,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Tow"
   },
   {
@@ -2027,6 +2096,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU25NE100"
   },
   {
@@ -2049,7 +2119,7 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1013032",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Adam's Grave; HE scheduling (sarsen chamber, Thurnam 1860); commonly classed Severn\u2013Cotswold / Cotswold\u2013Severn).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
@@ -2057,6 +2127,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013032"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "cotswold_severn",
     "display_name": "Adam's Grave"
   },
   {
@@ -2087,6 +2158,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012519"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Kitchen Barrow: a long barrow on Kitchen Barrow Hill"
   },
   {
@@ -2117,6 +2189,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012429"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Long barrow in Barrow Copse"
   },
   {
@@ -2146,6 +2219,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI6443"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI6443"
   },
   {
@@ -2175,6 +2249,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013141"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Horton Down"
   },
   {
@@ -2205,6 +2280,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013360"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on King's Play Hill, 430m north west of Hill Cottage"
   },
   {
@@ -2235,6 +2311,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1014030"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 650m WSW of Shepherds' Shore"
   },
   {
@@ -2265,6 +2342,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013366"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Long barrow on Easton Down"
   },
   {
@@ -2287,7 +2365,7 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1012323",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (East Kennet; Barker Avebury chambered-tomb inventory; HE notes protruding sarsens / probable chambers).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
@@ -2295,6 +2373,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012323"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "cotswold_severn",
     "display_name": "East Kennet"
   },
   {
@@ -2324,6 +2403,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI7728"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI7728"
   },
   {
@@ -2353,6 +2433,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14311"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI14311"
   },
   {
@@ -2383,6 +2464,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013239"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Long barrow and abutting bowl barrow 700m WSW of Beckhampton Buildings, forming the focus of a barrow cemetery on North Down"
   },
   {
@@ -2405,7 +2487,7 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010628",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (West Kennet; Darvill 2004; Piggott & Atkinson 1955\u201356 (transepted chambers)).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
@@ -2413,6 +2495,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010628"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "cotswold_severn",
     "display_name": "West Kennet"
   },
   {
@@ -2443,6 +2526,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008126"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Long Stones long barrow 150m north of Beckhampton House"
   },
   {
@@ -2473,6 +2557,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008103"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "South Street long barrow, 70m south east of the Long Stones"
   },
   {
@@ -2502,6 +2587,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010135"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Oldbury"
   },
   {
@@ -2532,6 +2618,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008449"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "Horseslip"
   },
   {
@@ -2561,6 +2648,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI15526"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI15526"
   },
   {
@@ -2589,6 +2677,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "SU17SW110"
   },
   {
@@ -2611,13 +2700,14 @@
     "he_url": null,
     "status": "certain",
     "scheduled": false,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge.",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. barrow_type=cotswold_severn (Millbarrow; Whittle et al. Millbarrow excavation; Cotswold\u2013Severn type chambered long barrow (destroyed)).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI9031"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "cotswold_severn",
     "display_name": "Millbarrow"
   },
   {
@@ -2647,6 +2737,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI15517"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI15517"
   },
   {
@@ -2675,6 +2766,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU27SE101"
   },
   {
@@ -2697,13 +2789,14 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010908",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Lanhill; Corcoran 1969; Darvill 2004 (Cotswold\u2013Severn chambered)).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010908"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "cotswold_severn",
     "display_name": "Lanhill Barrow: a long barrow 300m south of Sparrow Farm"
   },
   {
@@ -2733,6 +2826,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010396"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 400m north-west of Fox Covert"
   },
   {
@@ -2755,13 +2849,14 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010397",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents.",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Lugbury; Corcoran 1969; Darvill 2004 (Cotswold\u2013Severn; aka Littleton Drew)).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010397"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "cotswold_severn",
     "display_name": "Long barrow 500m north of Lugbury Farm"
   },
   {
@@ -2790,6 +2885,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU27NW103"
   },
   {
@@ -2819,7 +2915,37 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010395"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 600m north of Hebden Farm"
+  },
+  {
+    "id": "NHLE1010394",
+    "name": "Giant's Cave: a chambered long barrow 750m south west of Allengrove Farm",
+    "easting": 381998.4,
+    "northing": 182966.3,
+    "lat": 51.545301,
+    "lon": -2.260985,
+    "ngr": "ST 82001 82965",
+    "length_m": 61.7,
+    "width_m": 40.2,
+    "azimuth_deg": 98.3,
+    "azimuth_method": "nhle_polygon_pca",
+    "front_end": null,
+    "parish": null,
+    "her_ref": null,
+    "her_alt_ref": null,
+    "he_list_entry": 1010394,
+    "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010394",
+    "status": "certain",
+    "scheduled": true,
+    "notes": "Added from NHLE (not in Wheatley HER seed). Cotswold\u2013Severn chambered long barrow: Crawford 1925 Long Barrows of the Cotswolds; Darvill 2004; HE 'chambered long barrow'. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0\u2013180\u00b0 from N; scheduling outline \u2260 mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Giant's Cave (Luckington); Crawford 1925 Long Barrows of the Cotswolds; Darvill 2004; HE 'chambered long barrow').",
+    "source_urls": [
+      "https://doi.org/10.5281/zenodo.11005373",
+      "https://historicengland.org.uk/listing/the-list/list-entry/1010394"
+    ],
+    "cluster": "North Wiltshire chalk",
+    "barrow_type": "cotswold_severn",
+    "display_name": "Giant's Cave: a chambered long barrow 750m south west of Allengrove Farm"
   },
   {
     "id": "SU13SE108",
@@ -2847,6 +2973,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU13SE108"
   },
   {
@@ -2875,6 +3002,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU13SE663"
   },
   {
@@ -2903,6 +3031,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU23SW600"
   },
   {
@@ -2931,6 +3060,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI77205"
   },
   {
@@ -2959,6 +3089,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "MWI77115"
   },
   {
@@ -2988,6 +3119,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1005688"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "'Ende Burgh' long barrow"
   },
   {
@@ -3018,6 +3150,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1011046"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "Bowl barrow 400m south east of Longbarrow Cross Roads, east of A360"
   },
   {
@@ -3047,6 +3180,7 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1017603"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "Long barrow 250m east of Polebridge Farm"
   },
   {
@@ -3076,6 +3210,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12478"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI12478"
   },
   {
@@ -3105,6 +3240,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12440"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI12440"
   },
   {
@@ -3133,6 +3269,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "ST94SW742"
   },
   {
@@ -3162,6 +3299,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11877"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI11877"
   },
   {
@@ -3190,6 +3328,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU14SW654"
   },
   {
@@ -3219,6 +3358,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI74325"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI74325"
   },
   {
@@ -3247,6 +3387,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU24NW629"
   },
   {
@@ -3275,6 +3416,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "SU24NW678"
   },
   {
@@ -3304,6 +3446,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI11612"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
+    "barrow_type": "earthen",
     "display_name": "MWI11612"
   },
   {
@@ -3332,6 +3475,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU25SW781"
   },
   {
@@ -3360,6 +3504,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU25SE100"
   },
   {
@@ -3388,6 +3533,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU25NE104"
   },
   {
@@ -3416,6 +3562,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU15NW614"
   },
   {
@@ -3444,6 +3591,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "ST86SE643"
   },
   {
@@ -3473,6 +3621,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8170"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI8170"
   },
   {
@@ -3501,6 +3650,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "SU26NE100"
   },
   {
@@ -3529,6 +3679,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "SU16NW656"
   },
   {
@@ -3557,6 +3708,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "SU16NE648"
   },
   {
@@ -3586,6 +3738,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI8168"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI8168"
   },
   {
@@ -3614,6 +3767,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "Avebury / Pewsey",
+    "barrow_type": "earthen",
     "display_name": "MWI76495"
   },
   {
@@ -3642,6 +3796,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "MWI73199"
   },
   {
@@ -3670,6 +3825,7 @@
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/Index"
     ],
     "cluster": "North Wiltshire chalk",
+    "barrow_type": "earthen",
     "display_name": "ST98NW635"
   }
 ]

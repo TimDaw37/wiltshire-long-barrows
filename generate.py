@@ -30,31 +30,44 @@ def load_rows() -> list[dict]:
     return json.loads((DATA / "long_barrows.json").read_text(encoding="utf-8"))
 
 
-def load_bounds() -> dict:
-    p = ROOT / "lidar" / "web" / "ea1m-bounds.json"
-    if p.is_file():
+def load_bounds(name: str) -> dict | None:
+    p = ROOT / "lidar" / "web" / f"{name}-bounds.json"
+    if p.is_file() and (ROOT / "lidar" / "web" / f"{name}-hillshade.png").is_file():
         return json.loads(p.read_text(encoding="utf-8"))
-    return {
-        "wgs84_leaflet": [[51.05, -2.15], [51.45, -1.55]],
-        "placeholder": True,
-    }
+    return None
 
 
-def html_page(rows: list[dict], bounds: dict) -> str:
+def html_page(rows: list[dict], county_bounds: dict | None, ea_bounds: dict | None) -> str:
     n = len(rows)
     n_cert = sum(1 for r in rows if r.get("status") == "certain")
     n_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
     n_sched = sum(1 for r in rows if r.get("scheduled"))
+    n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
     clusters = Counter(r.get("cluster") or "—" for r in rows)
-    has_png = (ROOT / "lidar" / "web" / "ea1m-hillshade.png").is_file()
-    placeholder = bool(bounds.get("placeholder")) or not has_png
+    has_county = county_bounds is not None
+    has_ea = ea_bounds is not None
 
     holes_json = json.dumps(rows, ensure_ascii=False)
     colour_json = json.dumps(STATUS_COLOUR)
     label_json = json.dumps(STATUS_LABEL)
-    bounds_json = json.dumps(bounds.get("wgs84_leaflet"))
+    county_bounds_json = json.dumps((county_bounds or {}).get("wgs84_leaflet"))
+    ea_bounds_json = json.dumps((ea_bounds or {}).get("wgs84_leaflet"))
     sunrise_json = json.dumps(SUNRISE_AZ)
     cluster_bits = ", ".join(f"{k}: {v}" for k, v in sorted(clusters.items()))
+    if has_county and has_ea:
+        lidar_legend = (
+            "Terrain overlays: County terrain (EA DTM ~20 m) on by default; "
+            "EA detail (Stonehenge) toggleable."
+        )
+    elif has_county:
+        lidar_legend = "County terrain hillshade overlay (EA Composite DTM, coarse)."
+    elif has_ea:
+        lidar_legend = "EA LiDAR Composite DTM detail hillshade (Stonehenge cluster)."
+    else:
+        lidar_legend = (
+            "LiDAR hillshade: placeholder — run download_ea_county_dtm.py / "
+            "make_county_hillshade.py (and optional detail download)."
+        )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -166,13 +179,16 @@ def html_page(rows: list[dict], bounds: dict) -> str:
     extracts and Historic England scheduling polygons. Orientation is treated carefully:
     <b>long-axis azimuth</b> (undirected, degrees from north) is derived from NHLE footprints
     where matched — <b>not</b> claimed as a measured façade → sunrise alignment.
-    LiDAR hillshade uses EA Composite DTM (OGL) when built.
+    County-wide terrain hillshade from EA Composite DTM (coarse) with optional
+    Stonehenge-cluster EA detail. Cotswold–Severn (stone-chambered) vs earthen
+    long barrows are filterable — membership cited, not invented.
   </p>
 </header>
 
 <div class="stats" id="stats">
   <span><b>{n}</b> barrows</span>
   <span><b>{n_cert}</b> HER certain · <b>{n - n_cert}</b> possible</span>
+  <span><b>{n_cots}</b> Cotswold–Severn · <b>{n - n_cots}</b> earthen/other</span>
   <span><b>{n_sched}</b> NHLE-matched</span>
   <span><b>{n_az}</b> with long-axis azimuth</span>
   <span>{cluster_bits}</span>
@@ -180,7 +196,7 @@ def html_page(rows: list[dict], bounds: dict) -> str:
 <p class="legend">
   Gold = HER certain · grey = possible.
   Short ticks show undirected long-axis from NHLE polygon PCA (where available).
-  {"LiDAR hillshade: placeholder — run download_ea_dtm.py / make_ea1m_hillshade.py." if placeholder else "EA LiDAR Composite DTM hillshade overlay (toggle)."}
+  {lidar_legend}
 </p>
 
 <div class="layout">
@@ -221,13 +237,24 @@ def html_page(rows: list[dict], bounds: dict) -> str:
     reading of Salisbury Plain orientations remains contested (see Ruggles 1997 PBA).
   </p>
 
+  <h2>Cotswold–Severn vs earthen</h2>
+  <p>
+    The important Wiltshire split is <b>Cotswold–Severn</b> (stone-chambered; classic
+    “Cotteswold” tradition) versus <b>earthen</b> long barrows (Wessex chalk mounds,
+    usually timber chambers if any). About seven Cotswold–Severn sites fall in the
+    county; v1 marks only peer-attested membership (Darvill 2004; Corcoran 1969;
+    Crawford 1925; site excavations / HE chamber notes) — see <code>NOTES.md</code>.
+    All other gazetteer rows default to <code>earthen</code>.
+  </p>
+
   <h2>Sources (v1 seed)</h2>
   <ul>
-    <li>Wiltshire HER certain/possible points — Zenodo <a href="https://doi.org/10.5281/zenodo.11005373">10.5281/zenodo.11005373</a> (Wheatley 1996 viewshed recreation dataset).</li>
-    <li>Named Avebury / Stonehenge HER list — Kutty 2024 Zenodo <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a>.</li>
+    <li>Wiltshire HER certain/possible points — Zenodo <a href="https://doi.org/10.5281/zenodo.11005373">10.5281/zenodo.11005373</a> (Wheatley recreation; underlying Wiltshire HER).</li>
+    <li>Named Avebury / Stonehenge HER list — Kutty 2024 Zenodo <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a> (compiled from HER via Heritage Gateway).</li>
     <li>Historic England NHLE Scheduled Monuments (OGL) — footprint + List Entry via ArcGIS FeatureServer.</li>
-    <li>Catalogue / orientation literature: Ashbee; Darvill; Field 2006; Kinnes 1992; Ruggles 1997/1999; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
-    <li>EA LiDAR Composite DTM 1 m — OGL; WCS same pattern as Fremington / A303 corridor.</li>
+    <li>Cotswold–Severn typology: Corcoran 1969; Darvill 2004 <i>Long Barrows of the Cotswolds</i>; Crawford 1925; site reports (Piggott &amp; Atkinson; Whittle; Thurnam).</li>
+    <li>Catalogue / orientation literature: Ashbee; Field 2006; Kinnes 1992; Ruggles 1997/1999; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
+    <li>EA LiDAR Composite DTM — OGL; county coarse hillshade (~20 m WCS) + Stonehenge-cluster detail.</li>
   </ul>
 
   <h2>Honesty gaps</h2>
@@ -236,14 +263,18 @@ def html_page(rows: list[dict], bounds: dict) -> str:
     <li>Orientation not in HER export — derived only where NHLE polygon matched.</li>
     <li>Length/width from scheduling polygons are approximate (often oversize vs mound).</li>
     <li>Not a complete county inventory of every ploughed / cropmark candidate.</li>
+    <li>Cotswold–Severn membership is curated from peer sources; fringe / dubious chamber claims stay earthen unless cited.</li>
   </ul>
 
-  <h2>Licence</h2>
+  <h2>Licence / sources</h2>
   <p>
     Compilation © Tim Daw / <a href="https://www.sarsen.org/">sarsen.org</a> ·
     <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-    NHLE © Historic England / OGL. HER underlying records © Wiltshire Council.
-    EA LiDAR © Environment Agency / OGL. Research gazetteer only; no public land access implied.
+    NHLE © Historic England / OGL.
+    EA LiDAR © Environment Agency / OGL.
+    Zenodo Wheatley recreation <a href="https://doi.org/10.5281/zenodo.11005373">10.5281/zenodo.11005373</a> CC BY 4.0 (underlying Wiltshire HER).
+    Zenodo Kutty 2024 <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a> CC BY 4.0 (compiled from HER via Heritage Gateway).
+    Research gazetteer; not official HER; no land access implied.
   </p>
 </section>
 
@@ -256,9 +287,11 @@ def html_page(rows: list[dict], bounds: dict) -> str:
 const ROWS = {holes_json};
 const COLOUR = {colour_json};
 const STATUS_LABEL = {label_json};
-const EA_BOUNDS = {bounds_json};
+const COUNTY_BOUNDS = {county_bounds_json};
+const EA_BOUNDS = {ea_bounds_json};
 const SUNRISE = {sunrise_json};
-const HAS_LIDAR = {json.dumps(not placeholder)};
+const HAS_COUNTY = {json.dumps(has_county)};
+const HAS_EA = {json.dumps(has_ea)};
 
 const map = L.map('map', {{ zoomControl: true }});
 const osm = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
@@ -266,13 +299,23 @@ const osm = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }}).addTo(map);
 
+let countyLayer = null;
 let eaLayer = null;
-if (HAS_LIDAR) {{
-  eaLayer = L.imageOverlay('lidar/web/ea1m-hillshade.png', EA_BOUNDS, {{
-    opacity: 0.72,
+if (HAS_COUNTY) {{
+  countyLayer = L.imageOverlay('lidar/web/county-hillshade.png', COUNTY_BOUNDS, {{
+    opacity: 0.7,
     interactive: false,
-    attribution: 'EA LiDAR Composite DTM © Environment Agency / OGL'
+    attribution: 'EA LiDAR Composite DTM (county coarse) © Environment Agency / OGL'
   }}).addTo(map);
+}}
+if (HAS_EA) {{
+  eaLayer = L.imageOverlay('lidar/web/ea1m-hillshade.png', EA_BOUNDS, {{
+    opacity: 0.75,
+    interactive: false,
+    attribution: 'EA LiDAR Composite DTM (Stonehenge detail) © Environment Agency / OGL'
+  }});
+  // detail off by default when county base present; on alone if no county
+  if (!HAS_COUNTY) eaLayer.addTo(map);
 }}
 
 if (!map.getPane('barrows')) {{ map.createPane('barrows'); map.getPane('barrows').style.zIndex = 650; }}
@@ -326,11 +369,16 @@ ROWS.forEach(h => {{
 }});
 
 const group = L.featureGroup(Object.values(markers));
-map.fitBounds(group.getBounds().pad(0.08));
+if (HAS_COUNTY && COUNTY_BOUNDS) {{
+  map.fitBounds(COUNTY_BOUNDS, {{ padding: [12, 12] }});
+}} else {{
+  map.fitBounds(group.getBounds().pad(0.08));
+}}
 
 const overlays = {{ 'Long barrows': layer, 'Orientation ticks': ticks }};
-if (eaLayer) overlays['EA LiDAR hillshade'] = eaLayer;
-L.control.layers({{ 'OSM': osm }}, overlays, {{ collapsed: true }}).addTo(map);
+if (countyLayer) overlays['County terrain'] = countyLayer;
+if (eaLayer) overlays['EA detail (Stonehenge)'] = eaLayer;
+L.control.layers({{ 'OSM': osm }}, overlays, {{ collapsed: false }}).addTo(map);
 
 // sunrise reference rays (centre of map, decorative — not a claim)
 const sunLayer = L.layerGroup();
@@ -352,13 +400,15 @@ function drawSunRays() {{
 }}
 let filterStatus = 'all';
 let filterAz = 'all';
+let filterType = 'all';
 
 function matches(h, q) {{
   if (filterStatus !== 'all' && h.status !== filterStatus) return false;
   if (filterAz === 'with' && h.azimuth_deg == null) return false;
   if (filterAz === 'without' && h.azimuth_deg != null) return false;
+  if (filterType !== 'all' && (h.barrow_type || 'earthen') !== filterType) return false;
   if (!q) return true;
-  const blob = [h.display_name, h.name, h.id, h.her_ref, h.her_alt_ref, h.he_list_entry, h.ngr, h.cluster, h.notes, h.parish].join(' ').toLowerCase();
+  const blob = [h.display_name, h.name, h.id, h.her_ref, h.her_alt_ref, h.he_list_entry, h.ngr, h.cluster, h.notes, h.parish, h.barrow_type].join(' ').toLowerCase();
   return blob.includes(q);
 }}
 
@@ -382,6 +432,7 @@ function renderList() {{
     div.innerHTML = '<div class="nm"><span class="dot" style="background:' + col + '"></span>' + esc(h.display_name || h.id) + '</div>'
       + '<div class="meta">' + esc(STATUS_LABEL[h.status] || h.status)
       + (h.azimuth_deg != null ? ' · az ' + h.azimuth_deg + '°' : ' · az —')
+      + (h.barrow_type === 'cotswold_severn' ? ' · Cotswold–Severn' : '')
       + (h.scheduled ? ' · scheduled' : '')
       + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</div>';
     div.onclick = () => select(h.id, true);
@@ -411,6 +462,9 @@ function select(id, pan) {{
     + (h.scheduled ? ' · scheduled monument' : ' · not matched to NHLE in v1')
     + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</p>'
     + '<dl>'
+    + '<dt>Barrow type</dt><dd>' + (h.barrow_type === 'cotswold_severn'
+      ? 'Cotswold–Severn (stone-chambered)'
+      : (h.barrow_type === 'uncertain' ? 'Uncertain' : 'Earthen (Wessex tradition default)')) + '</dd>'
     + '<dt>NGR</dt><dd>' + esc(h.ngr || '—') + '</dd>'
     + '<dt>OSGB</dt><dd>E' + h.easting + ' N' + h.northing + '</dd>'
     + '<dt>Long axis</dt><dd>' + (h.azimuth_deg != null ? (h.azimuth_deg + '° from N (undirected)') : '—')
@@ -423,22 +477,35 @@ function select(id, pan) {{
 }}
 
 const chips = document.getElementById('chips');
+const statusChips = [];
 [['all','All'],['certain','Certain'],['possible','Possible']].forEach(([k,lab]) => {{
   const b = document.createElement('button');
   b.className = 'chip' + (k === 'all' ? ' on' : '');
   b.textContent = lab;
-  b.onclick = () => {{ filterStatus = k; [...chips.querySelectorAll('.chip')].slice(0,3).forEach((c,i) => c.classList.toggle('on', ['all','certain','possible'][i]===k)); renderList(); }};
+  b.onclick = () => {{ filterStatus = k; statusChips.forEach((c,i) => c.classList.toggle('on', ['all','certain','possible'][i]===k)); renderList(); }};
+  statusChips.push(b);
   chips.appendChild(b);
 }});
+const typeChips = [];
+[['all','Any type'],['cotswold_severn','Cotswold–Severn'],['earthen','Earthen']].forEach(([k,lab]) => {{
+  const b = document.createElement('button');
+  b.className = 'chip' + (k === 'all' ? ' on' : '');
+  b.textContent = lab;
+  b.onclick = () => {{ filterType = k; typeChips.forEach((c,i) => c.classList.toggle('on', ['all','cotswold_severn','earthen'][i]===k)); renderList(); }};
+  typeChips.push(b);
+  chips.appendChild(b);
+}});
+const azChips = [];
 [['all','Any az'],['with','Has az'],['without','No az']].forEach(([k,lab]) => {{
   const b = document.createElement('button');
   b.className = 'chip' + (k === 'all' ? ' on' : '');
   b.textContent = lab;
   b.onclick = () => {{
     filterAz = k;
-    [...chips.querySelectorAll('.chip')].slice(3).forEach((c,i) => c.classList.toggle('on', ['all','with','without'][i]===k));
+    azChips.forEach((c,i) => c.classList.toggle('on', ['all','with','without'][i]===k));
     renderList();
   }};
+  azChips.push(b);
   chips.appendChild(b);
 }});
 const sunBtn = document.createElement('button');
@@ -460,11 +527,17 @@ renderList();
 
 def main() -> None:
     rows = load_rows()
-    bounds = load_bounds()
+    county_bounds = load_bounds("county")
+    ea_bounds = load_bounds("ea1m")
     out = ROOT / "index.html"
-    out.write_text(html_page(rows, bounds), encoding="utf-8")
+    out.write_text(html_page(rows, county_bounds, ea_bounds), encoding="utf-8")
     n_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
-    print(f"wrote {out} ({len(rows)} barrows, {n_az} with azimuth)")
+    n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
+    print(
+        f"wrote {out} ({len(rows)} barrows, {n_az} with azimuth, "
+        f"{n_cots} Cotswold–Severn; county_lidar={county_bounds is not None}, "
+        f"ea_detail={ea_bounds is not None})"
+    )
 
 
 if __name__ == "__main__":

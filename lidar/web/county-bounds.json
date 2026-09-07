@@ -1,0 +1,32 @@
+{
+  "osgb": {
+    "e0": 376000.0,
+    "e1": 432000.0,
+    "n0": 117000.0,
+    "n1": 189000.0
+  },
+  "wgs84_leaflet": [
+    [
+      50.95192737903772,
+      -2.343038391328443
+    ],
+    [
+      51.59893966208736,
+      -1.5393965211080054
+    ]
+  ],
+  "source": "EA LIDAR Composite DTM 2022 1m product via WCS (SCALEFACTOR\u2192~20 m county mosaic), Open Government Licence",
+  "placeholder": false,
+  "cellsize_m": 28.0,
+  "source_cellsize_m": 20.0,
+  "z_range_m_od": [
+    11.405074119567871,
+    294.1728820800781
+  ],
+  "png_pixels": [
+    1722,
+    2214
+  ],
+  "png_mb": 4.753,
+  "label": "County terrain"
+}

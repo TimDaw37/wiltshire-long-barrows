@@ -5,7 +5,7 @@
 1. **Wiltshire HER certain/possible points** — Zenodo 10.5281/zenodo.11005373  
    (data for Wheatley 1996 viewshed recreation). Gives BNG coords + certainty + some names.  
    *Caveat:* CSV columns labelled Latitude/Longitude are actually easting/northing.  
-   Licence: check Zenodo record; derived from Wiltshire HER (not a substitute for HER licence terms).
+   Licence: Zenodo CC BY 4.0; underlying Wiltshire HER — research extract, not official HER.
 
 2. **Kutty 2024 Archaeological Features** — Zenodo 10.5281/zenodo.10989406  
    Named Avebury + Stonehenge long barrows with MWI HER URLs. Good for display names.
@@ -22,9 +22,12 @@
    - McOmish et al. 2002 (SPTA)  
    - Burl 1987 lunar-arc claim — contested by Ruggles
 
-5. **EA LiDAR Composite DTM 1 m** — OGL  
+5. **EA LiDAR Composite DTM** — OGL  
    WCS: `https://environment.data.gov.uk/spatialdata/lidar-composite-digital-terrain-model-dtm-1m/wcs`  
-   Coverage ID same pattern as Fremington / A303 corridor projects.
+   - **County terrain** (default map base): SCALEFACTOR 0.05 → ~20 m mosaic over  
+     E376000–432000 N117000–189000 → `lidar/web/county-hillshade.png`  
+   - **EA detail (Stonehenge)**: existing 2 m mosaic hillshade for WHS cluster  
+     → `lidar/web/ea1m-hillshade.png` (toggle)
 
 6. **OSM** — Overpass attempted; endpoint returned HTML error in this run. Optional later enrichment.
 
@@ -40,11 +43,33 @@
 Peer consensus for Wiltshire chalk: **no clear common astronomical alignment**; topography matters
 (Ruggles; Roberts et al. IA 47; Darvill). Treat solar claims as hypotheses to test against LiDAR-derived axes.
 
-## LiDAR next step
+## Cotswold–Severn vs earthen
 
-Default download bbox = Stonehenge / Salisbury Plain cluster from gazetteer + margin, capped
-~9×8 km. Expand with `WILTS_LB_BBOX` for Avebury / Pewsey belt. Then refine orientations from
-mound crest / ditch lines on hillshade rather than NHLE polygons alone.
+Important Wiltshire split: **Cotswold–Severn** (stone-chambered; “Cotteswold” tradition)
+vs **earthen** long barrows (Wessex chalk). Field `barrow_type`:
+`cotswold_severn` | `earthen` | `uncertain`.
+
+v1 marks **seven** peer-attested Cotswold–Severn sites only (do not invent membership):
+
+| Site | HE / id | Citation basis |
+|------|---------|----------------|
+| West Kennet | 1010628 | Darvill 2004; Piggott & Atkinson 1955–56 |
+| East Kennet | 1012323 | Barker inventory; HE sarsens / probable chambers |
+| Adam's Grave | 1013032 | HE (Thurnam sarsen chamber); Severn–Cotswold type |
+| Millbarrow | SU07SE105 | Whittle excavation; Cotswold–Severn type (destroyed) |
+| Lanhill | 1010908 | Corcoran 1969; Darvill 2004 |
+| Lugbury | 1010397 | Corcoran 1969; Darvill 2004 (Littleton Drew) |
+| Giant's Cave (Luckington) | 1010394 | Crawford 1925; Darvill 2004; HE “chambered” — added from NHLE (absent from Wheatley seed) |
+
+All other rows default to `earthen`. Fringe Wikipedia lists (e.g. Kitchen Barrow, Horton Down,
+South Street as “Cotswold–Severn”) are **not** auto-promoted without chambered peer evidence;
+South Street / Longstones are excavated **earthen** monuments.
+
+## LiDAR
+
+- County: `python download_ea_county_dtm.py` then `python make_county_hillshade.py`
+- Detail (Stonehenge): `WILTS_LB_BBOX=… python download_ea_dtm.py` then `make_ea1m_hillshade.py`
+- Next: refine orientations from mound crest / ditch lines on hillshade rather than NHLE polygons alone.
 
 ## Gaps
 
@@ -56,6 +81,7 @@ mound crest / ditch lines on hillshade rather than NHLE polygons alone.
 
 ## LiDAR status (this run)
 
-Downloaded EA Composite DTM (SCALEFACTOR 0.5 → 2 m) for Stonehenge WHS first bbox
-`E408500–416500 N139500–146500`. Hillshade: `lidar/web/ea1m-hillshade.png` (placeholder=false).
-Next: expand to Avebury / Pewsey with `WILTS_LB_BBOX`.
+- **County terrain:** EA Composite DTM SCALEFACTOR 0.05 → 20 m, E376000–432000 N117000–189000.
+  Web PNG `lidar/web/county-hillshade.png` (~4.8 MB) + `county-bounds.json`.
+- **EA detail (Stonehenge):** prior 2 m mosaic → `lidar/web/ea1m-hillshade.png` (~2.9 MB).
+- OS Terrain 50 not used (no county ASC download pattern in A303/Fremington; EA WCS preferred).
