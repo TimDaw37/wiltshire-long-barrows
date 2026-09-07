@@ -103,10 +103,8 @@ def html_page(
     cluster_bits = ", ".join(f"{k}: {v}" for k, v in sorted(clusters.items()))
     if has_county:
         lidar_legend = (
-            "<br><b>LiDAR on this map:</b> "
-            "county backdrop = EA Composite DTM at about <b>~20&nbsp;m</b> (all devices — landscape context only). "
-            "Per-barrow <b>1&nbsp;m</b> chips appear on the map only on a <b>desktop</b> when zoomed in past ~14; "
-            "the detail strip can also show that 1&nbsp;m chip when you select a barrow (including on a phone)."
+            "<br><b>LiDAR:</b> County backdrop: EA Composite DTM ~20&nbsp;m (all devices). "
+            "Per-barrow 1&nbsp;m chips: desktop map zoom ≳14, and in the detail strip when a barrow is selected."
         )
     else:
         lidar_legend = (
@@ -227,26 +225,21 @@ def html_page(
     display: inline-block; width: .55rem; height: .55rem; border-radius: 50%;
     margin-right: .35rem; vertical-align: middle;
   }}
-  details.about {{
+  section.about {{
     max-width: 1400px; margin: 0 auto; padding: .85rem 1.5rem 1.5rem;
     border-top: 1px solid var(--line);
   }}
-  details.about > summary {{
-    cursor: pointer; color: var(--gold); font-size: 1.05rem; font-weight: 650;
-    list-style: none; padding: .35rem 0;
+  section.about > h2.about-heading {{
+    color: var(--gold); font-size: 1.05rem; font-weight: 650;
+    margin: 0; padding: .35rem 0;
   }}
-  details.about > summary::-webkit-details-marker {{ display: none; }}
-  details.about > summary::before {{
-    content: "▸ "; font-weight: 700;
-  }}
-  details.about[open] > summary::before {{ content: "▾ "; }}
-  details.about .lead {{ margin: .7rem 0 0; max-width: 70rem; color: var(--ink); }}
-  details.about .stats {{
+  section.about .lead {{ margin: .7rem 0 0; max-width: 70rem; color: var(--ink); }}
+  section.about .stats {{
     margin: .75rem 0 0; padding: 0;
     display: flex; flex-wrap: wrap; gap: .5rem .9rem; font-size: .85rem; color: var(--muted);
   }}
-  details.about .stats b {{ color: var(--ink); }}
-  details.about .legend {{
+  section.about .stats b {{ color: var(--ink); }}
+  section.about .legend {{
     margin: .65rem 0 0; padding: 0;
     color: var(--muted); font-size: .82rem;
   }}
@@ -299,7 +292,7 @@ def html_page(
       padding: 0 .75rem .75rem;
     }}
     .filters, .chip-row, .gazetteer-head {{ padding-left: 1rem; padding-right: 1rem; }}
-    details.about {{ padding: .75rem 1rem 1.25rem; }}
+    section.about {{ padding: .75rem 1rem 1.25rem; }}
   }}
 </style>
 </head>
@@ -329,8 +322,8 @@ def html_page(
   </div>
 </div>
 
-<details class="about" id="about">
-  <summary>About this map</summary>
+<section class="about" id="about">
+  <h2 class="about-heading">About this map</h2>
   <p class="lead">
     Interactive gazetteer of Wiltshire Neolithic long barrows from open HER extracts and
     Historic England scheduling polygons, plus Tim Daw’s modern All Cannings long barrow.
@@ -378,7 +371,7 @@ def html_page(
       <li>EA LiDAR Composite DTM — OGL; county backdrop ~20 m (all devices); per-barrow 1 m hillshade chips (~380 m) on desktop zoom ≥14 and in the detail strip.</li>
     </ul>
 
-    <h2>Honesty gaps</h2>
+    <h2>Known limits</h2>
     <ul>
       <li>Many HER rows lack published names; display falls back to HER / parish number.</li>
       <li>Orientation not in HER export — derived only where NHLE polygon matched.</li>
@@ -399,10 +392,10 @@ def html_page(
       Research gazetteer; not official HER; no land access implied.
     </p>
   </section>
-</details>
+</section>
 
 <footer>
-  <p>© Tim Daw / sarsen.org · CC BY-SA 4.0 · scientific honesty over folklore</p>
+  <p>© Tim Daw / sarsen.org · CC BY-SA 4.0</p>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -671,11 +664,6 @@ const azChips = [];
 }});
 document.getElementById('q').addEventListener('input', renderList);
 renderList();
-// About: open by default on desktop; stay collapsed on phone so the map isn't buried.
-(function () {{
-  const about = document.getElementById('about');
-  if (about && window.matchMedia('(min-width: 901px)').matches) about.open = true;
-}})();
 </script>
 </body>
 </html>
