@@ -416,7 +416,7 @@ if (!map.getPane('terrain')) {{
   map.getPane('terrain').style.pointerEvents = 'none';
 }}
 if (HAS_COUNTY) {{
-  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=4', COUNTY_BOUNDS, {{
+  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=5', COUNTY_BOUNDS, {{
     opacity: 0.72,
     interactive: false,
     pane: 'terrain',
@@ -512,13 +512,9 @@ const group = L.featureGroup(Object.values(markers));
 // Use ceremonial outline bounds only — not the larger LiDAR COUNTY_BOUNDS rect.
 map.whenReady(function() {{
   map.invalidateSize();
+  // No setMaxBounds — it can blank the map on mobile Safari with tight pads.
   if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
     map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [8, 8], maxZoom: 11 }});
-    try {{
-      var pad = 0.08;
-      var b = L.latLngBounds(COUNTY_OUTLINE_BOUNDS);
-      map.setMaxBounds(b.pad(pad));
-    }} catch (e) {{}}
   }} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
     map.fitBounds(COUNTY_BOUNDS, {{ padding: [8, 8], maxZoom: 11 }});
   }} else {{
