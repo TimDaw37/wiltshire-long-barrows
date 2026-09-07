@@ -391,7 +391,7 @@ def html_page(
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="county-outline.js?v=6"></script>
+<script src="county-outline.js?v=7"></script>
 <script src="barrow-chips.js"></script>
 <script>
 const ROWS = {holes_json};
@@ -416,7 +416,7 @@ if (!map.getPane('terrain')) {{
   map.getPane('terrain').style.pointerEvents = 'none';
 }}
 if (HAS_COUNTY) {{
-  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=6', COUNTY_BOUNDS, {{
+  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=7', COUNTY_BOUNDS, {{
     opacity: 0.72,
     interactive: false,
     pane: 'terrain',
@@ -507,20 +507,14 @@ ROWS.forEach(h => {{
 }});
 
 const group = L.featureGroup(Object.values(markers));
-
-// Fit AFTER layout so mobile gets a correctly sized map (invalidateSize first).
-// Use ceremonial outline bounds only — not the larger LiDAR COUNTY_BOUNDS rect.
-map.whenReady(function() {{
-  map.invalidateSize();
-  // No setMaxBounds — it can blank the map on mobile Safari with tight pads.
-  if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
-    map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [8, 8], maxZoom: 11 }});
-  }} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
-    map.fitBounds(COUNTY_BOUNDS, {{ padding: [8, 8], maxZoom: 11 }});
-  }} else {{
-    map.fitBounds(group.getBounds().pad(0.08));
-  }}
-}});
+// Simple fit — same pattern as last-known-good 8de4907 (whenReady/maxZoom/setMaxBounds blanked the map).
+if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
+  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [12, 12] }});
+}} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
+  map.fitBounds(COUNTY_BOUNDS, {{ padding: [12, 12] }});
+}} else {{
+  map.fitBounds(group.getBounds().pad(0.08));
+}}
 
 // OSM + terrain + outline + barrows always on (no layer control).
 if (typeof initWiltshireCountyOutline === 'function') initWiltshireCountyOutline(map);
