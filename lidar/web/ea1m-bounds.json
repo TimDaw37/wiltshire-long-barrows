@@ -1,0 +1,31 @@
+{
+  "osgb": {
+    "e0": 408500.0,
+    "e1": 416500.0,
+    "n0": 139500.0,
+    "n1": 146500.0
+  },
+  "wgs84_leaflet": [
+    [
+      51.154693941268995,
+      -1.8798434829350867
+    ],
+    [
+      51.217463896467144,
+      -1.7651379926251796
+    ]
+  ],
+  "source": "EA LIDAR Composite DTM 2022 1m product via WCS (SCALEFACTOR\u21922 m mosaic), Open Government Licence",
+  "placeholder": false,
+  "cellsize_m": 4.0,
+  "source_cellsize_m": 2.0,
+  "z_range_m_od": [
+    61.07051086425781,
+    147.26553344726562
+  ],
+  "png_pixels": [
+    2000,
+    1750
+  ],
+  "png_mb": 2.861
+}
