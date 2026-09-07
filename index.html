@@ -19,21 +19,12 @@
   body {
     margin: 0; background: var(--bg); color: var(--ink);
     font: 15px/1.45 system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
   }
   a { color: var(--gold); }
   header { padding: 1.25rem 1.5rem .5rem; max-width: 1400px; margin: 0 auto; }
   header h1 { margin: 0 0 .35rem; font-size: 1.55rem; font-weight: 650; color: var(--gold); }
   header .sub { margin: 0; color: var(--muted); font-size: .92rem; }
-  header .lead { margin: .7rem 0 0; max-width: 70rem; color: var(--ink); }
-  .stats {
-    max-width: 1400px; margin: 0 auto; padding: .4rem 1.5rem .6rem;
-    display: flex; flex-wrap: wrap; gap: .5rem .9rem; font-size: .85rem; color: var(--muted);
-  }
-  .stats b { color: var(--ink); }
-  .legend {
-    max-width: 1400px; margin: 0 auto; padding: 0 1.5rem .6rem;
-    color: var(--muted); font-size: .82rem;
-  }
   .layout {
     display: flex; flex-direction: column; gap: 0;
     max-width: 1400px; margin: 0 auto; border-top: 1px solid var(--line);
@@ -46,28 +37,31 @@
     -webkit-transform: translateZ(0);
   }
   .detail {
-    width: 100%; margin: 0; padding: 1rem 1.25rem 1.15rem;
+    width: 100%; max-width: 100%; margin: 0; padding: 1rem 1.25rem 1.15rem;
     background: #18160f; border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
+    overflow-x: hidden; box-sizing: border-box;
   }
   .detail-inner {
-    display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
     gap: 1.1rem 1.5rem; align-items: start;
+    max-width: 100%; overflow-x: hidden; box-sizing: border-box;
   }
   .detail h2 { margin: 0 0 .35rem; color: var(--gold); font-size: 1.35rem; }
   .detail .meta { color: var(--muted); font-size: .88rem; }
   .detail .placeholder { color: var(--muted); font-size: .95rem; margin: .35rem 0; }
   .detail dl {
-    display: grid; grid-template-columns: 8rem 1fr; gap: .25rem .65rem;
+    display: grid; grid-template-columns: minmax(0, 8rem) minmax(0, 1fr); gap: .25rem .65rem;
     margin: .65rem 0 0; font-size: .9rem;
   }
   .detail dt { color: var(--muted); }
-  .detail dd { margin: 0; }
+  .detail dd { margin: 0; overflow-wrap: anywhere; }
   .detail .chip-figure {
-    margin: 0; justify-self: end; width: 100%; max-width: 420px;
+    margin: 0; justify-self: end; width: 100%; max-width: 100%;
+    overflow-x: hidden; box-sizing: border-box;
   }
   .detail .chip-figure img {
-    display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain;
+    display: block; width: 100%; max-width: 100%; height: auto; max-height: 420px; object-fit: contain;
     border-radius: 6px; border: 1px solid var(--line); background: #0d0c0a;
   }
   .detail .chip-figure figcaption {
@@ -117,8 +111,31 @@
     display: inline-block; width: .55rem; height: .55rem; border-radius: 50%;
     margin-right: .35rem; vertical-align: middle;
   }
+  details.about {
+    max-width: 1400px; margin: 0 auto; padding: .85rem 1.5rem 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  details.about > summary {
+    cursor: pointer; color: var(--gold); font-size: 1.05rem; font-weight: 650;
+    list-style: none; padding: .35rem 0;
+  }
+  details.about > summary::-webkit-details-marker { display: none; }
+  details.about > summary::before {
+    content: "▸ "; font-weight: 700;
+  }
+  details.about[open] > summary::before { content: "▾ "; }
+  details.about .lead { margin: .7rem 0 0; max-width: 70rem; color: var(--ink); }
+  details.about .stats {
+    margin: .75rem 0 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap: .5rem .9rem; font-size: .85rem; color: var(--muted);
+  }
+  details.about .stats b { color: var(--ink); }
+  details.about .legend {
+    margin: .65rem 0 0; padding: 0;
+    color: var(--muted); font-size: .82rem;
+  }
   .notes {
-    max-width: 1400px; margin: 0 auto; padding: 1.2rem 1.5rem 2rem;
+    max-width: none; margin: 0; padding: .6rem 0 0;
   }
   .notes h2 { color: var(--gold); font-size: 1.05rem; margin: 1.2rem 0 .4rem; }
   .notes p, .notes li { color: var(--ink); font-size: .9rem; }
@@ -143,20 +160,30 @@
     stroke: #e8e0d4;
   }
   @media (max-width: 900px) {
+    body, .layout { overflow-x: hidden; }
     #map {
       height: 48vh; min-height: 260px; max-height: none;
       width: 100%; overflow: hidden;
     }
-    .detail { padding: .85rem 1rem; }
-    .detail-inner { grid-template-columns: 1fr; }
+    .detail { padding: .85rem 1rem; max-width: 100%; overflow-x: hidden; }
+    .detail-inner {
+      grid-template-columns: 1fr;
+      max-width: 100%; overflow-x: hidden;
+    }
     .detail h2 { font-size: 1.15rem; }
-    .detail .chip-figure { justify-self: stretch; max-width: none; }
-    .detail .chip-figure img { max-height: 320px; }
+    .detail dl { grid-template-columns: minmax(0, 6.5rem) minmax(0, 1fr); }
+    .detail .chip-figure {
+      justify-self: stretch; max-width: 100%; overflow-x: hidden;
+    }
+    .detail .chip-figure img {
+      width: 100%; max-width: 100%; height: auto; max-height: none;
+    }
     .list {
       max-height: 42vh; grid-template-columns: 1fr;
       padding: 0 .75rem .75rem;
     }
     .filters, .chip-row, .gazetteer-head { padding-left: 1rem; padding-right: 1rem; }
+    details.about { padding: .75rem 1rem 1.25rem; }
   }
 </style>
 </head>
@@ -164,29 +191,7 @@
 <header>
   <h1>Wiltshire long barrows</h1>
   <p class="sub">Neolithic long mounds · HER gazetteer · NHLE footprints · one modern Cotswold–Severn</p>
-  <p class="lead">
-    Interactive gazetteer of Wiltshire Neolithic long barrows from open HER extracts and
-    Historic England scheduling polygons, plus Tim Daw’s modern All Cannings long barrow.
-    Terrain is a county-wide EA Composite DTM hillshade at ~20&nbsp;m; desktop zoom shows 1&nbsp;m chips.
-    Cotswold–Severn (stone-chambered) vs earthen is the main type split — peer-cited membership only.
-  </p>
 </header>
-
-<div class="stats" id="stats">
-  <span><b>129</b> barrows</span>
-  <span><b>98</b> HER certain · <b>31</b> possible</span>
-  <span><b>8</b> Cotswold–Severn · <b>121</b> earthen/other</span>
-  <span><b>64</b> NHLE-matched</span>
-  <span><b>64</b> with long-axis azimuth</span>
-  <span>Avebury / Pewsey: 27, North Wiltshire chalk: 17, South Wiltshire / Chase fringe: 8, Stonehenge / Salisbury Plain: 50, Wiltshire chalk: 27</span>
-</div>
-<p class="legend">
-  Gold = HER certain · grey = possible.
-  Circle markers: gold = HER certain, grey = possible, teal = modern.
-  Rim arrows = undirected long-axis from NHLE footprint (where available).
-  Gold outline = ceremonial Wiltshire (UA + Swindon).
-  <br><b>LiDAR on this map:</b> county backdrop = EA Composite DTM at about <b>~20&nbsp;m</b> (all devices — landscape context only). Per-barrow <b>1&nbsp;m</b> chips appear on the map only on a <b>desktop</b> when zoomed in past ~14; the detail strip can also show that 1&nbsp;m chip when you select a barrow (including on a phone).
-</p>
 
 <div class="layout">
   <div id="map"></div>
@@ -208,53 +213,77 @@
   </div>
 </div>
 
-<section class="notes">
-  <h2>Long axis</h2>
-  <p>
-    Where an NHLE footprint is matched, the map shows an <b>undirected</b> long-axis
-    (0–180° from north) from a simple polygon PCA — a first pass on the scheduling outline,
-    not a claimed solar alignment or façade direction.
+<details class="about" id="about">
+  <summary>About this map</summary>
+  <p class="lead">
+    Interactive gazetteer of Wiltshire Neolithic long barrows from open HER extracts and
+    Historic England scheduling polygons, plus Tim Daw’s modern All Cannings long barrow.
+    Terrain is a county-wide EA Composite DTM hillshade at ~20&nbsp;m; desktop zoom shows 1&nbsp;m chips.
+    Cotswold–Severn (stone-chambered) vs earthen is the main type split — peer-cited membership only.
   </p>
-
-  <h2>Cotswold–Severn vs earthen</h2>
-  <p>
-    <b>Cotswold–Severn</b> = stone-chambered; <b>earthen</b> = Wessex chalk mounds (timber chambers if any).
-    Neolithic Cotswold–Severn membership is peer-cited only (Darvill / Corcoran / Crawford / excavations / HE).
-    <b>All Cannings</b> is included as a modern (2014–) stone-chambered long barrow in Cotswold–Severn form —
-    not a Neolithic HER site.
+  <div class="stats" id="stats">
+    <span><b>129</b> barrows</span>
+    <span><b>98</b> HER certain · <b>31</b> possible</span>
+    <span><b>8</b> Cotswold–Severn · <b>121</b> earthen/other</span>
+    <span><b>64</b> NHLE-matched</span>
+    <span><b>64</b> with long-axis azimuth</span>
+    <span>Avebury / Pewsey: 27, North Wiltshire chalk: 17, South Wiltshire / Chase fringe: 8, Stonehenge / Salisbury Plain: 50, Wiltshire chalk: 27</span>
+  </div>
+  <p class="legend">
+    Gold = HER certain · grey = possible.
+    Circle markers: gold = HER certain, grey = possible, teal = modern.
+    Rim arrows = undirected long-axis from NHLE footprint (where available).
+    Gold outline = ceremonial Wiltshire (UA + Swindon).
+    <br><b>LiDAR on this map:</b> county backdrop = EA Composite DTM at about <b>~20&nbsp;m</b> (all devices — landscape context only). Per-barrow <b>1&nbsp;m</b> chips appear on the map only on a <b>desktop</b> when zoomed in past ~14; the detail strip can also show that 1&nbsp;m chip when you select a barrow (including on a phone).
   </p>
+  <section class="notes">
+    <h2>Long axis</h2>
+    <p>
+      Where an NHLE footprint is matched, the map shows an <b>undirected</b> long-axis
+      (0–180° from north) from a simple polygon PCA — a first pass on the scheduling outline,
+      not a claimed solar alignment or façade direction.
+    </p>
 
-  <h2>Sources (v1 seed)</h2>
-  <ul>
-    <li>Wiltshire HER certain/possible points — Zenodo <a href="https://doi.org/10.5281/zenodo.11005373">10.5281/zenodo.11005373</a> (Wheatley recreation; underlying Wiltshire HER).</li>
-    <li>Named Avebury / Stonehenge HER list — Kutty 2024 Zenodo <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a> (compiled from HER via Heritage Gateway).</li>
-    <li>Historic England NHLE Scheduled Monuments (OGL) — footprint + List Entry via ArcGIS FeatureServer.</li>
-    <li>Cotswold–Severn typology: Corcoran 1969; Darvill 2004 <i>Long Barrows of the Cotswolds</i>; Crawford 1925; site reports (Piggott &amp; Atkinson; Whittle; Thurnam).</li>
-    <li>Catalogue literature: Ashbee; Field 2006; Kinnes 1992; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
-    <li>EA LiDAR Composite DTM — OGL; county backdrop ~20 m (all devices); per-barrow 1 m hillshade chips (~380 m) on desktop zoom ≥14 and in the detail strip.</li>
-  </ul>
+    <h2>Cotswold–Severn vs earthen</h2>
+    <p>
+      <b>Cotswold–Severn</b> = stone-chambered; <b>earthen</b> = Wessex chalk mounds (timber chambers if any).
+      Neolithic Cotswold–Severn membership is peer-cited only (Darvill / Corcoran / Crawford / excavations / HE).
+      <b>All Cannings</b> is included as a modern (2014–) stone-chambered long barrow in Cotswold–Severn form —
+      not a Neolithic HER site.
+    </p>
 
-  <h2>Honesty gaps</h2>
-  <ul>
-    <li>Many HER rows lack published names; display falls back to HER / parish number.</li>
-    <li>Orientation not in HER export — derived only where NHLE polygon matched.</li>
-    <li>Length/width from scheduling polygons are approximate (often oversize vs mound).</li>
-    <li>Not a complete county inventory of every ploughed / cropmark candidate.</li>
-    <li>Cotswold–Severn membership is curated from peer sources; fringe / dubious chamber claims stay earthen unless cited.</li>
-  </ul>
+    <h2>Sources (v1 seed)</h2>
+    <ul>
+      <li>Wiltshire HER certain/possible points — Zenodo <a href="https://doi.org/10.5281/zenodo.11005373">10.5281/zenodo.11005373</a> (Wheatley recreation; underlying Wiltshire HER).</li>
+      <li>Named Avebury / Stonehenge HER list — Kutty 2024 Zenodo <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a> (compiled from HER via Heritage Gateway).</li>
+      <li>Historic England NHLE Scheduled Monuments (OGL) — footprint + List Entry via ArcGIS FeatureServer.</li>
+      <li>Cotswold–Severn typology: Corcoran 1969; Darvill 2004 <i>Long Barrows of the Cotswolds</i>; Crawford 1925; site reports (Piggott &amp; Atkinson; Whittle; Thurnam).</li>
+      <li>Catalogue literature: Ashbee; Field 2006; Kinnes 1992; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
+      <li>EA LiDAR Composite DTM — OGL; county backdrop ~20 m (all devices); per-barrow 1 m hillshade chips (~380 m) on desktop zoom ≥14 and in the detail strip.</li>
+    </ul>
 
-  <h2>Licence / sources</h2>
-  <p>
-    Compilation © Tim Daw / <a href="https://www.sarsen.org/">sarsen.org</a> ·
-    <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-    NHLE © Historic England / OGL.
-    EA LiDAR © Environment Agency / OGL.
-    Ceremonial county boundary © Office for National Statistics / OGL.
-    Zenodo Wheatley recreation <a href="https://doi.org/10.5281/zenodo.11005373">10.5281/zenodo.11005373</a> CC BY 4.0 (underlying Wiltshire HER).
-    Zenodo Kutty 2024 <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a> CC BY 4.0 (compiled from HER via Heritage Gateway).
-    Research gazetteer; not official HER; no land access implied.
-  </p>
-</section>
+    <h2>Honesty gaps</h2>
+    <ul>
+      <li>Many HER rows lack published names; display falls back to HER / parish number.</li>
+      <li>Orientation not in HER export — derived only where NHLE polygon matched.</li>
+      <li>Length/width from scheduling polygons are approximate (often oversize vs mound).</li>
+      <li>Not a complete county inventory of every ploughed / cropmark candidate.</li>
+      <li>Cotswold–Severn membership is curated from peer sources; fringe / dubious chamber claims stay earthen unless cited.</li>
+    </ul>
+
+    <h2>Licence / sources</h2>
+    <p>
+      Compilation © Tim Daw / <a href="https://www.sarsen.org/">sarsen.org</a> ·
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+      NHLE © Historic England / OGL.
+      EA LiDAR © Environment Agency / OGL.
+      Ceremonial county boundary © Office for National Statistics / OGL.
+      Zenodo Wheatley recreation <a href="https://doi.org/10.5281/zenodo.11005373">10.5281/zenodo.11005373</a> CC BY 4.0 (underlying Wiltshire HER).
+      Zenodo Kutty 2024 <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a> CC BY 4.0 (compiled from HER via Heritage Gateway).
+      Research gazetteer; not official HER; no land access implied.
+    </p>
+  </section>
+</details>
 
 <footer>
   <p>© Tim Daw / sarsen.org · CC BY-SA 4.0 · scientific honesty over folklore</p>
@@ -526,6 +555,11 @@ const azChips = [];
 });
 document.getElementById('q').addEventListener('input', renderList);
 renderList();
+// About: open by default on desktop; stay collapsed on phone so the map isn't buried.
+(function () {
+  const about = document.getElementById('about');
+  if (about && window.matchMedia('(min-width: 901px)').matches) about.open = true;
+})();
 </script>
 </body>
 </html>
