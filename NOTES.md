@@ -79,9 +79,11 @@ South Street / Longstones are excavated **earthen** monuments.
 - Cranborne Chase fringe sites may sit on county borders
 - No git push from box
 
-## LiDAR status (this run)
+## LiDAR status (2026-09-07 evening)
 
-- **County terrain:** EA Composite DTM SCALEFACTOR 0.05 → 20 m, E376000–432000 N117000–189000.
-  Web PNG `lidar/web/county-hillshade.png` (~4.8 MB) + `county-bounds.json`.
-- **EA detail (Stonehenge):** prior 2 m mosaic → `lidar/web/ea1m-hillshade.png` (~2.9 MB).
-- OS Terrain 50 not used (no county ASC download pattern in A303/Fremington; EA WCS preferred).
+- EA WCS **full-height** easting strips produced large northern rectangular nodata holes
+  (same E window with northern-only N returned 0% nodata — WCS truncation).
+- Fixed by **2D tiling** (E×N tiles, 14×36 km, 3 km overlap) → merge nodata **0%** before fill.
+- Residual fill-all kept as safety; county alpha mask on PNG; mobile JPEG `?v=4`.
+- Visual gate: no axis-aligned dark (L<20) blocks ≥40×80 px inside county footprint.
+

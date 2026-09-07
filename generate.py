@@ -12,10 +12,12 @@ DATA = ROOT / "data"
 STATUS_COLOUR = {
     "certain": "#c9a227",
     "possible": "#7a8a9a",
+    "modern": "#5ec8c0",
 }
 STATUS_LABEL = {
     "certain": "HER certain",
     "possible": "HER possible",
+    "modern": "Modern (not Neolithic HER)",
 }
 
 # Flat-horizon sunrise azimuths ≈51.2°N (true solar; no refraction / altitude)
@@ -414,7 +416,7 @@ if (!map.getPane('terrain')) {{
   map.getPane('terrain').style.pointerEvents = 'none';
 }}
 if (HAS_COUNTY) {{
-  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=3', COUNTY_BOUNDS, {{
+  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=4', COUNTY_BOUNDS, {{
     opacity: 0.72,
     interactive: false,
     pane: 'terrain',
@@ -505,13 +507,24 @@ ROWS.forEach(h => {{
 }});
 
 const group = L.featureGroup(Object.values(markers));
-if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
-  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [2, 2] }});
-}} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
-  map.fitBounds(COUNTY_BOUNDS, {{ padding: [2, 2] }});
-}} else {{
-  map.fitBounds(group.getBounds().pad(0.08));
-}}
+
+// Fit AFTER layout so mobile gets a correctly sized map (invalidateSize first).
+// Use ceremonial outline bounds only — not the larger LiDAR COUNTY_BOUNDS rect.
+map.whenReady(function() {{
+  map.invalidateSize();
+  if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
+    map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [8, 8], maxZoom: 11 }});
+    try {{
+      var pad = 0.08;
+      var b = L.latLngBounds(COUNTY_OUTLINE_BOUNDS);
+      map.setMaxBounds(b.pad(pad));
+    }} catch (e) {{}}
+  }} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
+    map.fitBounds(COUNTY_BOUNDS, {{ padding: [8, 8], maxZoom: 11 }});
+  }} else {{
+    map.fitBounds(group.getBounds().pad(0.08));
+  }}
+}});
 
 // OSM + terrain + outline + barrows always on (no layer control).
 if (typeof initWiltshireCountyOutline === 'function') initWiltshireCountyOutline(map);
@@ -593,12 +606,13 @@ function select(id, pan) {{
     + '<div class="detail-copy">'
     + '<h2>' + esc(h.display_name || h.id) + '</h2>'
     + '<p class="meta">' + esc(STATUS_LABEL[h.status] || h.status)
-    + (h.scheduled ? ' · scheduled monument' : ' · not matched to NHLE in v1')
+    + (h.status === 'modern' ? ' · contemporary (not scheduled Neolithic)' : (h.scheduled ? ' · scheduled monument' : ' · not matched to NHLE in v1'))
     + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</p>'
     + '<dl>'
     + '<dt>Barrow type</dt><dd>' + (h.barrow_type === 'cotswold_severn'
       ? 'Cotswold–Severn (stone-chambered)'
-      : (h.barrow_type === 'uncertain' ? 'Uncertain' : 'Earthen (Wessex tradition default)')) + '</dd>'
+      : (h.barrow_type === 'modern' ? 'Modern / experimental long barrow (earthen mound)'
+      : (h.barrow_type === 'uncertain' ? 'Uncertain' : 'Earthen (Wessex tradition default)'))) + '</dd>'
     + '<dt>NGR</dt><dd>' + esc(h.ngr || '—') + '</dd>'
     + '<dt>OSGB</dt><dd>E' + h.easting + ' N' + h.northing + '</dd>'
     + '<dt>Long axis</dt><dd>' + (h.azimuth_deg != null ? (h.azimuth_deg + '° from N (undirected)') : '—')
@@ -620,11 +634,11 @@ function select(id, pan) {{
 
 const chips = document.getElementById('chips');
 const statusChips = [];
-[['all','All'],['certain','Certain'],['possible','Possible']].forEach(([k,lab]) => {{
+[['all','All'],['certain','Certain'],['possible','Possible'],['modern','Modern']].forEach(([k,lab]) => {{
   const b = document.createElement('button');
   b.className = 'chip' + (k === 'all' ? ' on' : '');
   b.textContent = lab;
-  b.onclick = () => {{ filterStatus = k; statusChips.forEach((c,i) => c.classList.toggle('on', ['all','certain','possible'][i]===k)); renderList(); }};
+  b.onclick = () => {{ filterStatus = k; statusChips.forEach((c,i) => c.classList.toggle('on', ['all','certain','possible','modern'][i]===k)); renderList(); }};
   statusChips.push(b);
   chips.appendChild(b);
 }});

@@ -3827,5 +3827,35 @@
     "cluster": "North Wiltshire chalk",
     "barrow_type": "earthen",
     "display_name": "ST98NW635"
+  },
+  {
+    "id": "MODERN_ALL_CANNINGS",
+    "name": "All Cannings long barrow",
+    "easting": 407280.0,
+    "northing": 162740.0,
+    "lat": 51.36368,
+    "lon": -1.896822,
+    "ngr": "SU07286274",
+    "length_m": null,
+    "width_m": null,
+    "azimuth_deg": null,
+    "azimuth_method": null,
+    "front_end": null,
+    "parish": "All Cannings",
+    "her_ref": null,
+    "her_alt_ref": null,
+    "he_list_entry": null,
+    "he_url": null,
+    "status": "modern",
+    "scheduled": false,
+    "notes": "Modern (2014\u2013) long barrow built by Tim Daw at All Cannings; first contemporary/novolithic long barrow. NOT a Neolithic HER entry \u2014 included for context on the map. NGR SU 0728 6274 (Geograph, ~10 m). WGS84 from OSGB transform. See https://www.thelongbarrow.com/",
+    "source_urls": [
+      "https://www.thelongbarrow.com/",
+      "https://en.wikipedia.org/wiki/All_Cannings",
+      "https://www.geograph.org.uk/"
+    ],
+    "cluster": "Avebury / Pewsey",
+    "barrow_type": "modern",
+    "display_name": "All Cannings long barrow (modern)"
   }
 ]

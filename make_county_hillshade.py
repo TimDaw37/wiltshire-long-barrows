@@ -57,6 +57,39 @@ def load_resampled(tif: Path, cell: float):
     return data, transform, bounds, src_res, cell
 
 
+
+def county_valid_mask(height: int, width: int, transform) -> np.ndarray | None:
+    """Rasterize ceremonial Wiltshire (WGS84 geojson) to DTM grid; True = inside."""
+    gj_path = ROOT / "data" / "wiltshire-county.geojson"
+    if not gj_path.is_file():
+        return None
+    try:
+        from rasterio import features
+        from shapely.geometry import shape, mapping
+        from shapely.ops import transform as shp_transform
+        from pyproj import Transformer
+    except ImportError:
+        return None
+    gj = json.loads(gj_path.read_text(encoding="utf-8"))
+    to_osgb = Transformer.from_crs(4326, 27700, always_xy=True).transform
+    geoms = []
+    for f in gj.get("features") or []:
+        g = f.get("geometry")
+        if not g:
+            continue
+        geoms.append(mapping(shp_transform(to_osgb, shape(g))))
+    if not geoms:
+        return None
+    mask = features.rasterize(
+        [(g, 1) for g in geoms],
+        out_shape=(height, width),
+        transform=transform,
+        fill=0,
+        dtype="uint8",
+    )
+    return mask.astype(bool)
+
+
 def hillshade_rgba(grid: np.ndarray, cell: float):
     dy, dx = np.gradient(grid, cell, cell)
     azimuth = np.radians(315.0)
@@ -90,6 +123,11 @@ def main() -> None:
         f"z {np.nanmin(grid):.1f}–{np.nanmax(grid):.1f}"
     )
     rgba, zmin, zmax = hillshade_rgba(grid, cell)
+    cmask = county_valid_mask(grid.shape[0], grid.shape[1], transform)
+    if cmask is not None:
+        # Alpha only outside ceremonial county envelope (filled DTM may cover bbox)
+        rgba[~cmask, 3] = 0
+        print(f"county mask: inside {100.0 * cmask.mean():.1f}% of grid")
     img = Image.fromarray((rgba * 255).astype(np.uint8), "RGBA")
     png = OUT / "county-hillshade.png"
     img.save(png, optimize=True)

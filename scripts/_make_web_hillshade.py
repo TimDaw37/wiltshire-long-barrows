@@ -17,7 +17,7 @@ w, h = im.size
 scale = min(1.0, max_dim / max(w, h))
 nw, nh = int(round(w * scale)), int(round(h * scale))
 im2 = im.resize((nw, nh), Image.Resampling.LANCZOS)
-bg = Image.new("RGB", im2.size, (42, 58, 48))  # mid terrain; avoid black seam paint
+bg = Image.new("RGB", im2.size, (13, 12, 10))  # match county outside-mask; alpha→dark not olive holes
 bg.paste(im2, mask=im2.split()[3] if im2.mode == "RGBA" else None)
 out_jpg = WEB / "county-hillshade.jpg"
 bg.save(out_jpg, "JPEG", quality=78, optimize=True, progressive=True)
