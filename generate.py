@@ -102,7 +102,7 @@ def html_page(
     county_asset_json = json.dumps(county_asset)
     cluster_bits = ", ".join(f"{k}: {v}" for k, v in sorted(clusters.items()))
     if has_county:
-        lidar_legend = "County terrain hillshade always on (EA Composite DTM; mobile JPEG). Desktop ≥ zoom 14: 1 m chips."
+        lidar_legend = ("On phones/tablets the map shows only the county-wide EA backdrop (~20 m DTM hillshade) — not 1 m resolution. On a desktop (wide screen), zoom in past ~14 to see 1 m EA hillshade chips on each barrow; the detail strip below the map also shows that chip when a barrow is selected.")
     else:
         lidar_legend = (
             "LiDAR hillshade: placeholder — run download_ea_county_dtm.py / "
@@ -280,7 +280,7 @@ def html_page(
     extracts and Historic England scheduling polygons. Orientation is treated carefully:
     <b>long-axis azimuth</b> (undirected, degrees from north) is derived from NHLE footprints
     where matched — <b>not</b> claimed as a measured façade → sunrise alignment.
-    County-wide terrain hillshade from EA Composite DTM (coarse; mobile JPEG). Desktop ≥z14: 1 m EA chips. Cotswold–Severn
+    Terrain on the map is a county-wide EA Composite DTM hillshade at ~20 m (fine enough for landscape, not mound detail). True 1 m LiDAR chips appear only on desktop when zoomed in (and in the detail strip). Cotswold–Severn
     (stone-chambered) vs earthen long barrows are filterable — membership cited, not invented.
   </p>
 </header>
@@ -308,7 +308,7 @@ def html_page(
       <div class="detail-copy">
         <p class="placeholder">Select a long barrow on the map or in the gazetteer to see its description and 1&nbsp;m LiDAR hillshade.</p>
       </div>
-      <div class="chip-missing">1&nbsp;m EA LiDAR chip appears here when a barrow is selected (desktop &amp; mobile).</div>
+      <div class="chip-missing">1&nbsp;m EA LiDAR chip (~380&nbsp;m square) appears here when a barrow is selected. On phones the map itself stays on the ~20&nbsp;m county backdrop only.</div>
     </div>
   </section>
   <div class="gazetteer">
@@ -361,7 +361,7 @@ def html_page(
     <li>Historic England NHLE Scheduled Monuments (OGL) — footprint + List Entry via ArcGIS FeatureServer.</li>
     <li>Cotswold–Severn typology: Corcoran 1969; Darvill 2004 <i>Long Barrows of the Cotswolds</i>; Crawford 1925; site reports (Piggott &amp; Atkinson; Whittle; Thurnam).</li>
     <li>Catalogue / orientation literature: Ashbee; Field 2006; Kinnes 1992; Ruggles 1997/1999; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
-    <li>EA LiDAR Composite DTM — OGL; county coarse hillshade (~20 m WCS); desktop 1 m hillshade chips (~380 m).</li>
+    <li>EA LiDAR Composite DTM — OGL; county backdrop ~20 m (all devices); per-barrow 1 m hillshade chips (~380 m) on desktop zoom ≥14 and in the detail strip.</li>
   </ul>
 
   <h2>Honesty gaps</h2>
