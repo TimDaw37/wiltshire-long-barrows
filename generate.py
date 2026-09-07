@@ -100,7 +100,7 @@ def html_page(
     county_asset_json = json.dumps(county_asset)
     cluster_bits = ", ".join(f"{k}: {v}" for k, v in sorted(clusters.items()))
     if has_county:
-        lidar_legend = "County terrain hillshade always on (EA Composite DTM; mobile JPEG)."
+        lidar_legend = "County terrain hillshade always on (EA Composite DTM; mobile JPEG). Desktop ≥ zoom 14: 1 m chips."
     else:
         lidar_legend = (
             "LiDAR hillshade: placeholder — run download_ea_county_dtm.py / "
@@ -195,6 +195,13 @@ def html_page(
   }}
   .detail dt {{ color: var(--muted); }}
   .detail dd {{ margin: 0; }}
+  .detail .chip-preview img {{
+    display: block; max-width: 220px; width: 100%; height: auto;
+    border-radius: 4px; border: 1px solid var(--line); margin-top: .15rem;
+  }}
+  @media (max-width: 900px) {{
+    .detail .chip-preview {{ display: none; }}
+  }}
   .notes {{
     max-width: 1400px; margin: 0 auto; padding: 1.2rem 1.5rem 2rem;
   }}
@@ -243,7 +250,7 @@ def html_page(
     extracts and Historic England scheduling polygons. Orientation is treated carefully:
     <b>long-axis azimuth</b> (undirected, degrees from north) is derived from NHLE footprints
     where matched — <b>not</b> claimed as a measured façade → sunrise alignment.
-    County-wide terrain hillshade from EA Composite DTM (coarse; mobile JPEG). Cotswold–Severn
+    County-wide terrain hillshade from EA Composite DTM (coarse; mobile JPEG). Desktop ≥z14: 1 m EA chips. Cotswold–Severn
     (stone-chambered) vs earthen long barrows are filterable — membership cited, not invented.
   </p>
 </header>
@@ -318,7 +325,7 @@ def html_page(
     <li>Historic England NHLE Scheduled Monuments (OGL) — footprint + List Entry via ArcGIS FeatureServer.</li>
     <li>Cotswold–Severn typology: Corcoran 1969; Darvill 2004 <i>Long Barrows of the Cotswolds</i>; Crawford 1925; site reports (Piggott &amp; Atkinson; Whittle; Thurnam).</li>
     <li>Catalogue / orientation literature: Ashbee; Field 2006; Kinnes 1992; Ruggles 1997/1999; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
-    <li>EA LiDAR Composite DTM — OGL; county coarse hillshade (~20 m WCS).</li>
+    <li>EA LiDAR Composite DTM — OGL; county coarse hillshade (~20 m WCS); desktop 1 m hillshade chips (~380 m).</li>
   </ul>
 
   <h2>Honesty gaps</h2>
@@ -349,6 +356,7 @@ def html_page(
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="county-outline.js"></script>
+<script src="barrow-chips.js"></script>
 <script>
 const ROWS = {holes_json};
 const COLOUR = {colour_json};
@@ -464,15 +472,18 @@ ROWS.forEach(h => {{
 
 const group = L.featureGroup(Object.values(markers));
 if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
-  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [4, 4] }});
+  map.fitBounds(COUNTY_OUTLINE_BOUNDS, {{ padding: [16, 16] }});
 }} else if (HAS_COUNTY && COUNTY_BOUNDS) {{
-  map.fitBounds(COUNTY_BOUNDS, {{ padding: [4, 4] }});
+  map.fitBounds(COUNTY_BOUNDS, {{ padding: [12, 12] }});
 }} else {{
   map.fitBounds(group.getBounds().pad(0.08));
 }}
 
 // OSM + terrain + outline + barrows always on (no layer control).
 if (typeof initWiltshireCountyOutline === 'function') initWiltshireCountyOutline(map);
+const barrowChips = (typeof initBarrowLidarChips === 'function')
+  ? initBarrowLidarChips(map, {{ minZoom: 14 }})
+  : null;
 
 let filterStatus = 'all';
 let filterAz = 'all';
@@ -553,6 +564,13 @@ function select(id, pan) {{
     + '<dt>Front / façade</dt><dd>' + esc(h.front_end || 'unknown (not asserted in v1)') + '</dd>'
     + '<dt>Length × width</dt><dd>' + (h.length_m != null ? (h.length_m + ' × ' + (h.width_m ?? '—') + ' m (approx.)') : '—') + '</dd>'
     + '<dt>Refs</dt><dd>' + (links.join(' · ') || '—') + '</dd>'
+    + (function() {{
+        const cp = barrowChips && barrowChips.getChipPath ? barrowChips.getChipPath(id) : null;
+        return cp
+          ? ('<dt>1 m LiDAR</dt><dd class="chip-preview"><img src="' + esc(cp)
+            + '" alt="EA 1 m DTM hillshade (~380 m)" loading="lazy"/></dd>')
+          : '';
+      }})()
     + '<dt>Notes</dt><dd>' + esc(h.notes || '') + '</dd>'
     + '</dl>';
   try {{
@@ -607,7 +625,7 @@ def main() -> None:
     county_bounds = load_bounds("county")
     county_gj = load_county_geojson()
     outline_bounds = geojson_leaflet_bounds(county_gj) if county_gj else None
-    # ea1m detail intentionally unused on the map (optional offline scripts remain)
+    # ea1m cluster mosaic unused; per-barrow 1 m chips via barrow-chips.js + lidar/chips/web/
     out = ROOT / "index.html"
     out.write_text(html_page(rows, county_bounds, outline_bounds), encoding="utf-8")
     n_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)

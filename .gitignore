@@ -22,3 +22,8 @@ lidar/ea1m/strips/
 data/*.zip
 data/nhle_long_barrows_raw.geojson
 data/osm_long_barrows.json
+lidar/county/strips/
+
+# per-barrow 1 m DTM chips (keep web JPEGs + index.json only)
+lidar/chips/raw/
+lidar/chips/build.log
