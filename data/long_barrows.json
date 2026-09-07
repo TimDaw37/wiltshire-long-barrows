@@ -3848,14 +3848,14 @@
     "he_url": null,
     "status": "modern",
     "scheduled": false,
-    "notes": "Modern (2014\u2013) long barrow built by Tim Daw at All Cannings; first contemporary/novolithic long barrow. NOT a Neolithic HER entry \u2014 included for context on the map. NGR SU 0728 6274 (Geograph, ~10 m). WGS84 from OSGB transform. See https://www.thelongbarrow.com/",
+    "notes": "Modern (2014\u2013) stone-chambered long barrow built by Tim Daw at All Cannings (Cotswold\u2013Severn form / novolithic); NOT a Neolithic HER entry \u2014 included for context. NGR SU 0728 6274 (Geograph, ~10 m). See https://www.thelongbarrow.com/",
     "source_urls": [
       "https://www.thelongbarrow.com/",
       "https://en.wikipedia.org/wiki/All_Cannings",
       "https://www.geograph.org.uk/"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "modern",
+    "barrow_type": "cotswold_severn",
     "display_name": "All Cannings long barrow (modern)"
   }
 ]

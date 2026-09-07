@@ -279,14 +279,12 @@ def html_page(
 <body>
 <header>
   <h1>Wiltshire long barrows</h1>
-  <p class="sub">Neolithic long mounds · HER gazetteer · NHLE footprints · orientation first pass</p>
+  <p class="sub">Neolithic long mounds · HER gazetteer · NHLE footprints · one modern Cotswold–Severn</p>
   <p class="lead">
-    Interactive gazetteer of Wiltshire Neolithic long barrows seeded from open Wiltshire HER
-    extracts and Historic England scheduling polygons. Orientation is treated carefully:
-    <b>long-axis azimuth</b> (undirected, degrees from north) is derived from NHLE footprints
-    where matched — <b>not</b> claimed as a measured façade → sunrise alignment.
-    Terrain on the map is a county-wide EA Composite DTM hillshade at ~20 m (fine enough for landscape, not mound detail). True 1 m LiDAR chips appear only on desktop when zoomed in (and in the detail strip). Cotswold–Severn
-    (stone-chambered) vs earthen long barrows are filterable — membership cited, not invented.
+    Interactive gazetteer of Wiltshire Neolithic long barrows from open HER extracts and
+    Historic England scheduling polygons, plus Tim Daw’s modern All Cannings long barrow.
+    Terrain is a county-wide EA Composite DTM hillshade at ~20&nbsp;m; desktop zoom shows 1&nbsp;m chips.
+    Cotswold–Severn (stone-chambered) vs earthen is the main type split — peer-cited membership only.
   </p>
 </header>
 
@@ -300,8 +298,8 @@ def html_page(
 </div>
 <p class="legend">
   Gold = HER certain · grey = possible.
-  Circle markers with rim arrows show undirected long-axis from NHLE polygon PCA (where available);
-  plain circles have no derived azimuth.
+  Circle markers: gold = HER certain, grey = possible, teal = modern.
+  Rim arrows = undirected long-axis from NHLE footprint (where available).
   Gold outline = ceremonial Wiltshire (UA + Swindon).
   {lidar_legend}
 </p>
@@ -327,36 +325,19 @@ def html_page(
 </div>
 
 <section class="notes">
-  <h2>Orientation — what “faces the rising sun?” means</h2>
+  <h2>Long axis</h2>
   <p>
-    British earthen long barrows are often described as “east–west”, with ritual focus at the
-    higher / wider / forecourt end (commonly east — Field 2006; Ashbee; Kinnes). That is
-    <b>not</b> the same as a precise solstitial sightline. For Wiltshire latitude ≈51.2°N,
-    flat-horizon true-solar sunrise azimuths are approximately:
-  </p>
-  <ul>
-    <li>midsummer sunrise ≈ <b>{SUNRISE_AZ['midsummer']:.0f}°</b> from north</li>
-    <li>equinox sunrise ≈ <b>{SUNRISE_AZ['equinox']:.0f}°</b></li>
-    <li>midwinter sunrise ≈ <b>{SUNRISE_AZ['midwinter']:.0f}°</b></li>
-  </ul>
-  <p>
-    v1 stores an <b>undirected</b> long-axis azimuth (0–180°) from NHLE scheduling polygons
-    (<code>azimuth_method=nhle_polygon_pca</code>). The scheduling outline includes ditches and
-    margins — it is a first pass, not a crest survey. <b>Front / façade end is null</b> until
-    a peer source or LiDAR-derived morphology justifies it. Ruggles (1999) and Roberts et al.
-    (Internet Archaeology 47) find <b>no clear common astronomical alignment</b> among Salisbury
-    Plain / Stonehenge WHS long barrows; local topography often dominates. Burl’s lunar-arc
-    reading of Salisbury Plain orientations remains contested (see Ruggles 1997 PBA).
+    Where an NHLE footprint is matched, the map shows an <b>undirected</b> long-axis
+    (0–180° from north) from a simple polygon PCA — a first pass on the scheduling outline,
+    not a claimed solar alignment or façade direction.
   </p>
 
   <h2>Cotswold–Severn vs earthen</h2>
   <p>
-    The important Wiltshire split is <b>Cotswold–Severn</b> (stone-chambered; classic
-    “Cotteswold” tradition) versus <b>earthen</b> long barrows (Wessex chalk mounds,
-    usually timber chambers if any). About seven Cotswold–Severn sites fall in the
-    county; v1 marks only peer-attested membership (Darvill 2004; Corcoran 1969;
-    Crawford 1925; site excavations / HE chamber notes) — see <code>NOTES.md</code>.
-    All other gazetteer rows default to <code>earthen</code>.
+    <b>Cotswold–Severn</b> = stone-chambered; <b>earthen</b> = Wessex chalk mounds (timber chambers if any).
+    Neolithic Cotswold–Severn membership is peer-cited only (Darvill / Corcoran / Crawford / excavations / HE).
+    <b>All Cannings</b> is included as a modern (2014–) stone-chambered long barrow in Cotswold–Severn form —
+    not a Neolithic HER site.
   </p>
 
   <h2>Sources (v1 seed)</h2>
@@ -365,7 +346,7 @@ def html_page(
     <li>Named Avebury / Stonehenge HER list — Kutty 2024 Zenodo <a href="https://doi.org/10.5281/zenodo.10989406">10.5281/zenodo.10989406</a> (compiled from HER via Heritage Gateway).</li>
     <li>Historic England NHLE Scheduled Monuments (OGL) — footprint + List Entry via ArcGIS FeatureServer.</li>
     <li>Cotswold–Severn typology: Corcoran 1969; Darvill 2004 <i>Long Barrows of the Cotswolds</i>; Crawford 1925; site reports (Piggott &amp; Atkinson; Whittle; Thurnam).</li>
-    <li>Catalogue / orientation literature: Ashbee; Field 2006; Kinnes 1992; Ruggles 1997/1999; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
+    <li>Catalogue literature: Ashbee; Field 2006; Kinnes 1992; Roberts et al. IA 47; McOmish et al. 2002 (SPTA).</li>
     <li>EA LiDAR Composite DTM — OGL; county backdrop ~20 m (all devices); per-barrow 1 m hillshade chips (~380 m) on desktop zoom ≥14 and in the detail strip.</li>
   </ul>
 
