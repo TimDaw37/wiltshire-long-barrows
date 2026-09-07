@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Download county-wide EA LIDAR Composite DTM via WCS (heavily downsampled).
 
-Default OSGB bbox covers all gazetteer barrows (E378k–430k N119k–187k) + margin.
+Default OSGB bbox covers ceremonial Wiltshire outline (geojson) + ~2 km margin.
 SCALEFACTOR 0.05 → ~20 m cells so a full-county mosaic stays manageable.
 Override with WILTS_COUNTY_BBOX=e0,e1,n0,n1.
 """
@@ -26,8 +26,8 @@ WCS = "https://environment.data.gov.uk/spatialdata/lidar-composite-digital-terra
 COVERAGE = "13787b9a-26a4-4775-8523-806d13af58fc__Lidar_Composite_Elevation_DTM_1m"
 UA = {"User-Agent": "wiltshire-long-barrows/1.0 (sarsen.org research)"}
 
-# Gazetteer envelope + ~2 km margin (task: E378000–430000 N119000–187000 + margin)
-DEFAULT_BBOX = (376000.0, 432000.0, 117000.0, 189000.0)
+# Ceremonial Wiltshire outline OSGB ~E374.5–435.9k N116.2–200.5k + ~2 km margin
+DEFAULT_BBOX = (372000.0, 438000.0, 114000.0, 203000.0)
 SCALEFACTOR = 0.05  # 1 m × 0.05 → ~20 m
 STRIP_W_M = 14000.0  # wide strips OK at 20 m
 

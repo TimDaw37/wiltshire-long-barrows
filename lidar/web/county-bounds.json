@@ -1,39 +1,39 @@
 {
   "osgb": {
-    "e0": 376000.0,
-    "e1": 432000.0,
-    "n0": 117000.0,
-    "n1": 189000.0
+    "e0": 372000.0,
+    "e1": 438000.0,
+    "n0": 114000.0,
+    "n1": 203000.0
   },
   "wgs84_leaflet": [
     [
-      50.95192737903772,
-      -2.343038391328443
+      50.92476978473185,
+      -2.3997498192054576
     ],
     [
-      51.59893966208736,
-      -1.5393965211080054
+      51.72443928083643,
+      -1.451258008936767
     ]
   ],
   "source": "EA LIDAR Composite DTM 2022 1m product via WCS (SCALEFACTOR\u2192~20 m county mosaic), Open Government Licence",
   "placeholder": false,
-  "cellsize_m": 28.0,
+  "cellsize_m": 34.23,
   "source_cellsize_m": 20.0,
   "z_range_m_od": [
-    11.405074119567871,
-    294.1728820800781
+    -0.8263821005821228,
+    296.6251220703125
   ],
   "png_pixels": [
-    1722,
-    2214
+    1739,
+    2345
   ],
-  "png_mb": 4.753,
+  "png_mb": 4.707,
   "label": "County terrain",
   "web_asset": "county-hillshade.jpg",
   "web_pixels": [
-    1244,
+    1187,
     1600
   ],
-  "web_mb": 0.27,
+  "web_mb": 0.259,
   "web_note": "Mobile JPEG derivative (max dim 1600, q78); full PNG retained"
 }

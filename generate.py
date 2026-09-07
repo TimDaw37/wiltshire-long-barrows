@@ -168,7 +168,7 @@ def html_page(
     border-radius: 999px; padding: .2rem .55rem; font-size: .72rem; cursor: pointer;
   }}
   .chip.on {{ border-color: var(--gold); color: var(--gold); }}
-  .list {{ overflow: auto; flex: 1; padding: 0 .4rem .6rem; }}
+  .list {{ overflow: auto; flex: 1; min-height: 0; padding: 0 .4rem .6rem; }}
   .item {{
     padding: .45rem .5rem; border-radius: 4px; cursor: pointer;
     border: 1px solid transparent; margin-bottom: .2rem;
@@ -181,14 +181,17 @@ def html_page(
     margin-right: .35rem; vertical-align: middle;
   }}
   .detail {{
-    max-width: 1400px; margin: 0 auto; padding: 1rem 1.5rem;
-    background: var(--panel); border-bottom: 1px solid var(--line);
+    flex: 0 0 auto; max-height: 42%; overflow: auto;
+    margin: 0; padding: .65rem .75rem .75rem;
+    background: #18160f; border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }}
-  .detail h2 {{ margin: 0 0 .4rem; color: var(--gold); font-size: 1.15rem; }}
-  .detail .meta {{ color: var(--muted); font-size: .85rem; }}
+  .detail h2 {{ margin: 0 0 .35rem; color: var(--gold); font-size: 1.05rem; }}
+  .detail .meta {{ color: var(--muted); font-size: .8rem; }}
+  .detail .placeholder {{ color: var(--muted); font-size: .85rem; margin: 0; }}
   .detail dl {{
-    display: grid; grid-template-columns: 9rem 1fr; gap: .25rem .75rem;
-    margin: .7rem 0 0; font-size: .88rem;
+    display: grid; grid-template-columns: 7.5rem 1fr; gap: .2rem .55rem;
+    margin: .55rem 0 0; font-size: .82rem;
   }}
   .detail dt {{ color: var(--muted); }}
   .detail dd {{ margin: 0; }}
@@ -220,11 +223,14 @@ def html_page(
   @media (max-width: 900px) {{
     .layout {{ grid-template-columns: 1fr; }}
     #map {{
-      height: 55vh; min-height: 280px; max-height: none;
+      height: 48vh; min-height: 260px; max-height: none;
       width: 100%; overflow: hidden;
     }}
-    .side {{ max-height: 40vh; border-left: 0; border-top: 1px solid var(--line); }}
-    .leaflet-control-layers {{ font-size: 12px; }}
+    .side {{
+      max-height: none; border-left: 0; border-top: 1px solid var(--line);
+    }}
+    .detail {{ max-height: none; }}
+    .list {{ max-height: 42vh; }}
   }}
 </style>
 </head>
@@ -265,13 +271,12 @@ def html_page(
       <input id="q" type="search" placeholder="Search name, HER, NHLE, parish, notes…"/>
     </div>
     <div class="chip-row" id="chips"></div>
+    <section class="detail" id="detail">
+      <p class="placeholder">Select a long barrow.</p>
+    </section>
     <div class="list" id="list"></div>
   </div>
 </div>
-
-<section class="detail" id="detail">
-  <p class="meta">Select a long barrow.</p>
-</section>
 
 <section class="notes">
   <h2>Orientation — what “faces the rising sun?” means</h2>
@@ -466,10 +471,8 @@ if (HAS_OUTLINE && COUNTY_OUTLINE_BOUNDS) {{
   map.fitBounds(group.getBounds().pad(0.08));
 }}
 
-// County outline + terrain always on (not in layer control). Only barrows toggle.
-const overlays = {{ 'Long barrows': layer }};
+// OSM + terrain + outline + barrows always on (no layer control).
 if (typeof initWiltshireCountyOutline === 'function') initWiltshireCountyOutline(map);
-L.control.layers({{ 'OSM': osm }}, overlays, {{ collapsed: true }}).addTo(map);
 
 let filterStatus = 'all';
 let filterAz = 'all';
@@ -552,6 +555,11 @@ function select(id, pan) {{
     + '<dt>Refs</dt><dd>' + (links.join(' · ') || '—') + '</dd>'
     + '<dt>Notes</dt><dd>' + esc(h.notes || '') + '</dd>'
     + '</dl>';
+  try {{
+    det.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+  }} catch (e) {{
+    det.scrollIntoView(true);
+  }}
 }}
 
 const chips = document.getElementById('chips');
