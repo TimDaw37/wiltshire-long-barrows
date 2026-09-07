@@ -123,11 +123,13 @@ def main() -> None:
         f"z {np.nanmin(grid):.1f}–{np.nanmax(grid):.1f}"
     )
     rgba, zmin, zmax = hillshade_rgba(grid, cell)
+    # Do NOT apply ceremonial county outside-mask here: punching alpha outside the
+    # outline and then compositing JPEG onto near-black blanked the map. Invalid
+    # DTM cells already get alpha=0 in hillshade_rgba (NaN). Optional mask kept
+    # as unused helper for diagnostics.
     cmask = county_valid_mask(grid.shape[0], grid.shape[1], transform)
     if cmask is not None:
-        # Alpha only outside ceremonial county envelope (filled DTM may cover bbox)
-        rgba[~cmask, 3] = 0
-        print(f"county mask: inside {100.0 * cmask.mean():.1f}% of grid")
+        print(f"county footprint (not applied to alpha): inside {100.0 * cmask.mean():.1f}% of grid")
     img = Image.fromarray((rgba * 255).astype(np.uint8), "RGBA")
     png = OUT / "county-hillshade.png"
     img.save(png, optimize=True)

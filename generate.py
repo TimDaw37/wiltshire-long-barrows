@@ -396,7 +396,7 @@ def html_page(
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="county-outline.js?v=7"></script>
+<script src="county-outline.js?v=8"></script>
 <script src="barrow-chips.js"></script>
 <script>
 const ROWS = {holes_json};
@@ -421,7 +421,7 @@ if (!map.getPane('terrain')) {{
   map.getPane('terrain').style.pointerEvents = 'none';
 }}
 if (HAS_COUNTY) {{
-  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=7', COUNTY_BOUNDS, {{
+  countyLayer = L.imageOverlay('lidar/web/' + COUNTY_ASSET + '?v=8', COUNTY_BOUNDS, {{
     opacity: 0.72,
     interactive: false,
     pane: 'terrain',
