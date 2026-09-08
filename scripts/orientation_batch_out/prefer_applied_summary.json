@@ -1,0 +1,36 @@
+{
+  "applied_at_utc": "20260908T075953Z",
+  "source_prefer_json": "/workspace/wiltshire-long-barrows/scripts/orientation_batch_out/wiltshire-lb-orientation-prefer-v2.json",
+  "n_answers": 128,
+  "n_all": 128,
+  "counts": {
+    "lidar": 5,
+    "eye": 77,
+    "nhle": 4,
+    "not_barrow": 21,
+    "leave_indistinct": 21
+  },
+  "unanswered_ids": [],
+  "focus_five": {
+    "MWI73199": {
+      "prefer": "not_barrow"
+    },
+    "ST91NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 68.5
+    },
+    "SU25NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 173
+    },
+    "SU25NE102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 167
+    },
+    "SU25NE103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 76
+    }
+  },
+  "nhle_untouched": true
+}

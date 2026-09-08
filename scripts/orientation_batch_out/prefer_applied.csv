@@ -1,0 +1,129 @@
+id,name,prefer,azimuth_eye_deg,azimuth_display_deg,azimuth_display_source,nhle_az,lidar_az,note
+MWI73097,Horseslip,leave_indistinct,,,,136.2,,left indistinct after human review
+MWI73199,MWI73199,not_barrow,,,,,155.8,no usable barrow axis / not a clear long barrow on chip
+MWI73372,Brigmerston Field,eye,157.0,157.0,eye,,,
+MWI74325,North of Durrington Field,not_barrow,,,,,70.3,no usable barrow axis / not a clear long barrow on chip
+MWI75694,Southeast of Longbarrow Crossroads,leave_indistinct,,,,,,left indistinct after human review
+MWI76495,MWI76495,not_barrow,,,,,93.7,no usable barrow axis / not a clear long barrow on chip
+MWI77115,MWI77115,leave_indistinct,,,,,,left indistinct after human review
+MWI77205,MWI77205,leave_indistinct,,,,,,left indistinct after human review
+MWI78750,MWI78750,eye,16.0,16.0,eye,,,
+NHLE1010394,Giant's Cave: a chambered long barrow 750m south west of Allengrove Farm,eye,99.5,99.5,eye,98.3,,
+ST77NE100,Long barrow 400m north-west of Fox Covert,eye,36.5,36.5,eye,48.7,,
+ST83NE100,"Long barrow on Pertwood Down, 1400m north-west of Lower Pertwood",lidar,,109.0,lidar,125.1,109.0,
+ST83NW100,ST83NW100,not_barrow,,,,,,no usable barrow axis / not a clear long barrow on chip
+ST83NW101,Long barrow on Cold Kitchen Hill,eye,148.5,148.5,eye,154.1,148.4,
+ST83NW103,ST83NW103,not_barrow,,,,,105.5,no usable barrow axis / not a clear long barrow on chip
+ST83SE102,"Long barrow on Keysley Down, 1020m NNE of Chapel Field Barn",eye,146.5,146.5,eye,115.7,,
+ST84NE100,Colloway Clump long barrow,eye,16.0,16.0,eye,10.4,127.5,
+ST84SE100,King Barrow,eye,161.5,161.5,eye,158.1,161.5,
+ST86SE643,ST86SE643,not_barrow,,,,,111.9,no usable barrow axis / not a clear long barrow on chip
+ST87NW100,Long barrow 500m north of Lugbury Farm,eye,93.5,93.5,eye,97.4,,
+ST87SE101,Lanhill Barrow: a long barrow 300m south of Sparrow Farm,eye,90.5,90.5,eye,94.0,100.6,
+ST88SW101,Long barrow 600m north of Hebden Farm,eye,143.5,143.5,eye,89.5,,
+ST91NW100,ST91NW100,eye,68.5,68.5,eye,,68.3,
+ST92NE107,ST92NE107,eye,33.5,33.5,eye,,,
+ST92SW102,Long barrow 170m south west of triangulation pillar on White Sheet Hill,eye,59.5,59.5,eye,62.3,57.0,
+ST93NE101,Long barrow 250m east of Boyton Field Barn,eye,99.5,99.5,eye,100.9,99.7,
+ST93NE103,"Long barrow in Barrow Clump, Stockton Down",eye,29.0,29.0,eye,30.8,,
+ST94NE100,Long barrow south-west of Imber,eye,143.0,143.0,eye,144.5,,
+ST94NE101,Long barrow on Knook Down,leave_indistinct,,,,81.1,,left indistinct after human review
+ST94NW100,Bowls,eye,88.5,88.5,eye,89.7,88.5,
+ST94NW101,Middleton Down long barrow,eye,126.0,126.0,eye,120.7,122.2,
+ST94NW102,Norton Down long barrow,eye,100.5,100.5,eye,87.1,100.5,
+ST94NW103,Oxendean Down long barrow,nhle,,109.7,nhle,109.7,170.0,
+ST94SE100,Knock,eye,47.5,47.5,eye,46.5,,
+ST94SW100,Corton,eye,84.0,84.0,eye,90.5,,
+ST94SW101,West Hill long barrow,eye,163.0,163.0,eye,71.7,,
+ST94SW103,Long barrow 250m east of Polebridge Farm,eye,51.5,51.5,eye,40.3,39.9,
+ST94SW742,ST94SW742,leave_indistinct,,,,,,left indistinct after human review
+ST95SW100,ST95SW100,eye,92.0,92.0,eye,,94.2,
+ST95SW102,"Long barrow, Tinhead Hill",nhle,,64.3,nhle,64.3,47.4,
+ST98NW635,ST98NW635,eye,18.0,18.0,eye,,,
+SU02SE100,"Long barrow on Little Toyd Down, 760m south west of Grims Lodge Farm",eye,86.5,86.5,eye,90.0,86.4,
+SU02SW101,Vernditch Chase long barrow,eye,65.0,65.0,eye,85.3,,
+SU02SW103,Kitts Grave,leave_indistinct,,,,,,left indistinct after human review
+SU04NE100,East Down,eye,120.5,120.5,eye,131.6,120.5,
+SU04NW100,Whitebarrow,lidar,,91.7,lidar,4.0,91.7,
+SU04NW101,Tilshead Down,eye,65.0,65.0,eye,70.7,65.0,
+SU04NW102,Northwest of Tilshead Lodge,eye,89.0,89.0,eye,82.0,85.1,
+SU04NW103,Kill,eye,140.5,140.5,eye,,109.6,
+SU04SE100,Winterbourne Stoke Down,nhle,,90.0,nhle,90.0,53.2,
+SU05SE100,Ell Barrow,eye,74.0,74.0,eye,68.4,,
+SU06NE104,Roughridge Hill,not_barrow,,,,,96.7,no usable barrow axis / not a clear long barrow on chip
+SU06NE105,South Street,lidar,,68.9,lidar,132.6,68.9,
+SU06NE106,Easton Down,eye,76.5,76.5,eye,143.5,43.7,
+SU06NE107,Long Stones,eye,48.5,48.5,eye,53.8,44.4,
+SU06NE108,Beckhampton Road,nhle,,53.3,nhle,53.3,68.8,
+SU06NE115,Horton Down,lidar,,97.7,lidar,147.6,97.7,
+SU06NE133,Beckhampton Plantation,not_barrow,,,,,28.4,no usable barrow axis / not a clear long barrow on chip
+SU06NW105,Oldbury,eye,88.0,88.0,eye,75.2,,
+SU06NW106,West of Oldbury,eye,99.5,99.5,eye,,,
+SU06NW107,Kings Play Hill,eye,43.5,43.5,eye,42.1,,
+SU06NW108,Southeast of Hill Farm,leave_indistinct,,,,,,left indistinct after human review
+SU06NW109,West of Old Shepherds Shore,leave_indistinct,,,,61.4,,left indistinct after human review
+SU06SE101,Kitchen,eye,43.5,43.5,eye,18.3,35.5,
+SU07SE105,Millbarrow,leave_indistinct,,,,,,left indistinct after human review
+SU12SE100,Giants Grave,eye,9.0,9.0,eye,10.5,17.3,
+SU12SW101,Long barrow 600yds (550m) SE of Vanity,eye,146.5,146.5,eye,138.8,140.2,
+SU13NW100,Woodford G2,not_barrow,,,,,4.1,no usable barrow axis / not a clear long barrow on chip
+SU13NW151,Northwest of Camp Plantation,not_barrow,,,,,15.2,no usable barrow axis / not a clear long barrow on chip
+SU13SE100,Fussells Lodge,not_barrow,,,,75.4,69.1,no usable barrow axis / not a clear long barrow on chip
+SU13SE101,Cockey Down,not_barrow,,,,,47.3,no usable barrow axis / not a clear long barrow on chip
+SU13SE108,SU13SE108,eye,148.0,148.0,eye,,100.3,
+SU13SE604,'Ende Burgh' long barrow,eye,23.5,23.5,eye,30.9,11.1,
+SU13SE663,SU13SE663,leave_indistinct,,,,,,left indistinct after human review
+SU13SW106,Rocks Hill,leave_indistinct,,,,,,left indistinct after human review
+SU14NE100,Sheer Barrow,eye,67.5,67.5,eye,,,
+SU14NE101,North of Milston Firs,eye,32.0,32.0,eye,46.0,,
+SU14NE782,Northeast of Barrow Clump,leave_indistinct,,,,,,left indistinct after human review
+SU14NW102,Knighton,eye,88.5,88.5,eye,91.0,88.7,
+SU14NW103,Northeast of Robin Hood Ball Clump,eye,157.5,157.5,eye,147.5,,
+SU14NW104,Northeast of Robin Hood Ball Clump 2,eye,64.0,64.0,eye,62.9,,
+SU14NW108,South of Robin Hood Ball Clump,eye,132.0,132.0,eye,134.5,131.9,
+SU14NW110,North of Robin Hood Ball Clump,eye,100.5,100.5,eye,178.9,,
+SU14SE103,Southwest of Bulford,eye,109.5,109.5,eye,100.2,,
+SU14SE600,South of Woodhenge,eye,109.5,109.5,eye,,,
+SU14SW100,Knighton Down,eye,136.5,136.5,eye,129.8,,
+SU14SW102,Amesbury 42,eye,5.0,5.0,eye,,9.5,
+SU14SW105,West of Stonehenge,leave_indistinct,,,,,,left indistinct after human review
+SU14SW10W,South of Fargo Road,eye,174.5,174.5,eye,,,
+SU14SW11B,North of West Amesbury,eye,91.0,91.0,eye,,,
+SU14SW125,Winterbourne Stoke Crossroads,eye,35.0,35.0,eye,34.1,34.9,
+SU14SW126,Wilsford Down,lidar,,60.2,lidar,2.6,60.2,
+SU14SW127,North of Normanton Gorse,leave_indistinct,,,,142.1,,left indistinct after human review
+SU14SW128,Normanton Down,eye,21.5,21.5,eye,105.5,,
+SU14SW129,Normanton Down 2,eye,89.0,89.0,eye,66.8,43.2,
+SU14SW133,Lake Group,eye,111.0,111.0,eye,,113.2,
+SU14SW654,SU14SW654,leave_indistinct,,,,,,left indistinct after human review
+SU14SW997,South-southeast of Longbarrow Crossroads,leave_indistinct,,,,63.1,,left indistinct after human review
+SU15NW614,Cat's Brain,not_barrow,,,,,116.9,no usable barrow axis / not a clear long barrow on chip
+SU15SE100,Southeast of Comesdeane Well,eye,16.5,16.5,eye,,28.9,
+SU15SE152198,SU15SE152198,not_barrow,,,,,50.3,no usable barrow axis / not a clear long barrow on chip
+SU16NE102,West Woods,eye,90.0,90.0,eye,174.4,,
+SU16NE648,SU16NE648,not_barrow,,,,,92.8,no usable barrow axis / not a clear long barrow on chip
+SU16NW100,West Kennet,eye,84.5,84.5,eye,85.2,84.4,
+SU16NW101,East Kennet,eye,139.0,139.0,eye,146.1,,
+SU16NW133,White Hill,not_barrow,,,,,69.8,no usable barrow axis / not a clear long barrow on chip
+SU16NW656,SU16NW656,leave_indistinct,,,,,,left indistinct after human review
+SU16SW102,Adam's Grave,eye,136.0,136.0,eye,116.7,,
+SU17SW101,Temple Bottom,leave_indistinct,,,,,,left indistinct after human review
+SU17SW110,SU17SW110,not_barrow,,,,,,no usable barrow axis / not a clear long barrow on chip
+SU17SW111,Manton Down,leave_indistinct,,,,,,left indistinct after human review
+SU23SW100,SU23SW100,eye,20.5,20.5,eye,,43.3,
+SU23SW101,SU23SW101,not_barrow,,,,,62.8,no usable barrow axis / not a clear long barrow on chip
+SU23SW600,SU23SW600,eye,156.0,156.0,eye,,7.5,
+SU24NW101,SU24NW101,eye,67.5,67.5,eye,,,
+SU24NW102,SU24NW102,eye,71.0,71.0,eye,,69.6,
+SU24NW629,SU24NW629,eye,143.0,143.0,eye,,,
+SU24NW678,SU24NW678,eye,118.0,118.0,eye,,,
+SU25NE100,SU25NE100,eye,173.0,173.0,eye,,172.9,
+SU25NE101,Tow,eye,11.5,11.5,eye,,,
+SU25NE102,SU25NE102,eye,167.0,167.0,eye,,167.0,
+SU25NE103,SU25NE103,eye,76.0,76.0,eye,,75.9,
+SU25NE104,SU25NE104,not_barrow,,,,,55.9,no usable barrow axis / not a clear long barrow on chip
+SU25SE100,SU25SE100,not_barrow,,,,,73.4,no usable barrow axis / not a clear long barrow on chip
+SU25SW781,SU25SW781,not_barrow,,,,,,no usable barrow axis / not a clear long barrow on chip
+SU26NE100,SU26NE100,eye,36.5,36.5,eye,,,
+SU27NW103,SU27NW103,eye,139.0,139.0,eye,,,
+SU27SE101,SU27SE101,leave_indistinct,,,,,,left indistinct after human review

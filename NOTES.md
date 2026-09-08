@@ -31,17 +31,20 @@
 
 6. **OSM** — Overpass attempted; endpoint returned HTML error in this run. Optional later enrichment.
 
-## Orientation conventions (v1)
+## Orientation conventions
 
-- `azimuth_deg`: undirected long-axis bearing, **degrees from north**, range **0–180**.  
-  Computed as `atan2(ΔE, ΔN)` of the NHLE polygon PCA major axis, folded to 0–180.
+- **Undirected** long-axis bearing, **degrees from north**, range **0–180** (`atan2(ΔE, ΔN)` folded).
+- `azimuth_deg` / `azimuth_method`: **NHLE scheduling-polygon PCA** — **immutable** in orientation work.
+- `azimuth_lidar_*`: auto axis from EA 1 m DTM chip → local-relief mound mask → PCA (parallel fields).
+- `azimuth_prefer` / `azimuth_eye_deg` / `azimuth_display_deg` / `azimuth_display_source` / `azimuth_prefer_note`:
+  human review promotion (see 2026-09-08 section below).
 - `front_end`: **null** (not asserted). Literature often places the wider/higher/forecourt end
   toward the east, but that is site-specific.
-- `azimuth_method`: `nhle_polygon_pca` | null
 - Flat-horizon sunrise ≈51.2°N (true solar, no refraction): midsummer ~50°, equinox ~90°, midwinter ~129°.
 
 Peer consensus for Wiltshire chalk: **no clear common astronomical alignment**; topography matters
-(Ruggles; Roberts et al. IA 47; Darvill). Treat solar claims as hypotheses to test against LiDAR-derived axes.
+(Ruggles; Roberts et al. IA 47; Darvill). Treat solar claims as hypotheses to test against the
+human-curated display axes (and LiDAR), not as established intent.
 
 ## Cotswold–Severn vs earthen
 
@@ -69,7 +72,7 @@ South Street / Longstones are excavated **earthen** monuments.
 
 - County: `python download_ea_county_dtm.py` then `python make_county_hillshade.py`
 - Detail (Stonehenge): `WILTS_LB_BBOX=… python download_ea_dtm.py` then `make_ea1m_hillshade.py`
-- Next: refine orientations from mound crest / ditch lines on hillshade rather than NHLE polygons alone.
+- Orientation: human-reviewed display axes now preferred over NHLE polygons alone (see sections below).
 
 ## Gaps
 
@@ -87,3 +90,59 @@ South Street / Longstones are excavated **earthen** monuments.
 - Residual fill-all kept as safety; county alpha mask on PNG; mobile JPEG `?v=4`.
 - Visual gate: no axis-aligned dark (L<20) blocks ≥40×80 px inside county footprint.
 
+## Orientation batch + White Hill (2026-09-08)
+
+- Parallel LiDAR fields (`azimuth_lidar_*`) written for the gazetteer; **NHLE `azimuth_deg` not overwritten**.
+- Refuse floor **0.40**; review queue **|Δ| > 15°** → 14 sites (`scripts/orientation_batch_out/review_queue.csv`).
+- Human review pack: `scripts/orientation_batch_out/human_review.html` + `human_review_sheet.csv`.
+- Grok Build handoff: `docs/grok-build-orientation-protocol.md`.
+- **White Hill `SU16NW133`**: chip present (`lidar/chips/raw/SU16NW133.tif`, web JPG). Orientation measured — LiDAR **69.8°**, conf **0.932**, indistinct=false; NHLE azimuth still null. Preview `scripts/orientation_batch_out/SU16NW133_axis.png`.
+- Skip `MODERN_ALL_CANNINGS`. Undirected 0–180°, chips north-up.
+
+## Orientation human review complete (2026-09-08)
+
+Full chip-by-chip human review of all **128** gazetteer rows; prefer answers applied to
+`data/long_barrows.json` + `.geojson` without destroying NHLE.
+
+### Schema (orientation fields)
+
+| Field | Role |
+|-------|------|
+| `azimuth_deg` | NHLE polygon PCA — **immutable** |
+| `azimuth_method` | typically `nhle_polygon_pca` or null |
+| `azimuth_lidar_deg` / `_conf` / `_method` / `_indistinct` | auto LiDAR mound-mask PCA |
+| `delta_vs_nhle_deg` | undirected \|Δ\| when both NHLE + LiDAR exist |
+| `azimuth_prefer` | human decision (see values below) |
+| `azimuth_eye_deg` | eye-measured axis when prefer=eye |
+| `azimuth_display_deg` | promoted display axis for map / analysis (null if none) |
+| `azimuth_display_source` | `eye` \| `lidar` \| `nhle` when display set |
+| `azimuth_prefer_note` | optional free-text note |
+
+### Prefer values
+
+`eye` | `lidar` | `nhle` | `not_barrow` | `leave_indistinct` | `hold`
+
+- **`not_barrow`**: no usable long-barrow axis on the chip (exclude from orientation analysis).
+- **`leave_indistinct`**: mound too weak / ambiguous — no display axis.
+- **`hold`**: reserved; not used in final 128/128 set.
+
+### Final counts (128/128)
+
+| prefer | n |
+|--------|---|
+| eye | 77 |
+| leave_indistinct | 21 |
+| not_barrow | 21 |
+| lidar | 5 |
+| nhle | 4 |
+
+→ **`azimuth_display_deg` set for 86** (77 eye + 5 lidar + 4 nhle). not_barrow / leave_indistinct have no display.
+
+### Source prefer JSON
+
+`scripts/orientation_batch_out/wiltshire-lb-orientation-prefer-v2.json`  
+Applied summary: `scripts/orientation_batch_out/prefer_applied_summary.json` (nhle_untouched=true).
+
+### Map
+
+`generate.py` / `index.html` now use **`azimuth_display_deg`** for counts, filters, icons, tooltips and the primary detail value — **no fallback** to NHLE when prefer was not_barrow / leave_indistinct. NHLE PCA and LiDAR auto axes remain as separate evidence lines in the detail panel.

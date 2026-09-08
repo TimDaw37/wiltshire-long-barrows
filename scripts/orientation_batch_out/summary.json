@@ -1,0 +1,36 @@
+{
+  "confidence_floor": 0.4,
+  "delta_review_threshold_deg": 15.0,
+  "method_primary": "dtm_local_relief_pca",
+  "floor_rationale": "Score distribution (n=127): p5=0.012, p10=0.017, p25=0.092, p50=0.572, p75=0.765, p90=0.889, p95=0.921. Weak mass <0.25: 40; mid-band [0.30,0.50): 16. Kitts Grave SU02SW103 conf=0.004838556018061309. Clear refs: SU16NW100=0.9167459525762068, SU14SW125=0.8855483980045137. Chose floor=0.40 (within suggested 0.30\u20130.50): above the weak cluster (p25=0.092) and Kitts, well below clear mounds (~0.89\u20130.92), refusing soft mid-conf axes that the trial elongation gate alone can still pass after ensemble down-weighting.",
+  "review_ids": [
+    "ST83NE100",
+    "SU14SW129",
+    "SU14SW126",
+    "SU04SE100",
+    "SU04NW100",
+    "ST84NE100",
+    "ST94NW103",
+    "ST95SW102",
+    "SU06SE101",
+    "SU06NE115",
+    "SU06NE106",
+    "SU06NE108",
+    "SU06NE105",
+    "SU13SE604"
+  ],
+  "no_chip_ids": [],
+  "skipped_ids": [],
+  "n_ids": 128,
+  "measured": 65,
+  "indistinct": 63,
+  "no_chip": 0,
+  "white_hill_SU16NW133": {
+    "azimuth_lidar_deg": 69.8,
+    "azimuth_lidar_conf": 0.932,
+    "azimuth_lidar_indistinct": false
+  },
+  "updated_note": "Regenerated after White Hill chip acquisition 2026-09-08",
+  "review_gt15": 14,
+  "skipped": 0
+}

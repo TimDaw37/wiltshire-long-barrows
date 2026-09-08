@@ -1,0 +1,931 @@
+{
+  "schema": "wiltshire-lb-orientation-prefer-v2",
+  "undirected_deg": "0-180",
+  "north_up": true,
+  "answers": {
+    "SU04NW100": {
+      "prefer": "lidar"
+    },
+    "SU06NE106": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 76.5
+    },
+    "SU06NE105": {
+      "prefer": "lidar"
+    },
+    "ST84NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 16
+    },
+    "ST94NW103": {
+      "prefer": "nhle"
+    },
+    "SU14SW126": {
+      "prefer": "lidar"
+    },
+    "SU06NE115": {
+      "prefer": "lidar"
+    },
+    "SU04SE100": {
+      "prefer": "nhle"
+    },
+    "SU14SW129": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 89
+    },
+    "SU13SE604": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 23.5
+    },
+    "SU06SE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 43.5
+    },
+    "ST95SW102": {
+      "prefer": "nhle"
+    },
+    "ST83NE100": {
+      "prefer": "lidar"
+    },
+    "SU06NE108": {
+      "prefer": "nhle"
+    },
+    "ST94NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 100.5
+    },
+    "SU04NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 120.5
+    },
+    "ST83NW103": {
+      "prefer": "not_barrow"
+    },
+    "SU06NE107": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 48.5
+    },
+    "SU12SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 9
+    },
+    "ST87SE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 90.5
+    },
+    "SU13SE100": {
+      "prefer": "not_barrow"
+    },
+    "ST83NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 148.5
+    },
+    "SU04NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 65
+    },
+    "ST92SW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 59.5
+    },
+    "SU02SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 86.5
+    },
+    "ST84SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 161.5
+    },
+    "SU04NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 89
+    },
+    "SU14NW108": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 132
+    },
+    "SU14NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 88.5
+    },
+    "ST94NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 126
+    },
+    "SU12SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 146.5
+    },
+    "ST94NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 88.5
+    },
+    "ST93NE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 99.5
+    },
+    "SU14SW125": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 35
+    },
+    "SU16NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 84.5
+    },
+    "ST94SW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 51.5
+    },
+    "SU13SE108": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 148
+    },
+    "SU13NW151": {
+      "prefer": "not_barrow"
+    },
+    "SU25SE100": {
+      "prefer": "not_barrow"
+    },
+    "SU13NW100": {
+      "prefer": "not_barrow"
+    },
+    "SU23SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 20.5
+    },
+    "ST95SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 92
+    },
+    "SU25NE103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 76
+    },
+    "MWI73199": {
+      "prefer": "not_barrow"
+    },
+    "SU14SW133": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 111
+    },
+    "SU24NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 71
+    },
+    "SU14SW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 5
+    },
+    "SU23SW600": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 156
+    },
+    "SU06NE133": {
+      "prefer": "not_barrow"
+    },
+    "SU15SE152198": {
+      "prefer": "not_barrow"
+    },
+    "SU25NE104": {
+      "prefer": "not_barrow"
+    },
+    "ST91NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 68.5
+    },
+    "SU15SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 16.5
+    },
+    "SU25NE102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 167
+    },
+    "SU25NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 173
+    },
+    "SU15NW614": {
+      "prefer": "not_barrow"
+    },
+    "SU06NE104": {
+      "prefer": "not_barrow"
+    },
+    "SU13SE101": {
+      "prefer": "not_barrow"
+    },
+    "ST86SE643": {
+      "prefer": "not_barrow"
+    },
+    "SU16NE648": {
+      "prefer": "not_barrow"
+    },
+    "MWI76495": {
+      "prefer": "not_barrow"
+    },
+    "SU16NW133": {
+      "prefer": "not_barrow"
+    },
+    "SU23SW101": {
+      "prefer": "not_barrow"
+    },
+    "SU04NW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 140.5
+    },
+    "MWI74325": {
+      "prefer": "not_barrow"
+    },
+    "SU05SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 74
+    },
+    "SU02SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 65
+    },
+    "MWI78750": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 16
+    },
+    "SU14NE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 32
+    },
+    "SU24NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 67.5
+    },
+    "SU27NW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 139
+    },
+    "ST83SE102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 146.5
+    },
+    "SU14NW104": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 64
+    },
+    "ST94SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 47.5
+    },
+    "MWI75694": {
+      "prefer": "leave_indistinct"
+    },
+    "SU26NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 36.5
+    },
+    "SU16NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 139
+    },
+    "ST93NE103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 29
+    },
+    "SU14NW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 157.5
+    },
+    "SU25NE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 11.5
+    },
+    "SU16SW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 136
+    },
+    "MWI73372": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 157
+    },
+    "MWI73097": {
+      "prefer": "leave_indistinct"
+    },
+    "ST87NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 93.5
+    },
+    "SU14SW11B": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 91
+    },
+    "ST77NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 36.5
+    },
+    "SU14SE600": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 109.5
+    },
+    "SU14NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 67.5
+    },
+    "SU24NW629": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 143
+    },
+    "SU14SW105": {
+      "prefer": "leave_indistinct"
+    },
+    "SU17SW111": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14SW654": {
+      "prefer": "leave_indistinct"
+    },
+    "ST92NE107": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 33.5
+    },
+    "SU16NW656": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW105": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 88
+    },
+    "SU14SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 136.5
+    },
+    "SU14SW997": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14NW110": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 100.5
+    },
+    "SU27SE101": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW107": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 43.5
+    },
+    "MWI77205": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW106": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 99.5
+    },
+    "SU13SW106": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW108": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14SW127": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 143
+    },
+    "ST98NW635": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 18
+    },
+    "NHLE1010394": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 99.5
+    },
+    "SU14SE103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 109.5
+    },
+    "SU17SW110": {
+      "prefer": "not_barrow"
+    },
+    "SU25SW781": {
+      "prefer": "not_barrow"
+    },
+    "ST83NW100": {
+      "prefer": "not_barrow"
+    },
+    "ST94SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 84
+    },
+    "SU16NE102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 90
+    },
+    "SU24NW678": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 118
+    },
+    "ST88SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 143.5
+    },
+    "MWI77115": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW109": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14NE782": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94NE101": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94SW742": {
+      "prefer": "leave_indistinct"
+    },
+    "SU17SW101": {
+      "prefer": "leave_indistinct"
+    },
+    "SU07SE105": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 163
+    },
+    "SU13SE663": {
+      "prefer": "leave_indistinct"
+    },
+    "SU02SW103": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14SW10W": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 174.5
+    },
+    "SU14SW128": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 21.5
+    }
+  },
+  "all": {
+    "SU04NW100": {
+      "prefer": "lidar"
+    },
+    "SU06NE106": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 76.5
+    },
+    "SU06NE105": {
+      "prefer": "lidar"
+    },
+    "ST84NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 16
+    },
+    "ST94NW103": {
+      "prefer": "nhle"
+    },
+    "SU14SW126": {
+      "prefer": "lidar"
+    },
+    "SU06NE115": {
+      "prefer": "lidar"
+    },
+    "SU04SE100": {
+      "prefer": "nhle"
+    },
+    "SU14SW129": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 89
+    },
+    "SU13SE604": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 23.5
+    },
+    "SU06SE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 43.5
+    },
+    "ST95SW102": {
+      "prefer": "nhle"
+    },
+    "ST83NE100": {
+      "prefer": "lidar"
+    },
+    "SU06NE108": {
+      "prefer": "nhle"
+    },
+    "ST94NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 100.5
+    },
+    "SU04NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 120.5
+    },
+    "ST83NW103": {
+      "prefer": "not_barrow"
+    },
+    "SU06NE107": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 48.5
+    },
+    "SU12SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 9
+    },
+    "ST87SE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 90.5
+    },
+    "SU13SE100": {
+      "prefer": "not_barrow"
+    },
+    "ST83NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 148.5
+    },
+    "SU04NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 65
+    },
+    "ST92SW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 59.5
+    },
+    "SU02SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 86.5
+    },
+    "ST84SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 161.5
+    },
+    "SU04NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 89
+    },
+    "SU14NW108": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 132
+    },
+    "SU14NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 88.5
+    },
+    "ST94NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 126
+    },
+    "SU12SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 146.5
+    },
+    "ST94NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 88.5
+    },
+    "ST93NE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 99.5
+    },
+    "SU14SW125": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 35
+    },
+    "SU16NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 84.5
+    },
+    "ST94SW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 51.5
+    },
+    "SU13SE108": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 148
+    },
+    "SU13NW151": {
+      "prefer": "not_barrow"
+    },
+    "SU25SE100": {
+      "prefer": "not_barrow"
+    },
+    "SU13NW100": {
+      "prefer": "not_barrow"
+    },
+    "SU23SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 20.5
+    },
+    "ST95SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 92
+    },
+    "SU25NE103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 76
+    },
+    "MWI73199": {
+      "prefer": "not_barrow"
+    },
+    "SU14SW133": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 111
+    },
+    "SU24NW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 71
+    },
+    "SU14SW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 5
+    },
+    "SU23SW600": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 156
+    },
+    "SU06NE133": {
+      "prefer": "not_barrow"
+    },
+    "SU15SE152198": {
+      "prefer": "not_barrow"
+    },
+    "SU25NE104": {
+      "prefer": "not_barrow"
+    },
+    "ST91NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 68.5
+    },
+    "SU15SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 16.5
+    },
+    "SU25NE102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 167
+    },
+    "SU25NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 173
+    },
+    "SU15NW614": {
+      "prefer": "not_barrow"
+    },
+    "SU06NE104": {
+      "prefer": "not_barrow"
+    },
+    "SU13SE101": {
+      "prefer": "not_barrow"
+    },
+    "ST86SE643": {
+      "prefer": "not_barrow"
+    },
+    "SU16NE648": {
+      "prefer": "not_barrow"
+    },
+    "MWI76495": {
+      "prefer": "not_barrow"
+    },
+    "SU16NW133": {
+      "prefer": "not_barrow"
+    },
+    "SU23SW101": {
+      "prefer": "not_barrow"
+    },
+    "SU04NW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 140.5
+    },
+    "MWI74325": {
+      "prefer": "not_barrow"
+    },
+    "SU05SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 74
+    },
+    "SU02SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 65
+    },
+    "MWI78750": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 16
+    },
+    "SU14NE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 32
+    },
+    "SU24NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 67.5
+    },
+    "SU27NW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 139
+    },
+    "ST83SE102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 146.5
+    },
+    "SU14NW104": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 64
+    },
+    "ST94SE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 47.5
+    },
+    "MWI75694": {
+      "prefer": "leave_indistinct"
+    },
+    "SU26NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 36.5
+    },
+    "SU16NW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 139
+    },
+    "ST93NE103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 29
+    },
+    "SU14NW103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 157.5
+    },
+    "SU25NE101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 11.5
+    },
+    "SU16SW102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 136
+    },
+    "MWI73372": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 157
+    },
+    "MWI73097": {
+      "prefer": "leave_indistinct"
+    },
+    "ST87NW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 93.5
+    },
+    "SU14SW11B": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 91
+    },
+    "ST77NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 36.5
+    },
+    "SU14SE600": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 109.5
+    },
+    "SU14NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 67.5
+    },
+    "SU24NW629": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 143
+    },
+    "SU14SW105": {
+      "prefer": "leave_indistinct"
+    },
+    "SU17SW111": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14SW654": {
+      "prefer": "leave_indistinct"
+    },
+    "ST92NE107": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 33.5
+    },
+    "SU16NW656": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW105": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 88
+    },
+    "SU14SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 136.5
+    },
+    "SU14SW997": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14NW110": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 100.5
+    },
+    "SU27SE101": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW107": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 43.5
+    },
+    "MWI77205": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW106": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 99.5
+    },
+    "SU13SW106": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW108": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14SW127": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94NE100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 143
+    },
+    "ST98NW635": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 18
+    },
+    "NHLE1010394": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 99.5
+    },
+    "SU14SE103": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 109.5
+    },
+    "SU17SW110": {
+      "prefer": "not_barrow"
+    },
+    "SU25SW781": {
+      "prefer": "not_barrow"
+    },
+    "ST83NW100": {
+      "prefer": "not_barrow"
+    },
+    "ST94SW100": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 84
+    },
+    "SU16NE102": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 90
+    },
+    "SU24NW678": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 118
+    },
+    "ST88SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 143.5
+    },
+    "MWI77115": {
+      "prefer": "leave_indistinct"
+    },
+    "SU06NW109": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14NE782": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94NE101": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94SW742": {
+      "prefer": "leave_indistinct"
+    },
+    "SU17SW101": {
+      "prefer": "leave_indistinct"
+    },
+    "SU07SE105": {
+      "prefer": "leave_indistinct"
+    },
+    "ST94SW101": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 163
+    },
+    "SU13SE663": {
+      "prefer": "leave_indistinct"
+    },
+    "SU02SW103": {
+      "prefer": "leave_indistinct"
+    },
+    "SU14SW10W": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 174.5
+    },
+    "SU14SW128": {
+      "prefer": "eye",
+      "azimuth_eye_deg": 21.5
+    }
+  }
+}

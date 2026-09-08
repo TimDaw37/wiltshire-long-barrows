@@ -86,7 +86,8 @@ def html_page(
 ) -> str:
     n = len(rows)
     n_cert = sum(1 for r in rows if r.get("status") == "certain")
-    n_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
+    n_az = sum(1 for r in rows if r.get("azimuth_display_deg") is not None)
+    n_nhle_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
     n_sched = sum(1 for r in rows if r.get("scheduled"))
     n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
     clusters = Counter(r.get("cluster") or "—" for r in rows)
@@ -333,22 +334,27 @@ def html_page(
     <span><b>{n_cert}</b> HER certain · <b>{n - n_cert}</b> possible</span>
     <span><b>{n_cots}</b> Cotswold–Severn · <b>{n - n_cots}</b> earthen/other</span>
     <span><b>{n_sched}</b> NHLE-matched</span>
-    <span><b>{n_az}</b> with long-axis azimuth</span>
+    <span><b>{n_az}</b> with display axis (human-reviewed)</span>
+    <span><b>{n_nhle_az}</b> NHLE PCA</span>
     <span>{cluster_bits}</span>
   </div>
   <p class="legend">
     Gold = HER certain · grey = possible.
     Circle markers: gold = HER certain, grey = possible, teal = modern.
-    Rim arrows = undirected long-axis from NHLE footprint (where available).
+    Rim arrows = undirected <b>display</b> long-axis (human-reviewed preferred axis; where set).
     Gold outline = ceremonial Wiltshire (UA + Swindon).
     {lidar_legend}
   </p>
   <section class="notes">
     <h2>Long axis</h2>
     <p>
-      Where an NHLE footprint is matched, the map shows an <b>undirected</b> long-axis
-      (0–180° from north) from a simple polygon PCA — a first pass on the scheduling outline,
-      not a claimed solar alignment or façade direction.
+      Map icons, filters and the primary detail value use <b>display azimuth</b>
+      (<code>azimuth_display_deg</code>) — Tim’s human-reviewed preferred axis
+      (eye / lidar / nhle). Rows marked <code>not_barrow</code> or
+      <code>leave_indistinct</code> have no display axis and show as plain circles.
+      <b>NHLE</b> polygon PCA (<code>azimuth_deg</code>) and auto <b>LiDAR</b> mound-mask PCA
+      (<code>azimuth_lidar_deg</code>) are kept separately as evidence in the detail panel.
+      All axes are <b>undirected</b> 0–180° from north — not claimed solar alignments or façade directions.
     </p>
 
     <h2>Cotswold–Severn vs earthen</h2>
@@ -372,7 +378,7 @@ def html_page(
     <h2>Known limits</h2>
     <ul>
       <li>Many HER rows lack published names; display falls back to HER / parish number.</li>
-      <li>Orientation not in HER export — derived only where NHLE polygon matched.</li>
+      <li>Display orientation is human-reviewed where possible; NHLE PCA and LiDAR auto-axes are evidence only. Prefer=not_barrow / leave_indistinct excluded from display.</li>
       <li>Length/width from scheduling polygons are approximate (often oversize vs mound).</li>
       <li>Not a complete county inventory of every ploughed / cropmark candidate.</li>
       <li>Cotswold–Severn membership is curated from peer sources; fringe / dubious chamber claims stay earthen unless cited.</li>
@@ -439,11 +445,16 @@ if (!map.getPane('barrows')) {{ map.createPane('barrows'); map.getPane('barrows'
 function esc(s) {{
   return String(s ?? '').replace(/[&<>"']/g, c => ({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}}[c]));
 }}
+/** Human-reviewed preferred axis for map icons / filters / tooltips / primary detail. No NHLE fallback. */
+function displayAz(h) {{
+  return h.azimuth_display_deg != null ? h.azimuth_display_deg : null;
+}}
 
 /** SVG DivIcon: filled circle; with azimuth, bidirectional arrows from the rim. */
 function makeIconHtml(h, selected) {{
   const col = COLOUR[h.status] || '#888';
-  const hasAz = h.azimuth_deg != null;
+  const az = displayAz(h);
+  const hasAz = az != null;
   const size = hasAz ? 36 : 18;
   const cx = size / 2, cy = size / 2;
   const r = hasAz ? 7 : 5.5;
@@ -461,7 +472,7 @@ function makeIconHtml(h, selected) {{
     const shaftCol = selected ? '#e8e0d4' : '#f2ebe0';
     // Draw shaft along vertical (north–south in unrotated coords), rotate by az.
     inner =
-      '<g transform="rotate(' + h.azimuth_deg + ' ' + cx + ' ' + cy + ')">' +
+      '<g transform="rotate(' + az + ' ' + cx + ' ' + cy + ')">' +
       '<line class="lb-shaft" x1="' + cx + '" y1="' + (cy - tip) + '" x2="' + cx + '" y2="' + (cy - rim) +
         '" stroke="' + shaftCol + '" stroke-width="2.2" stroke-linecap="round"/>' +
       '<line class="lb-shaft" x1="' + cx + '" y1="' + (cy + rim) + '" x2="' + cx + '" y2="' + (cy + tip) +
@@ -485,7 +496,7 @@ function makeIconHtml(h, selected) {{
 }}
 
 function makeIcon(h, selected) {{
-  const hasAz = h.azimuth_deg != null;
+  const hasAz = displayAz(h) != null;
   const size = hasAz ? 36 : 18;
   return L.divIcon({{
     className: 'lb-icon' + (selected ? ' selected' : ''),
@@ -512,7 +523,7 @@ ROWS.forEach(h => {{
     icon: makeIcon(h, false),
     pane: 'barrows',
     riseOnHover: true
-  }}).bindTooltip((h.display_name || h.id) + (h.azimuth_deg != null ? ' · az ' + h.azimuth_deg + '°' : ''));
+  }}).bindTooltip((h.display_name || h.id) + (displayAz(h) != null ? ' · az ' + displayAz(h) + '°' : ''));
   m.on('click', () => select(key, true));
   markers[key] = m;
   m.addTo(layer);
@@ -540,8 +551,8 @@ let filterType = 'all';
 
 function matches(h, q) {{
   if (filterStatus !== 'all' && h.status !== filterStatus) return false;
-  if (filterAz === 'with' && h.azimuth_deg == null) return false;
-  if (filterAz === 'without' && h.azimuth_deg != null) return false;
+  if (filterAz === 'with' && displayAz(h) == null) return false;
+  if (filterAz === 'without' && displayAz(h) != null) return false;
   if (filterType !== 'all' && (h.barrow_type || 'earthen') !== filterType) return false;
   if (!q) return true;
   const blob = [h.display_name, h.name, h.id, h.her_ref, h.her_alt_ref, h.he_list_entry, h.ngr, h.cluster, h.notes, h.parish, h.barrow_type].join(' ').toLowerCase();
@@ -568,7 +579,7 @@ function renderList() {{
     const col = COLOUR[h.status] || '#888';
     div.innerHTML = '<div class="nm"><span class="dot" style="background:' + col + '"></span>' + esc(h.display_name || h.id) + '</div>'
       + '<div class="meta">' + esc(STATUS_LABEL[h.status] || h.status)
-      + (h.azimuth_deg != null ? ' · az ' + h.azimuth_deg + '°' : ' · az —')
+      + (displayAz(h) != null ? ' · az ' + displayAz(h) + '°' : ' · az —')
       + (h.barrow_type === 'cotswold_severn' ? ' · Cotswold–Severn' : '')
       + (h.scheduled ? ' · scheduled' : '')
       + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</div>';
@@ -610,12 +621,12 @@ function select(key, pan) {{
   if (pan && markers[key]) map.panTo(markers[key].getLatLng());
   const det = document.getElementById('detail');
   const links = [];
-  if (h.he_url) links.push('<a href="' + esc(h.he_url) + '" target="_blank" rel="noopener">NHLE ' + esc(h.he_list_entry) + '</a>');
+  if (h.he_url) links.push('<a href="' + esc(h.he_url) + '" target="_blank" rel="noopener noreferrer">NHLE ' + esc(h.he_list_entry) + '</a>');
   const herView = h.her_ref && String(h.her_ref).indexOf('MWI') === 0
     ? ('https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=' + h.her_ref)
     : null;
   if (herView) {{
-    links.push('<a href="' + esc(herView) + '" target="_blank" rel="noopener">Wiltshire HER ' + esc(h.her_ref) + '</a>');
+    links.push('<a href="' + esc(herView) + '" target="_blank" rel="noopener noreferrer">Wiltshire HER ' + esc(h.her_ref) + '</a>');
   }}
   (h.source_urls || []).forEach(u => {{
     if (!u) return;
@@ -624,7 +635,7 @@ function select(key, pan) {{
     if (/HistoryEnvRecord\\/Home\\/Index/i.test(u)) return;
     const lab = sourceLinkLabel(u);
     if (!lab) return;
-    links.push('<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(lab) + '</a>');
+    links.push('<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(lab) + '</a>');
   }});
   const cp = barrowChips && barrowChips.getChipPath ? barrowChips.getChipPath(h.id) : null;
   const chipHtml = cp
@@ -645,9 +656,21 @@ function select(key, pan) {{
       : (h.barrow_type === 'uncertain' ? 'Uncertain' : 'Earthen (Wessex tradition default)'))) + '</dd>'
     + '<dt>NGR</dt><dd>' + esc(h.ngr || '—') + '</dd>'
     + '<dt>OSGB</dt><dd>E' + h.easting + ' N' + h.northing + '</dd>'
-    + '<dt>Long axis</dt><dd>' + (h.azimuth_deg != null ? (h.azimuth_deg + '° from N (undirected)') : '—')
-    + (h.azimuth_method ? ' · <code>' + esc(h.azimuth_method) + '</code>' : '') + '</dd>'
+    + '<dt>Display axis</dt><dd>' + (displayAz(h) != null
+      ? (displayAz(h) + '° from N (undirected)')
+      : '— (no preferred axis)')
+    + (h.azimuth_display_source ? ' · source <code>' + esc(h.azimuth_display_source) + '</code>' : '')
+    + (h.azimuth_prefer ? ' · prefer <code>' + esc(h.azimuth_prefer) + '</code>' : '')
+    + '</dd>'
+    + '<dt>NHLE PCA</dt><dd>' + (h.azimuth_deg != null ? (h.azimuth_deg + '° from N') : '—')
+    + (h.azimuth_method ? ' · <code>' + esc(h.azimuth_method) + '</code>' : '')
+    + ' <span style="opacity:.7">(scheduling outline; kept separate)</span></dd>'
+    + '<dt>LiDAR auto axis</dt><dd>' + (h.azimuth_lidar_deg != null ? (h.azimuth_lidar_deg + '° from N') : '—')
+    + (h.azimuth_lidar_method ? ' · <code>' + esc(h.azimuth_lidar_method) + '</code>' : '')
+    + (h.azimuth_lidar_conf != null ? ' · conf ' + h.azimuth_lidar_conf : '')
+    + ' <span style="opacity:.7">(mound-mask PCA; kept separate)</span></dd>'
     + '<dt>Front / façade</dt><dd>' + esc(h.front_end || 'unknown (not asserted in v1)') + '</dd>'
+    + (h.azimuth_prefer_note ? ('<dt>Prefer note</dt><dd>' + esc(h.azimuth_prefer_note) + '</dd>') : '')
     + '<dt>Length × width</dt><dd>' + (h.length_m != null ? (h.length_m + ' × ' + (h.width_m ?? '—') + ' m (approx.)') : '—') + '</dd>'
     + '<dt>Refs</dt><dd>' + (links.join(' · ') || '—') + '</dd>'
     + '<dt>Notes</dt><dd>' + esc(h.notes || '') + '</dd>'
@@ -710,10 +733,12 @@ def main() -> None:
     # ea1m cluster mosaic unused; per-barrow 1 m chips via barrow-chips.js + lidar/chips/web/
     out = ROOT / "index.html"
     out.write_text(html_page(rows, county_bounds, outline_bounds), encoding="utf-8")
-    n_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
+    n_az = sum(1 for r in rows if r.get("azimuth_display_deg") is not None)
+    n_nhle_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
     n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
     print(
-        f"wrote {out} ({len(rows)} barrows, {n_az} with azimuth, "
+        f"wrote {out} ({len(rows)} barrows, {n_az} with display azimuth, "
+        f"{n_nhle_az} NHLE PCA, "
         f"{n_cots} Cotswold–Severn; county_lidar={county_bounds is not None})"
     )
 

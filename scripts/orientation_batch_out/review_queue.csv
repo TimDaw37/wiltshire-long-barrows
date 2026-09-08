@@ -1,0 +1,15 @@
+id,name,nhle_az,lidar_az,delta,conf
+SU04NW100,Whitebarrow,4.0,91.7,87.70,0.838
+SU06NE106,Easton Down,143.5,43.7,80.20,0.754
+SU06NE105,South Street,132.6,68.9,63.70,0.862
+ST84NE100,Colloway Clump long barrow,10.4,127.5,62.90,0.805
+ST94NW103,Oxendean Down long barrow,109.7,170.0,60.30,0.861
+SU14SW126,Wilsford Down,2.6,60.2,57.60,0.488
+SU06NE115,Horton Down,147.6,97.7,49.90,0.845
+SU04SE100,Winterbourne Stoke Down,90.0,53.2,36.80,0.903
+SU14SW129,Normanton Down 2,66.8,43.2,23.60,0.493
+SU13SE604,'Ende Burgh' long barrow,30.9,11.1,19.80,0.497
+SU06SE101,Kitchen,18.3,35.5,17.20,0.737
+ST95SW102,"Long barrow, Tinhead Hill",64.3,47.4,16.90,0.889
+ST83NE100,"Long barrow on Pertwood Down, 1400m north-west of Lower Pertwood",125.1,109.0,16.10,0.934
+SU06NE108,Beckhampton Road,53.3,68.8,15.50,0.723
