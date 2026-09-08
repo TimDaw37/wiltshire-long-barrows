@@ -24,7 +24,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "ST91NW100",
     "azimuth_lidar_deg": 68.3,
     "azimuth_lidar_conf": 0.766,
@@ -62,7 +61,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1004752"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "Vernditch Chase long barrow",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.596,
@@ -99,7 +97,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "Kitts Grave",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.005,
@@ -135,7 +132,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1003004"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "Long barrow 600yds (550m) SE of Vanity",
     "azimuth_lidar_deg": 140.2,
     "azimuth_lidar_conf": 0.655,
@@ -173,7 +169,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015703"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "Long barrow on Little Toyd Down, 760m south west of Grims Lodge Farm",
     "azimuth_lidar_deg": 86.4,
     "azimuth_lidar_conf": 0.886,
@@ -211,7 +206,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015935"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "Giants Grave",
     "azimuth_lidar_deg": 17.3,
     "azimuth_lidar_conf": 0.834,
@@ -249,7 +243,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015701"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "Long barrow 170m south west of triangulation pillar on White Sheet Hill",
     "azimuth_lidar_deg": 57.0,
     "azimuth_lidar_conf": 0.754,
@@ -286,7 +279,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "South Wiltshire / Chase fringe",
-    "barrow_type": "earthen",
     "display_name": "ST92NE107",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.187,
@@ -323,7 +315,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Cockey Down",
     "azimuth_lidar_deg": 47.3,
     "azimuth_lidar_conf": 0.89,
@@ -359,7 +350,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1005611"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Fussells Lodge",
     "azimuth_lidar_deg": 69.1,
     "azimuth_lidar_conf": 0.718,
@@ -395,7 +385,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Rocks Hill",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.027,
@@ -431,7 +420,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1016195"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow on Keysley Down, 1020m NNE of Chapel Field Barn",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.5,
@@ -468,7 +456,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU23SW101",
     "azimuth_lidar_deg": 62.8,
     "azimuth_lidar_conf": 0.938,
@@ -503,7 +490,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU23SW100",
     "azimuth_lidar_deg": 43.3,
     "azimuth_lidar_conf": 0.669,
@@ -540,7 +526,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "ST83NW103",
     "azimuth_lidar_deg": 105.5,
     "azimuth_lidar_conf": 0.48,
@@ -576,7 +561,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010463"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow on Pertwood Down, 1400m north-west of Lower Pertwood",
     "azimuth_lidar_deg": 109.0,
     "azimuth_lidar_conf": 0.934,
@@ -612,7 +596,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Woodford G2",
     "azimuth_lidar_deg": 4.1,
     "azimuth_lidar_conf": 0.625,
@@ -648,7 +631,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012047"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow in Barrow Clump, Stockton Down",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.439,
@@ -686,7 +668,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Northwest of Camp Plantation",
     "azimuth_lidar_deg": 15.2,
     "azimuth_lidar_conf": 0.577,
@@ -721,7 +702,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "ST83NW100",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.017,
@@ -757,7 +737,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010416"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow on Cold Kitchen Hill",
     "azimuth_lidar_deg": 148.4,
     "azimuth_lidar_conf": 0.854,
@@ -795,7 +774,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010520"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow 250m east of Boyton Field Barn",
     "azimuth_lidar_deg": 99.7,
     "azimuth_lidar_conf": 0.839,
@@ -833,7 +811,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "MWI78750",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.589,
@@ -871,7 +848,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Lake Group",
     "azimuth_lidar_deg": 113.2,
     "azimuth_lidar_conf": 0.698,
@@ -910,7 +886,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010518"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Corton",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.017,
@@ -948,7 +923,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Southeast of Longbarrow Crossroads",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.47,
@@ -985,7 +959,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009621"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Normanton Down 2",
     "azimuth_lidar_deg": 43.2,
     "azimuth_lidar_conf": 0.493,
@@ -1024,7 +997,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010830"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Wilsford Down",
     "azimuth_lidar_deg": 60.2,
     "azimuth_lidar_conf": 0.488,
@@ -1062,7 +1034,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009614"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Normanton Down",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.002,
@@ -1101,7 +1072,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1011841"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Winterbourne Stoke Crossroads",
     "azimuth_lidar_deg": 34.9,
     "azimuth_lidar_conf": 0.886,
@@ -1140,7 +1110,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008953"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "North of Normanton Gorse",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.022,
@@ -1177,7 +1146,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015021"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Winterbourne Stoke Down",
     "azimuth_lidar_deg": 53.2,
     "azimuth_lidar_conf": 0.903,
@@ -1214,7 +1182,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "South of Fargo Road",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.003,
@@ -1253,7 +1220,6 @@
       "https://doi.org/10.11141/ia.47.7"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Cuckoo Stone long barrow",
     "azimuth_lidar_deg": 54.1,
     "azimuth_lidar_conf": 0.317,
@@ -1290,7 +1256,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1015215"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Southwest of Bulford",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.018,
@@ -1327,7 +1292,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Amesbury 42",
     "azimuth_lidar_deg": 9.5,
     "azimuth_lidar_conf": 0.702,
@@ -1365,7 +1329,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009882"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "West Hill long barrow",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.009,
@@ -1404,7 +1367,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012167"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Knighton Down",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.099,
@@ -1442,7 +1404,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010399"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "King Barrow",
     "azimuth_lidar_deg": 161.5,
     "azimuth_lidar_conf": 0.726,
@@ -1480,7 +1441,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009938"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Knock",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.489,
@@ -1519,7 +1479,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010052"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Knighton",
     "azimuth_lidar_deg": 88.7,
     "azimuth_lidar_conf": 0.767,
@@ -1557,7 +1516,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Brigmerston Field",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.379,
@@ -1596,7 +1554,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009600"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "South of Robin Hood Ball Clump",
     "azimuth_lidar_deg": 131.9,
     "azimuth_lidar_conf": 0.615,
@@ -1634,7 +1591,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009895"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Norton Down long barrow",
     "azimuth_lidar_deg": 100.5,
     "azimuth_lidar_conf": 0.8,
@@ -1672,7 +1628,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009894"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Middleton Down long barrow",
     "azimuth_lidar_deg": 122.2,
     "azimuth_lidar_conf": 0.613,
@@ -1711,7 +1666,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009482"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "North of Milston Firs",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.585,
@@ -1748,7 +1702,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU24NW102",
     "azimuth_lidar_deg": 69.6,
     "azimuth_lidar_conf": 0.698,
@@ -1786,7 +1739,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009878"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow on Knook Down",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.013,
@@ -1821,7 +1773,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU24NW101",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.572,
@@ -1860,7 +1811,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010091"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "North of Robin Hood Ball Clump",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.084,
@@ -1899,7 +1849,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009520"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Northeast of Robin Hood Ball Clump",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.409,
@@ -1937,7 +1886,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009808"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Bowls",
     "azimuth_lidar_deg": 88.5,
     "azimuth_lidar_conf": 0.662,
@@ -1976,7 +1924,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009297"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Tilshead Down",
     "azimuth_lidar_deg": 65.0,
     "azimuth_lidar_conf": 0.952,
@@ -2015,7 +1962,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1018159"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Whitebarrow",
     "azimuth_lidar_deg": 91.7,
     "azimuth_lidar_conf": 0.838,
@@ -2053,7 +1999,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009516"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Northeast of Robin Hood Ball Clump 2",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.498,
@@ -2091,7 +2036,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009918"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Colloway Clump long barrow",
     "azimuth_lidar_deg": 127.5,
     "azimuth_lidar_conf": 0.805,
@@ -2129,7 +2073,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009798"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Oxendean Down long barrow",
     "azimuth_lidar_deg": 170.0,
     "azimuth_lidar_conf": 0.861,
@@ -2167,7 +2110,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009446"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Northwest of Tilshead Lodge",
     "azimuth_lidar_deg": 85.1,
     "azimuth_lidar_conf": 0.849,
@@ -2205,7 +2147,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Kill",
     "azimuth_lidar_deg": 109.6,
     "azimuth_lidar_conf": 0.959,
@@ -2243,7 +2184,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010027"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow south-west of Imber",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.021,
@@ -2281,7 +2221,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Sheer Barrow",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.251,
@@ -2320,7 +2259,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009936"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "East Down",
     "azimuth_lidar_deg": 120.5,
     "azimuth_lidar_conf": 0.69,
@@ -2359,7 +2297,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009758"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Ell Barrow",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.616,
@@ -2396,7 +2333,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "ST95SW100",
     "azimuth_lidar_deg": 94.2,
     "azimuth_lidar_conf": 0.684,
@@ -2434,7 +2370,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Southeast of Comesdeane Well",
     "azimuth_lidar_deg": 28.9,
     "azimuth_lidar_conf": 0.77,
@@ -2471,7 +2406,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU15SE152198",
     "azimuth_lidar_deg": 50.3,
     "azimuth_lidar_conf": 0.72,
@@ -2507,7 +2441,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1009783"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow, Tinhead Hill",
     "azimuth_lidar_deg": 47.4,
     "azimuth_lidar_conf": 0.889,
@@ -2543,7 +2476,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU25NE103",
     "azimuth_lidar_deg": 75.9,
     "azimuth_lidar_conf": 0.686,
@@ -2580,7 +2512,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU25NE102",
     "azimuth_lidar_deg": 167.0,
     "azimuth_lidar_conf": 0.817,
@@ -2617,7 +2548,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Tow",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.405,
@@ -2657,7 +2587,6 @@
       "https://theconversation.com/6-000-year-old-monument-offers-a-tantalising-glimpse-of-britains-neolithic-civilisation-87730"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Cat's Brain",
     "azimuth_lidar_deg": 116.9,
     "azimuth_lidar_conf": 0.851,
@@ -2692,7 +2621,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU25NE100",
     "azimuth_lidar_deg": 172.9,
     "azimuth_lidar_conf": 0.818,
@@ -2724,14 +2652,13 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1013032",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Adam's Grave; HE scheduling (sarsen chamber, Thurnam 1860); commonly classed Severn–Cotswold / Cotswold–Severn).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. Often classed as Cotswold–Severn / chambered (HE scheduling: sarsen chamber, Thurnam 1860; commonly Severn–Cotswold / Cotswold–Severn).",
     "source_urls": [
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14864",
       "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1013032"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "cotswold_severn",
     "display_name": "Adam's Grave",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.389,
@@ -2770,7 +2697,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012519"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Kitchen",
     "azimuth_lidar_deg": 35.5,
     "azimuth_lidar_conf": 0.737,
@@ -2809,7 +2735,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1012429"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "West Woods",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.017,
@@ -2847,7 +2772,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Roughridge Hill",
     "azimuth_lidar_deg": 96.7,
     "azimuth_lidar_conf": 0.889,
@@ -2883,7 +2807,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013141"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Horton Down",
     "azimuth_lidar_deg": 97.7,
     "azimuth_lidar_conf": 0.845,
@@ -2921,7 +2844,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013360"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Kings Play Hill",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.062,
@@ -2960,7 +2882,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1014030"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "West of Old Shepherds Shore",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.014,
@@ -2997,7 +2918,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013366"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Easton Down",
     "azimuth_lidar_deg": 43.7,
     "azimuth_lidar_conf": 0.754,
@@ -3029,14 +2949,13 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1012323",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (East Kennet; Barker Avebury chambered-tomb inventory; HE notes protruding sarsens / probable chambers).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. Typology is debated on the Cotswold–Severn / earthen spectrum — often treated as a hybrid (protruding sarsens / probable chambers; Barker Avebury chambered-tomb inventory; HE notes), not a clean binary class.",
     "source_urls": [
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14279",
       "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1012323"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "cotswold_severn",
     "display_name": "East Kennet",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.454,
@@ -3074,7 +2993,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Beckhampton Plantation",
     "azimuth_lidar_deg": 28.4,
     "azimuth_lidar_conf": 0.716,
@@ -3110,7 +3028,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "White Hill",
     "azimuth_lidar_deg": 69.8,
     "azimuth_lidar_conf": 0.932,
@@ -3147,7 +3064,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1013239"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Beckhampton Road",
     "azimuth_lidar_deg": 68.8,
     "azimuth_lidar_conf": 0.723,
@@ -3178,14 +3094,13 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010628",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (West Kennet; Darvill 2004; Piggott & Atkinson 1955–56 (transepted chambers)).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. Often classed as Cotswold–Severn / chambered (Darvill 2004; Piggott & Atkinson 1955–56, transepted chambers).",
     "source_urls": [
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI14278",
       "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010628"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "cotswold_severn",
     "display_name": "West Kennet",
     "azimuth_lidar_deg": 84.4,
     "azimuth_lidar_conf": 0.917,
@@ -3224,7 +3139,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008126"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Long Stones",
     "azimuth_lidar_deg": 44.4,
     "azimuth_lidar_conf": 0.744,
@@ -3263,7 +3177,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008103"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "South Street",
     "azimuth_lidar_deg": 68.9,
     "azimuth_lidar_conf": 0.862,
@@ -3300,7 +3213,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010135"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Oldbury",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.101,
@@ -3340,7 +3252,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1008449"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Horseslip",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.346,
@@ -3376,7 +3287,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Manton Down",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.218,
@@ -3411,7 +3321,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "SU17SW110",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.018,
@@ -3441,13 +3350,12 @@
     "he_url": null,
     "status": "certain",
     "scheduled": false,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. barrow_type=cotswold_severn (Millbarrow; Whittle et al. Millbarrow excavation; Cotswold–Severn type chambered long barrow (destroyed)).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Avebury Henge. Often classed as Cotswold–Severn / chambered (Whittle et al. Millbarrow excavation; Cotswold–Severn type chambered long barrow, destroyed).",
     "source_urls": [
       "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI9031",
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "cotswold_severn",
     "display_name": "Millbarrow",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.01,
@@ -3483,7 +3391,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Temple Bottom",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.012,
@@ -3518,7 +3425,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU27SE101",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.066,
@@ -3548,13 +3454,12 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010908",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Lanhill; Corcoran 1969; Darvill 2004 (Cotswold–Severn chambered)).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. Often classed as Cotswold–Severn / chambered (Corcoran 1969; Darvill 2004).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010908"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "cotswold_severn",
     "display_name": "Lanhill Barrow: a long barrow 300m south of Sparrow Farm",
     "azimuth_lidar_deg": 100.6,
     "azimuth_lidar_conf": 0.935,
@@ -3592,7 +3497,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010396"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow 400m north-west of Fox Covert",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.292,
@@ -3624,13 +3528,12 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010397",
     "status": "certain",
     "scheduled": true,
-    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Lugbury; Corcoran 1969; Darvill 2004 (Cotswold–Severn; aka Littleton Drew)).",
+    "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. Often classed as Cotswold–Severn / chambered (Corcoran 1969; Darvill 2004; aka Littleton Drew).",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010397"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "cotswold_severn",
     "display_name": "Long barrow 500m north of Lugbury Farm",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.306,
@@ -3667,7 +3570,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU27NW103",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.535,
@@ -3705,7 +3607,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1010395"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow 600m north of Hebden Farm",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.016,
@@ -3737,13 +3638,12 @@
     "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1010394",
     "status": "certain",
     "scheduled": true,
-    "notes": "Added from NHLE (not in Wheatley HER seed). Cotswold–Severn chambered long barrow: Crawford 1925 Long Barrows of the Cotswolds; Darvill 2004; HE 'chambered long barrow'. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. barrow_type=cotswold_severn (Giant's Cave (Luckington); Crawford 1925 Long Barrows of the Cotswolds; Darvill 2004; HE 'chambered long barrow').",
+    "notes": "Added from NHLE (not in Wheatley HER seed). Often classed as Cotswold–Severn / chambered (Crawford 1925 Long Barrows of the Cotswolds; Darvill 2004; HE 'chambered long barrow'). Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents.",
     "source_urls": [
       "https://doi.org/10.5281/zenodo.11005373",
       "https://historicengland.org.uk/listing/the-list/list-entry/1010394"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "cotswold_severn",
     "display_name": "Giant's Cave: a chambered long barrow 750m south west of Allengrove Farm",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.018,
@@ -3780,7 +3680,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU13SE108",
     "azimuth_lidar_deg": 100.3,
     "azimuth_lidar_conf": 0.567,
@@ -3817,7 +3716,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU13SE663",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.008,
@@ -3852,7 +3750,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU23SW600",
     "azimuth_lidar_deg": 7.5,
     "azimuth_lidar_conf": 0.712,
@@ -3890,7 +3787,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "MWI77205",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.043,
@@ -3926,7 +3822,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "MWI77115",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.015,
@@ -3962,7 +3857,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1005688"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "'Ende Burgh' long barrow",
     "azimuth_lidar_deg": 11.1,
     "azimuth_lidar_conf": 0.497,
@@ -4001,7 +3895,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1011046"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "South-southeast of Longbarrow Crossroads",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.085,
@@ -4037,7 +3930,6 @@
       "https://historicengland.org.uk/listing/the-list/list-entry/1017603"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "Long barrow 250m east of Polebridge Farm",
     "azimuth_lidar_deg": 39.9,
     "azimuth_lidar_conf": 0.763,
@@ -4076,7 +3968,6 @@
       "https://intarch.ac.uk/journal/issue47/7/subpages/AM140.html"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Amesbury 140 (North of West Amesbury)",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.296,
@@ -4115,7 +4006,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "West of Stonehenge",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.224,
@@ -4150,7 +4040,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "ST94SW742",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.012,
@@ -4186,7 +4075,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "South of Woodhenge",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.288,
@@ -4223,7 +4111,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU14SW654",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.194,
@@ -4259,7 +4146,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "North of Durrington Field",
     "azimuth_lidar_deg": 70.3,
     "azimuth_lidar_conf": 0.99,
@@ -4294,7 +4180,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU24NW629",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.234,
@@ -4331,7 +4216,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "SU24NW678",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.017,
@@ -4369,7 +4253,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Stonehenge / Salisbury Plain",
-    "barrow_type": "earthen",
     "display_name": "Northeast of Barrow Clump",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.014,
@@ -4404,7 +4287,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU25SW781",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.018,
@@ -4439,7 +4321,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU25SE100",
     "azimuth_lidar_deg": 73.4,
     "azimuth_lidar_conf": 0.615,
@@ -4474,7 +4355,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU25NE104",
     "azimuth_lidar_deg": 55.9,
     "azimuth_lidar_conf": 0.731,
@@ -4509,7 +4389,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "ST86SE643",
     "azimuth_lidar_deg": 111.9,
     "azimuth_lidar_conf": 0.9,
@@ -4545,7 +4424,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "Southeast of Hill Farm",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.022,
@@ -4580,7 +4458,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "SU26NE100",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.47,
@@ -4617,7 +4494,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "SU16NW656",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.182,
@@ -4652,7 +4528,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "SU16NE648",
     "azimuth_lidar_deg": 92.8,
     "azimuth_lidar_conf": 0.921,
@@ -4688,7 +4563,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "West of Oldbury",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.042,
@@ -4726,7 +4600,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "Avebury / Pewsey",
-    "barrow_type": "earthen",
     "display_name": "MWI76495",
     "azimuth_lidar_deg": 93.7,
     "azimuth_lidar_conf": 0.922,
@@ -4762,7 +4635,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "MWI73199",
     "azimuth_lidar_deg": 155.8,
     "azimuth_lidar_conf": 0.697,
@@ -4797,7 +4669,6 @@
       "https://doi.org/10.5281/zenodo.11005373"
     ],
     "cluster": "North Wiltshire chalk",
-    "barrow_type": "earthen",
     "display_name": "ST98NW635",
     "azimuth_lidar_deg": null,
     "azimuth_lidar_conf": 0.021,

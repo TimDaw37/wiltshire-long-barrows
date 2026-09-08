@@ -102,7 +102,7 @@ Prefer JSON: `scripts/orientation_batch_out/wiltshire-lb-orientation-prefer-v2.j
 
 1. **Never overwrite** NHLE `azimuth_deg` / `azimuth_method`.
 2. **Skip** `MODERN_ALL_CANNINGS` for Neolithic orientation analysis.
-3. **Cotswold–Severn**: façade / forecourt direction ≠ mound long-axis; keep `barrow_type` peer-cited only (see `NOTES.md`).
+3. **Chambered / Cotswold–Severn traits**: façade / forecourt direction ≠ mound long-axis; typology lives in site notes only — no `barrow_type` binary (see `NOTES.md`).
 4. **Plough / track / twin-mound** false axes — prefer eye / leave_indistinct already encodes many of these; don’t “rescue” not_barrow into display.
 5. **Undirected 0–180°**, chips **north-up**.
 6. **Circular / axial statistics** required for undirected data (do not treat 0–180 as linear Euclidean without axial handling; mean resultant length on doubled angles is the usual approach).
@@ -152,7 +152,7 @@ YOUR JOB NOW — write-up + analysis package (not more plumbing):
 2) Compare display vs NHLE vs LiDAR where all exist: Δ distributions; flag where
    eye differed from both NHLE and LiDAR.
 
-3) Split by barrow_type (earthen vs cotswold_severn) and by cluster/region if fields exist.
+3) Do not split by a Cotswold–Severn / earthen binary; optional splits by cluster/region or by keywords in notes only.
 
 4) Overlay flat-horizon solar azimuths at ~51.2°N (midsummer ~50°, equinox ~90°,
    midwinter ~129°) as DESCRIPTIVE overlays only — no intent claims.

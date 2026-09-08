@@ -46,27 +46,14 @@ Peer consensus for Wiltshire chalk: **no clear common astronomical alignment**; 
 (Ruggles; Roberts et al. IA 47; Darvill). Treat solar claims as hypotheses to test against the
 human-curated display axes (and LiDAR), not as established intent.
 
-## Cotswold–Severn vs earthen
+## Typology (no public binary class)
 
-Important Wiltshire split: **Cotswold–Severn** (stone-chambered; “Cotteswold” tradition)
-vs **earthen** long barrows (Wessex chalk). Field `barrow_type`:
-`cotswold_severn` | `earthen` | `uncertain`.
+The public map does **not** filter or label sites as Cotswold–Severn vs earthen.
+Chambered / earthen / hybrid traits are a **spectrum** (e.g. East Kennet is often treated as hybrid);
+plain-language typology lives in each site’s **Notes**, not a hard UI class.
 
-v1 marks **seven** peer-attested Cotswold–Severn sites only (do not invent membership):
+The `barrow_type` field has been **removed** from `long_barrows.json` / `.geojson`. Do not reintroduce a public Cotswold–Severn / earthen binary; keep typology in site notes only.
 
-| Site | HE / id | Citation basis |
-|------|---------|----------------|
-| West Kennet | 1010628 | Darvill 2004; Piggott & Atkinson 1955–56 |
-| East Kennet | 1012323 | Barker inventory; HE sarsens / probable chambers |
-| Adam's Grave | 1013032 | HE (Thurnam sarsen chamber); Severn–Cotswold type |
-| Millbarrow | SU07SE105 | Whittle excavation; Cotswold–Severn type (destroyed) |
-| Lanhill | 1010908 | Corcoran 1969; Darvill 2004 |
-| Lugbury | 1010397 | Corcoran 1969; Darvill 2004 (Littleton Drew) |
-| Giant's Cave (Luckington) | 1010394 | Crawford 1925; Darvill 2004; HE “chambered” — added from NHLE (absent from Wheatley seed) |
-
-All other rows default to `earthen`. Fringe Wikipedia lists (e.g. Kitchen Barrow, Horton Down,
-South Street as “Cotswold–Severn”) are **not** auto-promoted without chambered peer evidence;
-South Street / Longstones are excavated **earthen** monuments.
 
 ## LiDAR
 
@@ -76,7 +63,6 @@ South Street / Longstones are excavated **earthen** monuments.
 
 ## Gaps
 
-- Cuckoo Stone long barrow `SU14SW521` (NHLE 1009130 / Roberts DUR76) added 2026-09-08 at SU 14652 43241; LiDAR chip present, auto axis below refuse floor — needs eye review. Distinct from Wheatley seed `SU14SW10W` 393 m south.
 - Incomplete naming; many HER-only IDs
 - Possible HER rows include oval barrows / uncertain cropmarks — keep `status`
 - Two seed rows dropped for impossible OSGB (outside chalk envelope)
@@ -132,12 +118,12 @@ Full chip-by-chip human review of all **128** gazetteer rows; prefer answers app
 | prefer | n |
 |--------|---|
 | eye | 77 |
-| leave_indistinct | 22 |
-| not_barrow | 20 |
+| leave_indistinct | 21 |
+| not_barrow | 21 |
 | lidar | 5 |
 | nhle | 4 |
 
-→ **`azimuth_display_deg` set for 86** (77 eye + 5 lidar + 4 nhle). After 2026-09-08 re-review: leave_indistinct 22, not_barrow 20 (Woodford 2 `SU13NW151` moved not_barrow → leave_indistinct). AM140 `SU14SW11B` eye reset 91° → 157.5° (aerial NNW–SSE). WS71 `SU14SW997` NHLE 1011046 is scheduled as a **bowl barrow** at the long-barrow HER NGR — NHLE PCA not used as display.
+→ **`azimuth_display_deg` set for 86** (77 eye + 5 lidar + 4 nhle). not_barrow / leave_indistinct have no display.
 
 ### Source prefer JSON
 
@@ -147,9 +133,3 @@ Applied summary: `scripts/orientation_batch_out/prefer_applied_summary.json` (nh
 ### Map
 
 `generate.py` / `index.html` now use **`azimuth_display_deg`** for counts, filters, icons, tooltips and the primary detail value — **no fallback** to NHLE when prefer was not_barrow / leave_indistinct. NHLE PCA and LiDAR auto axes remain as separate evidence lines in the detail panel.
-
-### Display-axis analysis (2026-09-08)
-
-Draft write-up + figures: `docs/analysis/wiltshire-long-barrow-orientations.md`.  
-Re-run: `python scripts/orientation_analysis.py` then `python scripts/orientation_robust.py` (read-only on gazetteer JSON).  
-Primary n = 86 `azimuth_display_deg`. Ridge-vs-solstice test on EA DTM; comparison with Roberts et al. IA 47 Table 1. Re-review queue in the article.

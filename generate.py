@@ -89,7 +89,6 @@ def html_page(
     n_az = sum(1 for r in rows if r.get("azimuth_display_deg") is not None)
     n_nhle_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
     n_sched = sum(1 for r in rows if r.get("scheduled"))
-    n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
     clusters = Counter(r.get("cluster") or "—" for r in rows)
     has_county = county_bounds is not None
     has_outline = county_outline_bounds is not None
@@ -366,12 +365,10 @@ def html_page(
     Interactive gazetteer of Wiltshire Neolithic long barrows from open HER extracts and
     Historic England scheduling polygons, plus Tim Daw’s modern All Cannings long barrow.
     Terrain is a county-wide EA Composite DTM hillshade at ~20&nbsp;m; desktop zoom shows 1&nbsp;m chips.
-    Cotswold–Severn (stone-chambered) vs earthen is the main type split — peer-cited membership only.
   </p>
   <div class="stats" id="stats">
     <span><b>{n}</b> barrows</span>
     <span><b>{n_cert}</b> HER certain · <b>{n - n_cert}</b> possible</span>
-    <span><b>{n_cots}</b> Cotswold–Severn · <b>{n - n_cots}</b> earthen/other</span>
     <span><b>{n_sched}</b> NHLE-matched</span>
     <span><b>{n_az}</b> with long-axis bearing shown</span>
     <span>{cluster_bits}</span>
@@ -409,12 +406,11 @@ def html_page(
       human-checked where shown. They are not solar alignments or façade directions.
     </p>
 
-    <h2>Cotswold–Severn vs earthen</h2>
+    <h2>Typology</h2>
     <p>
-      <b>Cotswold–Severn</b> = stone-chambered; <b>earthen</b> = Wessex chalk mounds (timber chambers if any).
-      Neolithic Cotswold–Severn membership is peer-cited only (Darvill / Corcoran / Crawford / excavations / HE).
-      <b>All Cannings</b> is included as a modern (2014–) stone-chambered long barrow in Cotswold–Severn form —
-      not a Neolithic HER site.
+      Chambered, earthen, and hybrid traits form a spectrum — this map does not force a binary
+      Cotswold–Severn vs earthen class on markers or filters. See each site’s Notes for plain-language typology.
+      <b>All Cannings</b> is a modern (2014–) long barrow, not a Neolithic HER site.
     </p>
 
     <h2>Sources (v1 seed)</h2>
@@ -433,7 +429,6 @@ def html_page(
       <li>Long-axis bearings are human-checked where shown; sites without a clear axis appear as plain circles.</li>
       <li>Length/width from scheduling polygons are approximate (often oversize vs mound).</li>
       <li>Not a complete county inventory of every ploughed / cropmark candidate.</li>
-      <li>Cotswold–Severn membership is curated from peer sources; fringe / dubious chamber claims stay earthen unless cited.</li>
     </ul>
 
     <h2>Licence / sources</h2>
@@ -605,15 +600,13 @@ const barrowChips = (typeof initBarrowLidarChips === 'function')
 
 let filterStatus = 'all';
 let filterAz = 'all';
-let filterType = 'all';
 
 function matches(h, q) {{
   if (filterStatus !== 'all' && h.status !== filterStatus) return false;
   if (filterAz === 'with' && displayAz(h) == null) return false;
   if (filterAz === 'without' && displayAz(h) != null) return false;
-  if (filterType !== 'all' && (h.barrow_type || 'earthen') !== filterType) return false;
   if (!q) return true;
-  const blob = [h.display_name, h.name, h.id, h.her_ref, h.her_alt_ref, h.he_list_entry, h.ngr, h.cluster, h.notes, h.parish, h.barrow_type].join(' ').toLowerCase();
+  const blob = [h.display_name, h.name, h.id, h.her_ref, h.her_alt_ref, h.he_list_entry, h.ngr, h.cluster, h.notes, h.parish].join(' ').toLowerCase();
   return blob.includes(q);
 }}
 
@@ -638,7 +631,6 @@ function renderList() {{
     div.innerHTML = '<div class="nm"><span class="dot" style="background:' + col + '"></span>' + esc(h.display_name || h.id) + '</div>'
       + '<div class="meta">' + esc(STATUS_LABEL[h.status] || h.status)
       + (displayAz(h) != null ? ' · az ' + displayAz(h) + '°' : ' · az —')
-      + (h.barrow_type === 'cotswold_severn' ? ' · Cotswold–Severn' : '')
       + (h.scheduled ? ' · scheduled' : '')
       + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</div>';
     div.onclick = () => select(key, true);
@@ -708,10 +700,6 @@ function select(key, pan) {{
     + (h.status === 'modern' ? ' · contemporary (not scheduled Neolithic)' : (h.scheduled ? ' · scheduled monument' : ' · not matched to NHLE in v1'))
     + (h.cluster ? ' · ' + esc(h.cluster) : '') + '</p>'
     + '<dl>'
-    + '<dt>Barrow type</dt><dd>' + (h.barrow_type === 'cotswold_severn'
-      ? 'Cotswold–Severn (stone-chambered)'
-      : (h.barrow_type === 'modern' ? 'Modern / experimental long barrow (earthen mound)'
-      : (h.barrow_type === 'uncertain' ? 'Uncertain' : 'Earthen (Wessex tradition default)'))) + '</dd>'
     + '<dt>NGR</dt><dd>' + esc(h.ngr || '—') + '</dd>'
     + '<dt>OSGB</dt><dd>E' + h.easting + ' N' + h.northing + '</dd>'
     + '<dt>Long axis</dt><dd>' + (displayAz(h) != null
@@ -740,15 +728,6 @@ const statusChips = [];
   b.textContent = lab;
   b.onclick = () => {{ filterStatus = k; statusChips.forEach((c,i) => c.classList.toggle('on', ['all','certain','possible','modern'][i]===k)); renderList(); }};
   statusChips.push(b);
-  chips.appendChild(b);
-}});
-const typeChips = [];
-[['all','Any type'],['cotswold_severn','Cotswold–Severn'],['earthen','Earthen']].forEach(([k,lab]) => {{
-  const b = document.createElement('button');
-  b.className = 'chip' + (k === 'all' ? ' on' : '');
-  b.textContent = lab;
-  b.onclick = () => {{ filterType = k; typeChips.forEach((c,i) => c.classList.toggle('on', ['all','cotswold_severn','earthen'][i]===k)); renderList(); }};
-  typeChips.push(b);
   chips.appendChild(b);
 }});
 const azChips = [];
@@ -782,11 +761,9 @@ def main() -> None:
     out.write_text(html_page(rows, county_bounds, outline_bounds), encoding="utf-8")
     n_az = sum(1 for r in rows if r.get("azimuth_display_deg") is not None)
     n_nhle_az = sum(1 for r in rows if r.get("azimuth_deg") is not None)
-    n_cots = sum(1 for r in rows if r.get("barrow_type") == "cotswold_severn")
     print(
         f"wrote {out} ({len(rows)} barrows, {n_az} with display azimuth, "
-        f"{n_nhle_az} NHLE PCA, "
-        f"{n_cots} Cotswold–Severn; county_lidar={county_bounds is not None})"
+        f"{n_nhle_az} NHLE PCA; county_lidar={county_bounds is not None})"
     )
 
 
