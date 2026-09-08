@@ -379,7 +379,7 @@ def html_page(
   <p class="legend">
     Gold = HER certain · grey = possible.
     Circle markers: gold = HER certain, grey = possible, teal = modern.
-    Rim arrows = undirected long-axis bearings from north (0–180°), human-checked where shown.
+    Rim arrows mark undirected long-axis bearings from north (0–180°), human-checked where shown.
     Gold outline = ceremonial Wiltshire (UA + Swindon).
     {lidar_legend}
   </p>
@@ -396,7 +396,7 @@ def html_page(
         and no spike at midsummer or midwinter.
       </p>
       <p class="more">
-        <a href="docs/analysis/wiltshire-long-barrows-facing-the-land.md">Short note on the bearings</a>
+        <a href="docs/analysis/wiltshire-long-barrows-facing-the-land.html" target="_blank" rel="noopener noreferrer">Short note on the bearings</a>
         · dashed lines on the rose are sunrise on a flat horizon (drawn for scale, not a finding)
       </p>
     </div>
