@@ -1,0 +1,128 @@
+{
+  "n_display": 86,
+  "n_ridge_ok": 86,
+  "roberts_flags": {
+    "no_display": 6,
+    "agree": 12,
+    "unmatched": 1,
+    "identity_mismatch": 1,
+    "look": 1
+  },
+  "roberts_n_compared": 14,
+  "delta_vs_ridge": {
+    "n": 86,
+    "median": 30.27,
+    "mean": 34.74,
+    "lt15": 23,
+    "lt22_5": 36,
+    "lt30": 43
+  },
+  "delta_vs_nearest_solstice": {
+    "n": 86,
+    "median": 21.0,
+    "mean": 23.25,
+    "lt15": 26,
+    "lt22_5": 44,
+    "lt30": 59
+  },
+  "delta_vs_equinox": {
+    "n": 86,
+    "median": 37.3,
+    "mean": 37.82,
+    "lt15": 22,
+    "lt22_5": 33,
+    "lt30": 39
+  },
+  "delta_vs_ridge_slope_ge_1deg": {
+    "n": 57,
+    "median": 25.65,
+    "mean": 31.85,
+    "lt15": 19,
+    "lt22_5": 26,
+    "lt30": 32
+  },
+  "chance_median_undirected": 45.0,
+  "display_rayleigh": {
+    "n": 86,
+    "mean": 86.86,
+    "R": 0.168,
+    "p": 0.08802558786214297
+  },
+  "v_midsummer": 0.2635603993296609,
+  "v_equinox": 0.014175406669364787,
+  "v_midwinter": 0.41310648729221455,
+  "ridge_following_lt22": 36,
+  "across_slope_lt22": 12,
+  "solstice_lt15": 26,
+  "rereview_axis": [
+    {
+      "abbr": "WIL41",
+      "id": "SU14SW133",
+      "name": "Lake Group",
+      "published": "NW-SE",
+      "display": 111.0,
+      "delta": 24.0,
+      "flag": "look",
+      "prefer": "eye",
+      "match_dist_m": 33.2
+    }
+  ],
+  "rereview_excluded_but_published": [
+    {
+      "abbr": "AM7",
+      "id": "SU14SW105",
+      "name": "West of Stonehenge",
+      "published": "NNW-SSE",
+      "prefer": "leave_indistinct",
+      "match_dist_m": 8.9
+    },
+    {
+      "abbr": "AM10a",
+      "id": "SU14SW105",
+      "name": "West of Stonehenge",
+      "published": "W-E",
+      "prefer": "leave_indistinct",
+      "match_dist_m": 103.2
+    },
+    {
+      "abbr": "AM14",
+      "id": "SU14SW127",
+      "name": "North of Normanton Gorse",
+      "published": "NNW-SSE",
+      "prefer": "leave_indistinct",
+      "match_dist_m": 21.0
+    },
+    {
+      "abbr": "WS86",
+      "id": "MWI75694",
+      "name": "Southeast of Longbarrow Crossroads",
+      "published": "NNW-SSE",
+      "prefer": "leave_indistinct",
+      "match_dist_m": 11.7
+    },
+    {
+      "abbr": "WS71",
+      "id": "SU14SW997",
+      "name": "South-southeast of Longbarrow Crossroads",
+      "published": "NE-SW",
+      "prefer": "leave_indistinct",
+      "match_dist_m": 17.0
+    },
+    {
+      "abbr": "WOO2",
+      "id": "SU13NW151",
+      "name": "Northwest of Camp Plantation",
+      "published": "N-S",
+      "prefer": "leave_indistinct",
+      "match_dist_m": 11.7
+    }
+  ],
+  "identity_mismatch": [
+    {
+      "abbr": "DUR76",
+      "id": "SU14SW10W",
+      "name": "South of Fargo Road",
+      "match_dist_m": 392.8
+    }
+  ]
+}

@@ -141,7 +141,7 @@
       "azimuth_eye_deg": 148
     },
     "SU13NW151": {
-      "prefer": "not_barrow"
+      "prefer": "leave_indistinct"
     },
     "SU25SE100": {
       "prefer": "not_barrow"
@@ -166,7 +166,7 @@
     },
     "SU14SW133": {
       "prefer": "eye",
-      "azimuth_eye_deg": 111
+      "azimuth_eye_deg": 111.0
     },
     "SU24NW102": {
       "prefer": "eye",
@@ -312,7 +312,7 @@
     },
     "SU14SW11B": {
       "prefer": "eye",
-      "azimuth_eye_deg": 91
+      "azimuth_eye_deg": 157.5
     },
     "ST77NE100": {
       "prefer": "eye",
@@ -604,7 +604,7 @@
       "azimuth_eye_deg": 148
     },
     "SU13NW151": {
-      "prefer": "not_barrow"
+      "prefer": "leave_indistinct"
     },
     "SU25SE100": {
       "prefer": "not_barrow"
@@ -629,7 +629,7 @@
     },
     "SU14SW133": {
       "prefer": "eye",
-      "azimuth_eye_deg": 111
+      "azimuth_eye_deg": 111.0
     },
     "SU24NW102": {
       "prefer": "eye",
@@ -775,7 +775,7 @@
     },
     "SU14SW11B": {
       "prefer": "eye",
-      "azimuth_eye_deg": 91
+      "azimuth_eye_deg": 157.5
     },
     "ST77NE100": {
       "prefer": "eye",

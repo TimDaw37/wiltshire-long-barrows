@@ -1,0 +1,22 @@
+roberts_abbr,roberts_grinsell,roberts_smr,roberts_orientation,roberts_mid_deg,gazetteer_id,display_name,match_dist_m,azimuth_display_deg,azimuth_prefer,delta_vs_roberts_mid,flag,status,cluster
+AM7,Amesbury 7,SU 14 SW 730,NNW-SSE,157.5,SU14SW105,West of Stonehenge,8.9,,leave_indistinct,,no_display,possible,Stonehenge / Salisbury Plain
+AM10a,Amesbury 10a,SU 14 SW 105,W-E,90.0,SU14SW105,West of Stonehenge,103.2,,leave_indistinct,,no_display,possible,Stonehenge / Salisbury Plain
+AM14,Amesbury 14,SU 14 SW 127,NNW-SSE,157.5,SU14SW127,North of Normanton Gorse,21.0,,leave_indistinct,,no_display,certain,Stonehenge / Salisbury Plain
+AM42,Amesbury 42,SU 14 SW 102,N-S,0.0,SU14SW102,Amesbury 42,9.2,5.0,eye,5.0,agree,certain,Stonehenge / Salisbury Plain
+AM140,Amesbury 140,SU 14 SW 11B,NNW-SSE,157.5,SU14SW11B,North of West Amesbury,1.4,157.5,eye,0.0,agree,possible,Stonehenge / Salisbury Plain
+BUL1,Bulford 1,SU 14 SE 103,?,,SU14SE103,Southwest of Bulford,4.1,109.5,eye,,unmatched,certain,Stonehenge / Salisbury Plain
+DUR76,Durrington 76,SU 14 SW 10W,NE-SW,45.0,SU14SW10W,South of Fargo Road,392.8,174.5,eye,50.5,identity_mismatch,certain,Stonehenge / Salisbury Plain
+DUR24,Durrington 24,SU 14 SW 100,NW-SE,135.0,SU14SW100,Knighton Down,13.3,136.5,eye,1.5,agree,certain,Stonehenge / Salisbury Plain
+FIG27,Figheldean 27,SU 14 NW 102,W-E,90.0,SU14NW102,Knighton,2.2,88.5,eye,1.5,agree,certain,Stonehenge / Salisbury Plain
+FIG31,Figheldean 31,SU 14 NW 108,NW-SE,135.0,SU14NW108,South of Robin Hood Ball Clump,2.2,132.0,eye,3.0,agree,certain,Stonehenge / Salisbury Plain
+NET6,Netheravon 6,SU 14 NW 104,ENE-SSW,67.5,SU14NW104,Northeast of Robin Hood Ball Clump 2,3.2,64.0,eye,3.5,agree,certain,Stonehenge / Salisbury Plain
+NETB,-,SU14 NW 103,NNW-SSE,157.5,SU14NW103,Northeast of Robin Hood Ball Clump,5.1,157.5,eye,0.0,agree,certain,Stonehenge / Salisbury Plain
+WIL13,Wilsford 13,SU 14 SW 128,NNE-SSW,22.5,SU14SW128,Normanton Down,6.3,21.5,eye,1.0,agree,certain,Stonehenge / Salisbury Plain
+WIL30,Wilsford 30,SU 14 SW 129,W-E,90.0,SU14SW129,Normanton Down 2,9.0,89.0,eye,1.0,agree,certain,Stonehenge / Salisbury Plain
+WIL34,Wilsford 34,SU 14 SW 126,NE-SW,45.0,SU14SW126,Wilsford Down,4.2,60.2,lidar,15.2,agree,certain,Stonehenge / Salisbury Plain
+WIL41,Wilsford 41,SU 14 SW 133,NW-SE,135.0,SU14SW133,Lake Group,33.2,111.0,eye,24.0,look,certain,Stonehenge / Salisbury Plain
+WS86,Winterbourne Stoke 86,-,NNW-SSE,157.5,MWI75694,Southeast of Longbarrow Crossroads,11.7,,leave_indistinct,,no_display,certain,Stonehenge / Salisbury Plain
+WS1,Winterbourne Stoke 1,SU 14 SW 125,NE-SW,45.0,SU14SW125,Winterbourne Stoke Crossroads,6.4,35.0,eye,10.0,agree,certain,Stonehenge / Salisbury Plain
+WIN53,Winterbourne Stoke 53,SU 04 SE 100,W-E,90.0,SU04SE100,Winterbourne Stoke Down,3.0,90.0,nhle,0.0,agree,certain,Stonehenge / Salisbury Plain
+WS71,Winterbourne Stoke 71,SU 14 SW 997,NE-SW,45.0,SU14SW997,South-southeast of Longbarrow Crossroads,17.0,,leave_indistinct,,no_display,possible,Stonehenge / Salisbury Plain
+WOO2,Woodford 2,SU 13 NW 151,N-S,0.0,SU13NW151,Northwest of Camp Plantation,11.7,,leave_indistinct,,no_display,certain,Stonehenge / Salisbury Plain

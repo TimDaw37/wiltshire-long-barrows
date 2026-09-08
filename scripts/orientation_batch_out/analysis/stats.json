@@ -1,0 +1,1505 @@
+{
+  "generated_from": "C:/Users/timda/Documents/wiltshire-long-barrows/data/long_barrows.json",
+  "n_gazetteer": 128,
+  "prefer_counts": {
+    "eye": 77,
+    "leave_indistinct": 22,
+    "not_barrow": 20,
+    "lidar": 5,
+    "nhle": 4
+  },
+  "display_source_counts": {
+    "eye": 77,
+    "None": 42,
+    "lidar": 5,
+    "nhle": 4
+  },
+  "n_display": 86,
+  "n_excluded": 42,
+  "excluded_prefer_counts": {
+    "leave_indistinct": 22,
+    "not_barrow": 20
+  },
+  "modern_ids_in_json": [],
+  "n_display_certain": 75,
+  "n_display_possible": 11,
+  "n_display_earthen": 80,
+  "n_display_cotswold_severn": 6,
+  "cotswold_severn_display": [
+    {
+      "id": "SU16SW102",
+      "display_name": "Adam's Grave",
+      "azimuth_display_deg": 136.0,
+      "source": "eye"
+    },
+    {
+      "id": "SU16NW101",
+      "display_name": "East Kennet",
+      "azimuth_display_deg": 139.0,
+      "source": "eye"
+    },
+    {
+      "id": "SU16NW100",
+      "display_name": "West Kennet",
+      "azimuth_display_deg": 84.5,
+      "source": "eye"
+    },
+    {
+      "id": "ST87SE101",
+      "display_name": "Lanhill Barrow: a long barrow 300m south of Sparrow Farm",
+      "azimuth_display_deg": 90.5,
+      "source": "eye"
+    },
+    {
+      "id": "ST87NW100",
+      "display_name": "Long barrow 500m north of Lugbury Farm",
+      "azimuth_display_deg": 93.5,
+      "source": "eye"
+    },
+    {
+      "id": "NHLE1010394",
+      "display_name": "Giant's Cave: a chambered long barrow 750m south west of Allengrove Farm",
+      "azimuth_display_deg": 99.5,
+      "source": "eye"
+    }
+  ],
+  "cotswold_severn_excluded": [
+    {
+      "id": "SU07SE105",
+      "display_name": "Millbarrow",
+      "prefer": "leave_indistinct"
+    }
+  ],
+  "sunrise_az_flat_horizon": {
+    "midsummer": 50.2,
+    "equinox": 89.7,
+    "midwinter": 129.0
+  },
+  "lat_ref": 51.2,
+  "overall": {
+    "n": 86,
+    "mean_deg": 86.86,
+    "R": 0.168,
+    "Z": 2.427,
+    "p": 0.08802558786214297,
+    "circ_sd_axial_deg": 54.11,
+    "circ_var": 0.832,
+    "bootstrap": {
+      "mean_deg": 86.86,
+      "mean_identified": true,
+      "mean_ci95": [
+        58.5,
+        117.34
+      ],
+      "R": 0.168,
+      "R_ci95": [
+        0.0508,
+        0.3245
+      ]
+    },
+    "v_midsummer": {
+      "theta0_deg": 50.2,
+      "Vbar": 0.0482,
+      "u": 0.632,
+      "p": 0.2635603993296609,
+      "mean_deg": 86.86,
+      "R": 0.168
+    },
+    "v_equinox": {
+      "theta0_deg": 89.7,
+      "Vbar": 0.1672,
+      "u": 2.192,
+      "p": 0.014175406669364787,
+      "mean_deg": 86.86,
+      "R": 0.168
+    },
+    "v_midwinter": {
+      "theta0_deg": 129.0,
+      "Vbar": 0.0167,
+      "u": 0.22,
+      "p": 0.41310648729221455,
+      "mean_deg": 86.86,
+      "R": 0.168
+    },
+    "bins_10": {
+      "width_deg": 10.0,
+      "edges": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0,
+        100.0,
+        110.0,
+        120.0,
+        130.0,
+        140.0,
+        150.0,
+        160.0,
+        170.0,
+        180.0
+      ],
+      "counts": [
+        2,
+        5,
+        4,
+        5,
+        4,
+        3,
+        9,
+        4,
+        8,
+        10,
+        6,
+        2,
+        2,
+        5,
+        8,
+        4,
+        3,
+        2
+      ],
+      "expected_uniform": 4.778,
+      "max_bin": 10,
+      "max_bin_lo": 90.0
+    },
+    "bins_15": {
+      "width_deg": 15.0,
+      "edges": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0,
+        180.0
+      ],
+      "counts": [
+        3,
+        8,
+        7,
+        5,
+        11,
+        10,
+        12,
+        6,
+        3,
+        12,
+        6,
+        3
+      ],
+      "expected_uniform": 7.167,
+      "max_bin": 12,
+      "max_bin_lo": 90.0
+    }
+  },
+  "by_type": {
+    "earthen": {
+      "n": 80,
+      "mean_deg": 80.05,
+      "R": 0.1411,
+      "Z": 1.593,
+      "p": 0.20367379025717447,
+      "circ_sd_axial_deg": 56.69,
+      "circ_var": 0.8589,
+      "bootstrap": {
+        "mean_deg": 80.05,
+        "mean_identified": true,
+        "mean_ci95": [
+          39.71,
+          123.38
+        ],
+        "R": 0.1411,
+        "R_ci95": [
+          0.0384,
+          0.3055
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": 0.0712,
+        "u": 0.901,
+        "p": 0.1838375127011702,
+        "mean_deg": 80.05,
+        "R": 0.1411
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": 0.1332,
+        "u": 1.685,
+        "p": 0.046023575644762005,
+        "mean_deg": 80.05,
+        "R": 0.1411
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": -0.0194,
+        "u": -0.246,
+        "p": 0.5969996919227714,
+        "mean_deg": 80.05,
+        "R": 0.1411
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          2,
+          5,
+          4,
+          5,
+          4,
+          3,
+          9,
+          4,
+          7,
+          7,
+          6,
+          2,
+          2,
+          3,
+          8,
+          4,
+          3,
+          2
+        ],
+        "expected_uniform": 4.444,
+        "max_bin": 9,
+        "max_bin_lo": 60.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          3,
+          8,
+          7,
+          5,
+          11,
+          9,
+          9,
+          6,
+          3,
+          10,
+          6,
+          3
+        ],
+        "expected_uniform": 6.667,
+        "max_bin": 11,
+        "max_bin_lo": 60.0
+      }
+    },
+    "cotswold_severn": {
+      "n": 6,
+      "mean_deg": 105.57,
+      "R": 0.7294,
+      "Z": 3.192,
+      "p": 0.033501614013024754,
+      "circ_sd_axial_deg": 22.76,
+      "circ_var": 0.2706,
+      "bootstrap": {
+        "mean_deg": 105.57,
+        "mean_identified": true,
+        "mean_ci95": [
+          90.99,
+          125.71
+        ],
+        "R": 0.7294,
+        "R_ci95": [
+          0.6467,
+          0.9901
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": -0.2584,
+        "u": -0.895,
+        "p": 0.8146428588738193,
+        "mean_deg": 105.57,
+        "R": 0.7294
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": 0.6203,
+        "u": 2.149,
+        "p": 0.015831414599870253,
+        "mean_deg": 105.57,
+        "R": 0.7294
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": 0.4988,
+        "u": 1.728,
+        "p": 0.04199337511505874,
+        "mean_deg": 105.57,
+        "R": 0.7294
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          3,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_uniform": 0.333,
+        "max_bin": 3,
+        "max_bin_lo": 90.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "expected_uniform": 0.5,
+        "max_bin": 3,
+        "max_bin_lo": 90.0
+      }
+    }
+  },
+  "by_cluster": {
+    "Avebury / Pewsey": {
+      "n": 13,
+      "mean_deg": 78.75,
+      "R": 0.5536,
+      "Z": 3.984,
+      "p": 0.01556865226722807,
+      "circ_sd_axial_deg": 31.15,
+      "circ_var": 0.4464,
+      "bootstrap": {
+        "mean_deg": 78.75,
+        "mean_identified": true,
+        "mean_ci95": [
+          61.12,
+          100.29
+        ],
+        "R": 0.5536,
+        "R_ci95": [
+          0.3218,
+          0.8157
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": 0.3007,
+        "u": 1.533,
+        "p": 0.06262178403790608,
+        "mean_deg": 78.75,
+        "R": 0.5536
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": 0.5137,
+        "u": 2.619,
+        "p": 0.004405676326041719,
+        "mean_deg": 78.75,
+        "R": 0.5536
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": -0.1008,
+        "u": -0.514,
+        "p": 0.696443354281952,
+        "mean_deg": 78.75,
+        "R": 0.5536
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_uniform": 0.722,
+        "max_bin": 3,
+        "max_bin_lo": 40.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          0,
+          2,
+          2,
+          1,
+          3,
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "expected_uniform": 1.083,
+        "max_bin": 3,
+        "max_bin_lo": 75.0
+      }
+    },
+    "North Wiltshire chalk": {
+      "n": 12,
+      "mean_deg": 9.35,
+      "R": 0.0699,
+      "Z": 0.059,
+      "p": 0.9453293059088246,
+      "circ_sd_axial_deg": 66.09,
+      "circ_var": 0.9301,
+      "bootstrap": {
+        "mean_deg": 9.35,
+        "mean_identified": false,
+        "mean_ci95": null,
+        "R": 0.0699,
+        "R_ci95": [
+          0.0454,
+          0.5575
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": 0.0101,
+        "u": 0.049,
+        "p": 0.4802871159392337,
+        "mean_deg": 9.35,
+        "R": 0.0699
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": -0.0659,
+        "u": -0.323,
+        "p": 0.6266517364280861,
+        "mean_deg": 9.35,
+        "R": 0.0699
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": -0.0357,
+        "u": -0.175,
+        "p": 0.5693633528990577,
+        "mean_deg": 9.35,
+        "R": 0.0699
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          3,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "expected_uniform": 0.667,
+        "max_bin": 3,
+        "max_bin_lo": 90.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          1,
+          1,
+          2,
+          0,
+          0,
+          1,
+          3,
+          0,
+          0,
+          2,
+          0,
+          2
+        ],
+        "expected_uniform": 1.0,
+        "max_bin": 3,
+        "max_bin_lo": 90.0
+      }
+    },
+    "South Wiltshire / Chase fringe": {
+      "n": 7,
+      "mean_deg": 56.06,
+      "R": 0.4246,
+      "Z": 1.262,
+      "p": 0.2935007321299333,
+      "circ_sd_axial_deg": 37.5,
+      "circ_var": 0.5754,
+      "bootstrap": {
+        "mean_deg": 56.06,
+        "mean_identified": false,
+        "mean_ci95": null,
+        "R": 0.4246,
+        "R_ci95": [
+          0.0959,
+          0.8961
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": 0.4158,
+        "u": 1.556,
+        "p": 0.05989856807904903,
+        "mean_deg": 56.06,
+        "R": 0.4246
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": 0.164,
+        "u": 0.613,
+        "p": 0.2697732232781669,
+        "mean_deg": 56.06,
+        "R": 0.4246
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": -0.3515,
+        "u": -1.315,
+        "p": 0.9057979241897547,
+        "mean_deg": 56.06,
+        "R": 0.4246
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "expected_uniform": 0.389,
+        "max_bin": 2,
+        "max_bin_lo": 60.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "expected_uniform": 0.583,
+        "max_bin": 2,
+        "max_bin_lo": 60.0
+      }
+    },
+    "Stonehenge / Salisbury Plain": {
+      "n": 35,
+      "mean_deg": 102.67,
+      "R": 0.1486,
+      "Z": 0.773,
+      "p": 0.4647229217462888,
+      "circ_sd_axial_deg": 55.94,
+      "circ_var": 0.8514,
+      "bootstrap": {
+        "mean_deg": 102.67,
+        "mean_identified": false,
+        "mean_ci95": null,
+        "R": 0.1486,
+        "R_ci95": [
+          0.0413,
+          0.4063
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": -0.0383,
+        "u": -0.321,
+        "p": 0.6257748620546102,
+        "mean_deg": 102.67,
+        "R": 0.1486
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": 0.1336,
+        "u": 1.118,
+        "p": 0.13174600480313226,
+        "mean_deg": 102.67,
+        "R": 0.1486
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": 0.0902,
+        "u": 0.754,
+        "p": 0.22532875126319907,
+        "mean_deg": 102.67,
+        "R": 0.1486
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          1,
+          1,
+          3,
+          2,
+          0,
+          0,
+          5,
+          2,
+          3,
+          2,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          0,
+          1
+        ],
+        "expected_uniform": 1.944,
+        "max_bin": 5,
+        "max_bin_lo": 60.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          1,
+          4,
+          2,
+          0,
+          7,
+          3,
+          3,
+          4,
+          2,
+          4,
+          4,
+          1
+        ],
+        "expected_uniform": 2.917,
+        "max_bin": 7,
+        "max_bin_lo": 60.0
+      }
+    },
+    "Wiltshire chalk": {
+      "n": 19,
+      "mean_deg": 108.12,
+      "R": 0.1752,
+      "Z": 0.583,
+      "p": 0.5641220396565756,
+      "circ_sd_axial_deg": 53.47,
+      "circ_var": 0.8248,
+      "bootstrap": {
+        "mean_deg": 108.12,
+        "mean_identified": false,
+        "mean_ci95": null,
+        "R": 0.1752,
+        "R_ci95": [
+          0.0511,
+          0.5184
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": -0.0764,
+        "u": -0.471,
+        "p": 0.6811704742879033,
+        "mean_deg": 108.12,
+        "R": 0.1752
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": 0.1402,
+        "u": 0.864,
+        "p": 0.19367362111726116,
+        "mean_deg": 108.12,
+        "R": 0.1752
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": 0.1307,
+        "u": 0.806,
+        "p": 0.21014996049336232,
+        "mean_deg": 108.12,
+        "R": 0.1752
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          2,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          2,
+          2,
+          3,
+          0,
+          1,
+          0,
+          3,
+          0,
+          2,
+          0
+        ],
+        "expected_uniform": 1.056,
+        "max_bin": 3,
+        "max_bin_lo": 100.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          3,
+          0,
+          2,
+          1,
+          2,
+          3,
+          2,
+          1,
+          3,
+          2,
+          0
+        ],
+        "expected_uniform": 1.583,
+        "max_bin": 3,
+        "max_bin_lo": 15.0
+      }
+    }
+  },
+  "by_status": {
+    "certain": {
+      "n": 75,
+      "mean_deg": 83.86,
+      "R": 0.2146,
+      "Z": 3.454,
+      "p": 0.031067022582605932,
+      "circ_sd_axial_deg": 50.26,
+      "circ_var": 0.7854,
+      "bootstrap": {
+        "mean_deg": 83.86,
+        "mean_identified": true,
+        "mean_ci95": [
+          60.7,
+          107.66
+        ],
+        "R": 0.2146,
+        "R_ci95": [
+          0.0773,
+          0.3825
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": 0.0828,
+        "u": 1.014,
+        "p": 0.1553548229678251,
+        "mean_deg": 83.86,
+        "R": 0.2146
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": 0.2102,
+        "u": 2.574,
+        "p": 0.005026253792361768,
+        "mean_deg": 83.86,
+        "R": 0.2146
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": -0.0011,
+        "u": -0.013,
+        "p": 0.505223165994036,
+        "mean_deg": 83.86,
+        "R": 0.2146
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          2,
+          4,
+          3,
+          4,
+          4,
+          2,
+          9,
+          4,
+          8,
+          9,
+          5,
+          1,
+          2,
+          5,
+          6,
+          2,
+          3,
+          2
+        ],
+        "expected_uniform": 4.167,
+        "max_bin": 9,
+        "max_bin_lo": 60.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          3,
+          6,
+          6,
+          4,
+          11,
+          10,
+          11,
+          4,
+          3,
+          10,
+          4,
+          3
+        ],
+        "expected_uniform": 6.25,
+        "max_bin": 11,
+        "max_bin_lo": 60.0
+      }
+    },
+    "possible": {
+      "n": 11,
+      "mean_deg": 153.27,
+      "R": 0.2087,
+      "Z": 0.479,
+      "p": 0.629791560153878,
+      "circ_sd_axial_deg": 50.71,
+      "circ_var": 0.7913,
+      "bootstrap": {
+        "mean_deg": 153.27,
+        "mean_identified": false,
+        "mean_ci95": null,
+        "R": 0.2087,
+        "R_ci95": [
+          0.0615,
+          0.6554
+        ]
+      },
+      "v_midsummer": {
+        "theta0_deg": 50.2,
+        "Vbar": -0.1874,
+        "u": -0.879,
+        "p": 0.8102321742101823,
+        "mean_deg": 153.27,
+        "R": 0.2087
+      },
+      "v_equinox": {
+        "theta0_deg": 89.7,
+        "Vbar": -0.126,
+        "u": -0.591,
+        "p": 0.7227463632583098,
+        "mean_deg": 153.27,
+        "R": 0.2087
+      },
+      "v_midwinter": {
+        "theta0_deg": 129.0,
+        "Vbar": 0.1382,
+        "u": 0.648,
+        "p": 0.25845921504029956,
+        "mean_deg": 153.27,
+        "R": 0.2087
+      },
+      "bins_10": {
+        "width_deg": 10.0,
+        "edges": [
+          0.0,
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0,
+          70.0,
+          80.0,
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          130.0,
+          140.0,
+          150.0,
+          160.0,
+          170.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        "expected_uniform": 0.611,
+        "max_bin": 2,
+        "max_bin_lo": 140.0
+      },
+      "bins_15": {
+        "width_deg": 15.0,
+        "edges": [
+          0.0,
+          15.0,
+          30.0,
+          45.0,
+          60.0,
+          75.0,
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0
+        ],
+        "counts": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          0,
+          1,
+          2,
+          0,
+          2,
+          2,
+          0
+        ],
+        "expected_uniform": 0.917,
+        "max_bin": 2,
+        "max_bin_lo": 15.0
+      }
+    }
+  },
+  "pairwise": {
+    "display_vs_nhle": {
+      "n": 58,
+      "median": 6.6,
+      "mean": 18.18,
+      "p75": 18.5,
+      "p90": 64.69,
+      "gt15": 16,
+      "gt30": 11,
+      "gt60": 7
+    },
+    "display_vs_lidar": {
+      "n": 47,
+      "median": 2.2,
+      "mean": 10.73,
+      "p75": 12.4,
+      "p90": 34.4,
+      "gt15": 11,
+      "gt30": 8,
+      "gt60": 2
+    },
+    "nhle_vs_lidar": {
+      "n": 35,
+      "median": 6.8,
+      "mean": 20.02,
+      "p75": 21.7,
+      "p90": 61.86,
+      "gt15": 14,
+      "gt30": 8,
+      "gt60": 5
+    }
+  },
+  "n_all_three": 34,
+  "eye_differs_from_both_gt15": [
+    {
+      "id": "SU14SW129",
+      "display_name": "Normanton Down 2",
+      "eye": 89.0,
+      "nhle": 66.8,
+      "lidar": 43.2,
+      "delta_vs_nhle": 22.2,
+      "delta_vs_lidar": 45.8,
+      "cluster": "Stonehenge / Salisbury Plain",
+      "note": "",
+      "flag": "eye_differs_both_gt15"
+    },
+    {
+      "id": "SU06NE106",
+      "display_name": "Easton Down",
+      "eye": 76.5,
+      "nhle": 143.5,
+      "lidar": 43.7,
+      "delta_vs_nhle": 67.0,
+      "delta_vs_lidar": 32.8,
+      "cluster": "Avebury / Pewsey",
+      "note": "",
+      "flag": "eye_differs_both_gt15"
+    }
+  ],
+  "nhle_lidar_delta_gt60": [
+    {
+      "id": "SU04NW100",
+      "display_name": "Whitebarrow",
+      "a": 4.0,
+      "b": 91.7,
+      "delta": 87.7,
+      "prefer": "lidar",
+      "barrow_type": "earthen",
+      "cluster": "Stonehenge / Salisbury Plain"
+    },
+    {
+      "id": "ST84NE100",
+      "display_name": "Colloway Clump long barrow",
+      "a": 10.4,
+      "b": 127.5,
+      "delta": 62.9,
+      "prefer": "eye",
+      "barrow_type": "earthen",
+      "cluster": "Wiltshire chalk"
+    },
+    {
+      "id": "ST94NW103",
+      "display_name": "Oxendean Down long barrow",
+      "a": 109.7,
+      "b": 170.0,
+      "delta": 60.3,
+      "prefer": "nhle",
+      "barrow_type": "earthen",
+      "cluster": "Wiltshire chalk"
+    },
+    {
+      "id": "SU06NE106",
+      "display_name": "Easton Down",
+      "a": 143.5,
+      "b": 43.7,
+      "delta": 80.2,
+      "prefer": "eye",
+      "barrow_type": "earthen",
+      "cluster": "Avebury / Pewsey"
+    },
+    {
+      "id": "SU06NE105",
+      "display_name": "South Street",
+      "a": 132.6,
+      "b": 68.9,
+      "delta": 63.7,
+      "prefer": "lidar",
+      "barrow_type": "earthen",
+      "cluster": "Avebury / Pewsey"
+    }
+  ],
+  "nhle_fingerprint_sha256_16": "40c802b97ea49128",
+  "geojson_nhle_fingerprint_sha256_16": "40c802b97ea49128",
+  "nhle_untouched": true,
+  "json_geojson_nhle_match": true,
+  "figures": {
+    "rose": [
+      "docs/analysis/fig-01-rose-display.svg",
+      "docs/analysis/fig-01-rose-display.png"
+    ],
+    "hist10": [
+      "docs/analysis/fig-02-histogram-10deg.svg",
+      "docs/analysis/fig-02-histogram-10deg.png"
+    ],
+    "hist15": [
+      "docs/analysis/fig-03-histogram-15deg.svg",
+      "docs/analysis/fig-03-histogram-15deg.png"
+    ],
+    "deltas": [
+      "docs/analysis/fig-04-delta-distributions.svg",
+      "docs/analysis/fig-04-delta-distributions.png"
+    ],
+    "scatter": [
+      "docs/analysis/fig-05-display-vs-nhle-lidar.svg",
+      "docs/analysis/fig-05-display-vs-nhle-lidar.png"
+    ],
+    "cluster": [
+      "docs/analysis/fig-06-by-cluster.svg",
+      "docs/analysis/fig-06-by-cluster.png"
+    ],
+    "type": [
+      "docs/analysis/fig-07-by-type.svg",
+      "docs/analysis/fig-07-by-type.png"
+    ],
+    "map": [
+      "docs/analysis/fig-08-map-axes.svg",
+      "docs/analysis/fig-08-map-axes.png"
+    ],
+    "prefer": [
+      "docs/analysis/fig-09-prefer-counts.svg",
+      "docs/analysis/fig-09-prefer-counts.png"
+    ]
+  },
+  "seed": 20260908,
+  "n_boot": 10000
+}

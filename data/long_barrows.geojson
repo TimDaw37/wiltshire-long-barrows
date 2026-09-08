@@ -846,8 +846,8 @@
         "azimuth_lidar_method": "dtm_local_relief_pca",
         "azimuth_lidar_indistinct": false,
         "delta_vs_nhle_deg": null,
-        "azimuth_prefer": "not_barrow",
-        "azimuth_prefer_note": "no usable barrow axis / not a clear long barrow on chip"
+        "azimuth_prefer": "leave_indistinct",
+        "azimuth_prefer_note": "2026-09-08 re-review: HER MWI10607 = excavated Neolithic long barrow (Vatchers 1963 / Harding and Gingell 1986). Chip has no usable axis; prefer leave_indistinct (was not_barrow)."
       }
     },
     {
@@ -1074,7 +1074,8 @@
         "azimuth_prefer": "eye",
         "azimuth_eye_deg": 111.0,
         "azimuth_display_deg": 111.0,
-        "azimuth_display_source": "eye"
+        "azimuth_display_source": "eye",
+        "azimuth_prefer_note": "2026-09-08 re-review: eye 111° confirmed (Roberts class NW-SE)."
       }
     },
     {
@@ -1164,7 +1165,7 @@
         "azimuth_lidar_indistinct": true,
         "delta_vs_nhle_deg": null,
         "azimuth_prefer": "leave_indistinct",
-        "azimuth_prefer_note": "left indistinct after human review"
+        "azimuth_prefer_note": "left indistinct after human review. HER MWI75694 = levelled Neolithic long barrow (Roberts WS86; NNW-SSE). No surviving mound on chip."
       }
     },
     {
@@ -1396,7 +1397,7 @@
         "azimuth_lidar_indistinct": true,
         "delta_vs_nhle_deg": null,
         "azimuth_prefer": "leave_indistinct",
-        "azimuth_prefer_note": "left indistinct after human review"
+        "azimuth_prefer_note": "left indistinct after human review. HER MWI12487 / NHLE 1008953 = long barrow NNW-SSE, mound to 1.8 m; chip too weak for a display axis."
       }
     },
     {
@@ -4802,7 +4803,7 @@
         "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1011046",
         "status": "possible",
         "scheduled": true,
-        "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents.",
+        "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Possible). Kutty region tag: Stonehenge. Long-axis azimuth from PCA of NHLE scheduling polygon (undirected 0–180° from N; scheduling outline ≠ mound crest). Length/width approx. from NHLE polygon extents. NHLE type mismatch 2026-09-08: scheduled as bowl barrow 1011046; HER/Roberts treat the location as long barrow WS71.",
         "source_urls": [
           "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI13159",
           "https://doi.org/10.5281/zenodo.11005373",
@@ -4817,7 +4818,7 @@
         "azimuth_lidar_indistinct": true,
         "delta_vs_nhle_deg": null,
         "azimuth_prefer": "leave_indistinct",
-        "azimuth_prefer_note": "left indistinct after human review"
+        "azimuth_prefer_note": "left indistinct after human review. HER MWI13159 = Neolithic long barrow (Roberts WS71, excavated 2015–16, NE-SW, unscheduled as a long barrow). NHLE 1011046 at the same NGR is scheduled as a levelled BOWL BARROW (26 m diameter, 1995). NHLE polygon PCA (63.1°) is that circular scheduling outline, not a long-barrow axis — do not use as Neolithic long-axis evidence."
       }
     },
     {
@@ -4907,9 +4908,10 @@
         "azimuth_lidar_indistinct": true,
         "delta_vs_nhle_deg": null,
         "azimuth_prefer": "eye",
-        "azimuth_eye_deg": 91.0,
-        "azimuth_display_deg": 91.0,
-        "azimuth_display_source": "eye"
+        "azimuth_eye_deg": 157.5,
+        "azimuth_display_deg": 157.5,
+        "azimuth_display_source": "eye",
+        "azimuth_prefer_note": "2026-09-08 re-review: LiDAR chip unclear; aerial cropmarks + Roberts IA 47 NNW-SSE (midpoint 157.5°). HER MWI12478 = probable Neolithic long barrow."
       }
     },
     {

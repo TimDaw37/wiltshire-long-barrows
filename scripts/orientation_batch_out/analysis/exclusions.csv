@@ -1,0 +1,43 @@
+id,display_name,status,barrow_type,cluster,azimuth_prefer,azimuth_display_deg,azimuth_deg,azimuth_lidar_deg,azimuth_prefer_note
+SU02SW103,Kitts Grave,certain,earthen,South Wiltshire / Chase fringe,leave_indistinct,,,,left indistinct after human review
+SU13SE101,Cockey Down,certain,earthen,Stonehenge / Salisbury Plain,not_barrow,,,47.3,no usable barrow axis / not a clear long barrow on chip
+SU13SE100,Fussells Lodge,certain,earthen,Stonehenge / Salisbury Plain,not_barrow,,75.4,69.1,no usable barrow axis / not a clear long barrow on chip
+SU13SW106,Rocks Hill,certain,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,,left indistinct after human review
+SU23SW101,SU23SW101,certain,earthen,Wiltshire chalk,not_barrow,,,62.8,no usable barrow axis / not a clear long barrow on chip
+ST83NW103,ST83NW103,certain,earthen,Wiltshire chalk,not_barrow,,,105.5,no usable barrow axis / not a clear long barrow on chip
+SU13NW100,Woodford G2,certain,earthen,Stonehenge / Salisbury Plain,not_barrow,,,4.1,no usable barrow axis / not a clear long barrow on chip
+SU13NW151,Northwest of Camp Plantation,certain,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,15.2,2026-09-08 re-review: HER MWI10607 = excavated Neolithic long barrow (Vatchers 1963 / Harding and Gingell 1986). Chip has no usable axis; prefer leave_indistinct (was not_barrow).
+ST83NW100,ST83NW100,certain,earthen,Wiltshire chalk,not_barrow,,,,no usable barrow axis / not a clear long barrow on chip
+MWI75694,Southeast of Longbarrow Crossroads,certain,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,,left indistinct after human review. HER MWI75694 = levelled Neolithic long barrow (Roberts WS86; NNW-SSE). No surviving mound on chip.
+SU14SW127,North of Normanton Gorse,certain,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,142.1,,"left indistinct after human review. HER MWI12487 / NHLE 1008953 = long barrow NNW-SSE, mound to 1.8 m; chip too weak for a display axis."
+ST94NE101,Long barrow on Knook Down,certain,earthen,Wiltshire chalk,leave_indistinct,,81.1,,left indistinct after human review
+SU15SE152198,SU15SE152198,certain,earthen,Stonehenge / Salisbury Plain,not_barrow,,,50.3,no usable barrow axis / not a clear long barrow on chip
+SU15NW614,Cat's Brain,certain,earthen,North Wiltshire chalk,not_barrow,,,116.9,no usable barrow axis / not a clear long barrow on chip
+SU06NE104,Roughridge Hill,certain,earthen,Avebury / Pewsey,not_barrow,,,96.7,no usable barrow axis / not a clear long barrow on chip
+SU06NW109,West of Old Shepherds Shore,certain,earthen,Avebury / Pewsey,leave_indistinct,,61.4,,left indistinct after human review
+SU06NE133,Beckhampton Plantation,certain,earthen,Avebury / Pewsey,not_barrow,,,28.4,no usable barrow axis / not a clear long barrow on chip
+SU16NW133,White Hill,certain,earthen,Avebury / Pewsey,not_barrow,,,69.8,no usable barrow axis / not a clear long barrow on chip
+MWI73097,Horseslip,certain,earthen,Avebury / Pewsey,leave_indistinct,,136.2,,left indistinct after human review
+SU17SW111,Manton Down,certain,earthen,Avebury / Pewsey,leave_indistinct,,,,left indistinct after human review
+SU17SW110,SU17SW110,certain,earthen,Avebury / Pewsey,not_barrow,,,,no usable barrow axis / not a clear long barrow on chip
+SU07SE105,Millbarrow,certain,cotswold_severn,Avebury / Pewsey,leave_indistinct,,,,left indistinct after human review
+SU17SW101,Temple Bottom,certain,earthen,Avebury / Pewsey,leave_indistinct,,,,left indistinct after human review
+SU27SE101,SU27SE101,certain,earthen,North Wiltshire chalk,leave_indistinct,,,,left indistinct after human review
+SU13SE663,SU13SE663,possible,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,,left indistinct after human review
+MWI77205,MWI77205,possible,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,,left indistinct after human review
+MWI77115,MWI77115,possible,earthen,Wiltshire chalk,leave_indistinct,,,,left indistinct after human review
+SU14SW997,South-southeast of Longbarrow Crossroads,possible,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,63.1,,"left indistinct after human review. HER MWI13159 = Neolithic long barrow (Roberts WS71, excavated 2015–16, NE-SW, unscheduled as a long barrow). NHLE 1011046 at the same NGR is scheduled as a levelled BOWL BARROW (26 m diameter, 1995). NHLE polygon PCA (63.1°) is that circular scheduling outline, not a long-barrow axis — do not use as Neolithic long-axis evidence."
+SU14SW105,West of Stonehenge,possible,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,,left indistinct after human review
+ST94SW742,ST94SW742,possible,earthen,Wiltshire chalk,leave_indistinct,,,,left indistinct after human review
+SU14SW654,SU14SW654,possible,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,,left indistinct after human review
+MWI74325,North of Durrington Field,possible,earthen,Stonehenge / Salisbury Plain,not_barrow,,,70.3,no usable barrow axis / not a clear long barrow on chip
+SU14NE782,Northeast of Barrow Clump,possible,earthen,Stonehenge / Salisbury Plain,leave_indistinct,,,,left indistinct after human review
+SU25SW781,SU25SW781,possible,earthen,Wiltshire chalk,not_barrow,,,,no usable barrow axis / not a clear long barrow on chip
+SU25SE100,SU25SE100,possible,earthen,Wiltshire chalk,not_barrow,,,73.4,no usable barrow axis / not a clear long barrow on chip
+SU25NE104,SU25NE104,possible,earthen,North Wiltshire chalk,not_barrow,,,55.9,no usable barrow axis / not a clear long barrow on chip
+ST86SE643,ST86SE643,possible,earthen,North Wiltshire chalk,not_barrow,,,111.9,no usable barrow axis / not a clear long barrow on chip
+SU06NW108,Southeast of Hill Farm,possible,earthen,Avebury / Pewsey,leave_indistinct,,,,left indistinct after human review
+SU16NW656,SU16NW656,possible,earthen,Avebury / Pewsey,leave_indistinct,,,,left indistinct after human review
+SU16NE648,SU16NE648,possible,earthen,Avebury / Pewsey,not_barrow,,,92.8,no usable barrow axis / not a clear long barrow on chip
+MWI76495,MWI76495,possible,earthen,Avebury / Pewsey,not_barrow,,,93.7,no usable barrow axis / not a clear long barrow on chip
+MWI73199,MWI73199,possible,earthen,North Wiltshire chalk,not_barrow,,,155.8,no usable barrow axis / not a clear long barrow on chip

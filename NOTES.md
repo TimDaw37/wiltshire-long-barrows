@@ -131,12 +131,12 @@ Full chip-by-chip human review of all **128** gazetteer rows; prefer answers app
 | prefer | n |
 |--------|---|
 | eye | 77 |
-| leave_indistinct | 21 |
-| not_barrow | 21 |
+| leave_indistinct | 22 |
+| not_barrow | 20 |
 | lidar | 5 |
 | nhle | 4 |
 
-→ **`azimuth_display_deg` set for 86** (77 eye + 5 lidar + 4 nhle). not_barrow / leave_indistinct have no display.
+→ **`azimuth_display_deg` set for 86** (77 eye + 5 lidar + 4 nhle). After 2026-09-08 re-review: leave_indistinct 22, not_barrow 20 (Woodford 2 `SU13NW151` moved not_barrow → leave_indistinct). AM140 `SU14SW11B` eye reset 91° → 157.5° (aerial NNW–SSE). WS71 `SU14SW997` NHLE 1011046 is scheduled as a **bowl barrow** at the long-barrow HER NGR — NHLE PCA not used as display.
 
 ### Source prefer JSON
 
@@ -146,3 +146,9 @@ Applied summary: `scripts/orientation_batch_out/prefer_applied_summary.json` (nh
 ### Map
 
 `generate.py` / `index.html` now use **`azimuth_display_deg`** for counts, filters, icons, tooltips and the primary detail value — **no fallback** to NHLE when prefer was not_barrow / leave_indistinct. NHLE PCA and LiDAR auto axes remain as separate evidence lines in the detail panel.
+
+### Display-axis analysis (2026-09-08)
+
+Draft write-up + figures: `docs/analysis/wiltshire-long-barrow-orientations.md`.  
+Re-run: `python scripts/orientation_analysis.py` then `python scripts/orientation_robust.py` (read-only on gazetteer JSON).  
+Primary n = 86 `azimuth_display_deg`. Ridge-vs-solstice test on EA DTM; comparison with Roberts et al. IA 47 Table 1. Re-review queue in the article.

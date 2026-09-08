@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="567.74125pt" height="193.880312pt" viewBox="0 0 567.74125 193.880312" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-08T10:40:25.082083</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 193.880312 
+L 567.74125 193.880312 
+L 567.74125 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 89.72 155.635781 
+L 560.54125 155.635781 
+L 560.54125 22.318125 
+L 89.72 22.318125 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 89.72 28.378018 
+L 328.867302 28.378018 
+L 328.867302 149.575888 
+L 89.72 149.575888 
+z
+" clip-path="url(#p3563da5ad7)" style="fill: #c49212; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mee2fe3073f" d="M 0 0 
+L 0 3.5 
+" style="stroke: #1a1814; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mee2fe3073f" x="89.72" y="155.635781" style="fill: #1a1814; stroke: #1a1814; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a1814" x="89.72" y="170.233437" transform="rotate(-0 89.72 170.233437)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mee2fe3073f" x="189.364709" y="155.635781" style="fill: #1a1814; stroke: #1a1814; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a1814" x="189.364709" y="170.233437" transform="rotate(-0 189.364709 170.233437)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mee2fe3073f" x="289.009418" y="155.635781" style="fill: #1a1814; stroke: #1a1814; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a1814" x="289.009418" y="170.233437" transform="rotate(-0 289.009418 170.233437)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mee2fe3073f" x="388.654127" y="155.635781" style="fill: #1a1814; stroke: #1a1814; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a1814" x="388.654127" y="170.233437" transform="rotate(-0 388.654127 170.233437)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mee2fe3073f" x="488.298836" y="155.635781" style="fill: #1a1814; stroke: #1a1814; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a1814" x="488.298836" y="170.233437" transform="rotate(-0 488.298836 170.233437)">40</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a1814" x="325.130625" y="184.277969" transform="rotate(-0 325.130625 184.277969)">Undirected |Δ| vs Roberts quadrant midpoint (°)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m2aa8dfb18d" d="M 0 0 
+L -3.5 0 
+" style="stroke: #1a1814; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m2aa8dfb18d" x="89.72" y="88.976953" style="fill: #1a1814; stroke: #1a1814; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1a1814" x="82.72" y="92.016328" transform="rotate(-0 82.72 92.016328)">WIL41  Lake Group</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_7">
+    <path d="M 313.920595 155.635781 
+L 313.920595 22.318125 
+" clip-path="url(#p3563da5ad7)" style="fill: none; stroke-dasharray: 3.33,1.44; stroke-dashoffset: 0; stroke: #6a6258; stroke-width: 0.9"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 538.12119 155.635781 
+L 538.12119 22.318125 
+" clip-path="url(#p3563da5ad7)" style="fill: none; stroke-dasharray: 0.9,1.485; stroke-dashoffset: 0; stroke: #9a3b32; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 89.72 155.635781 
+L 89.72 22.318125 
+" style="fill: none; stroke: #1a1814; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 89.72 155.635781 
+L 560.54125 155.635781 
+" style="fill: none; stroke: #1a1814; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a1814" x="325.130625" y="16.318125" transform="rotate(-0 325.130625 16.318125)">Re-review queue: display axis vs published SWHS class</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3563da5ad7">
+   <rect x="89.72" y="22.318125" width="470.82125" height="133.317656"/>
+  </clipPath>
+ </defs>
+</svg>
