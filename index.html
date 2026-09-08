@@ -134,6 +134,45 @@
   .notes h2 { color: var(--gold); font-size: 1.05rem; margin: 1.2rem 0 .4rem; }
   .notes p, .notes li { color: var(--ink); font-size: .9rem; }
   .notes ul { padding-left: 1.2rem; }
+
+  .orientation-findings {
+    margin: 1.25rem 0 0;
+    padding: 1rem 0 0;
+    border-top: 1px solid var(--line);
+    max-width: 70rem;
+    display: grid;
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+    gap: 1rem 1.25rem;
+    align-items: center;
+  }
+  .orientation-findings img {
+    width: 100%;
+    max-width: 16rem;
+    height: auto;
+    border-radius: 6px;
+    background: #0b0a09;
+    border: 1px solid var(--line);
+  }
+  .orientation-findings h2 {
+    margin: 0 0 .45rem;
+    font-size: 1.05rem;
+  }
+  .orientation-findings p {
+    margin: 0 0 .55rem;
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  .orientation-findings .more {
+    margin: 0;
+    font-size: .92rem;
+  }
+  @media (max-width: 700px) {
+    .orientation-findings {
+      grid-template-columns: 1fr;
+    }
+    .orientation-findings img { max-width: 14rem; }
+  }
+
   footer {
     max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 2rem;
     color: var(--muted); font-size: .8rem;
@@ -229,6 +268,25 @@
     Gold outline = ceremonial Wiltshire (UA + Swindon).
     <br><b>LiDAR:</b> County backdrop: EA Composite DTM ~20&nbsp;m (all devices). Per-barrow 1&nbsp;m chips: desktop map zoom ≳14, and in the detail strip when a barrow is selected.
   </p>
+
+  <div class="orientation-findings" id="orientation">
+    <img src="docs/analysis/fig-01-rose-display.png" width="512" height="512"
+         alt="Rose diagram of 86 Wiltshire long-barrow long axes, drawn both ways, with flat-horizon sunrise lines for midsummer, equinox and midwinter">
+    <div>
+      <h2>Do they face the sun?</h2>
+      <p>
+        <strong>No</strong> — not as a shared design, and not as folklore likes.
+        They do not all run along the ridges either. The eighty-six axes we could
+        trust mostly <strong>spread</strong>, with only a gentle east–west smear
+        and no spike at midsummer or midwinter.
+      </p>
+      <p class="more">
+        <a href="docs/analysis/wiltshire-long-barrows-facing-the-land.md">Short note on the bearings</a>
+        · dashed lines on the rose are sunrise on a flat horizon (drawn for scale, not a finding)
+      </p>
+    </div>
+  </div>
+
   <section class="notes">
     <h2>Long axis</h2>
     <p>
