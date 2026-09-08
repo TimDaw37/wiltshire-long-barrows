@@ -334,27 +334,21 @@ def html_page(
     <span><b>{n_cert}</b> HER certain · <b>{n - n_cert}</b> possible</span>
     <span><b>{n_cots}</b> Cotswold–Severn · <b>{n - n_cots}</b> earthen/other</span>
     <span><b>{n_sched}</b> NHLE-matched</span>
-    <span><b>{n_az}</b> with display axis (human-reviewed)</span>
-    <span><b>{n_nhle_az}</b> NHLE PCA</span>
+    <span><b>{n_az}</b> with long-axis bearing shown</span>
     <span>{cluster_bits}</span>
   </div>
   <p class="legend">
     Gold = HER certain · grey = possible.
     Circle markers: gold = HER certain, grey = possible, teal = modern.
-    Rim arrows = undirected <b>display</b> long-axis (human-reviewed preferred axis; where set).
+    Rim arrows = undirected long-axis bearings from north (0–180°), human-checked where shown.
     Gold outline = ceremonial Wiltshire (UA + Swindon).
     {lidar_legend}
   </p>
   <section class="notes">
     <h2>Long axis</h2>
     <p>
-      Map icons, filters and the primary detail value use <b>display azimuth</b>
-      (<code>azimuth_display_deg</code>) — Tim’s human-reviewed preferred axis
-      (eye / lidar / nhle). Rows marked <code>not_barrow</code> or
-      <code>leave_indistinct</code> have no display axis and show as plain circles.
-      <b>NHLE</b> polygon PCA (<code>azimuth_deg</code>) and auto <b>LiDAR</b> mound-mask PCA
-      (<code>azimuth_lidar_deg</code>) are kept separately as evidence in the detail panel.
-      All axes are <b>undirected</b> 0–180° from north — not claimed solar alignments or façade directions.
+      Map arrows are undirected long-axis bearings from north (0–180°),
+      human-checked where shown. They are not solar alignments or façade directions.
     </p>
 
     <h2>Cotswold–Severn vs earthen</h2>
@@ -378,7 +372,7 @@ def html_page(
     <h2>Known limits</h2>
     <ul>
       <li>Many HER rows lack published names; display falls back to HER / parish number.</li>
-      <li>Display orientation is human-reviewed where possible; NHLE PCA and LiDAR auto-axes are evidence only. Prefer=not_barrow / leave_indistinct excluded from display.</li>
+      <li>Long-axis bearings are human-checked where shown; sites without a clear axis appear as plain circles.</li>
       <li>Length/width from scheduling polygons are approximate (often oversize vs mound).</li>
       <li>Not a complete county inventory of every ploughed / cropmark candidate.</li>
       <li>Cotswold–Severn membership is curated from peer sources; fringe / dubious chamber claims stay earthen unless cited.</li>
@@ -448,6 +442,12 @@ function esc(s) {{
 /** Human-reviewed preferred axis for map icons / filters / tooltips / primary detail. No NHLE fallback. */
 function displayAz(h) {{
   return h.azimuth_display_deg != null ? h.azimuth_display_deg : null;
+}}
+function axisSourcePlain(src) {{
+  if (src === 'eye') return 'eye reading';
+  if (src === 'lidar') return 'LiDAR';
+  if (src === 'nhle') return 'Historic England outline';
+  return src ? String(src) : 'not set';
 }}
 
 /** SVG DivIcon: filled circle; with azimuth, bidirectional arrows from the rim. */
@@ -656,21 +656,10 @@ function select(key, pan) {{
       : (h.barrow_type === 'uncertain' ? 'Uncertain' : 'Earthen (Wessex tradition default)'))) + '</dd>'
     + '<dt>NGR</dt><dd>' + esc(h.ngr || '—') + '</dd>'
     + '<dt>OSGB</dt><dd>E' + h.easting + ' N' + h.northing + '</dd>'
-    + '<dt>Display axis</dt><dd>' + (displayAz(h) != null
-      ? (displayAz(h) + '° from N (undirected)')
-      : '— (no preferred axis)')
-    + (h.azimuth_display_source ? ' · source <code>' + esc(h.azimuth_display_source) + '</code>' : '')
-    + (h.azimuth_prefer ? ' · prefer <code>' + esc(h.azimuth_prefer) + '</code>' : '')
+    + '<dt>Long axis</dt><dd>' + (displayAz(h) != null
+      ? (displayAz(h) + '° from north · ' + axisSourcePlain(h.azimuth_display_source))
+      : '—')
     + '</dd>'
-    + '<dt>NHLE PCA</dt><dd>' + (h.azimuth_deg != null ? (h.azimuth_deg + '° from N') : '—')
-    + (h.azimuth_method ? ' · <code>' + esc(h.azimuth_method) + '</code>' : '')
-    + ' <span style="opacity:.7">(scheduling outline; kept separate)</span></dd>'
-    + '<dt>LiDAR auto axis</dt><dd>' + (h.azimuth_lidar_deg != null ? (h.azimuth_lidar_deg + '° from N') : '—')
-    + (h.azimuth_lidar_method ? ' · <code>' + esc(h.azimuth_lidar_method) + '</code>' : '')
-    + (h.azimuth_lidar_conf != null ? ' · conf ' + h.azimuth_lidar_conf : '')
-    + ' <span style="opacity:.7">(mound-mask PCA; kept separate)</span></dd>'
-    + '<dt>Front / façade</dt><dd>' + esc(h.front_end || 'unknown (not asserted in v1)') + '</dd>'
-    + (h.azimuth_prefer_note ? ('<dt>Prefer note</dt><dd>' + esc(h.azimuth_prefer_note) + '</dd>') : '')
     + '<dt>Length × width</dt><dd>' + (h.length_m != null ? (h.length_m + ' × ' + (h.width_m ?? '—') + ' m (approx.)') : '—') + '</dd>'
     + '<dt>Refs</dt><dd>' + (links.join(' · ') || '—') + '</dd>'
     + '<dt>Notes</dt><dd>' + esc(h.notes || '') + '</dd>'
