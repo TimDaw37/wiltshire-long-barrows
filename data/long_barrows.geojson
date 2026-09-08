@@ -1473,7 +1473,7 @@
         "he_url": null,
         "status": "certain",
         "scheduled": false,
-        "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge.",
+        "notes": "Seeded from Wiltshire HER extract in Zenodo 11005373 (certainty=Certain). Kutty region tag: Stonehenge. Not Roberts DUR76 / NHLE 1009130 Cuckoo Stone long barrow (that monument is 393 m north at SU 14652 43241; gazetteer id SU14SW521).",
         "source_urls": [
           "https://services.wiltshire.gov.uk/HistoryEnvRecord/Home/ViewHERItem?HER=MWI12463",
           "https://doi.org/10.5281/zenodo.11005373"
@@ -1490,6 +1490,51 @@
         "azimuth_eye_deg": 174.5,
         "azimuth_display_deg": 174.5,
         "azimuth_display_source": "eye"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.791901,
+          51.188201
+        ]
+      },
+      "properties": {
+        "id": "SU14SW521",
+        "name": "Cuckoo Stone long barrow",
+        "easting": 414652.0,
+        "northing": 143241.0,
+        "ngr": "SU 14652 43241",
+        "length_m": 40.0,
+        "width_m": 28.0,
+        "azimuth_deg": null,
+        "azimuth_method": null,
+        "front_end": null,
+        "parish": "Durrington",
+        "her_ref": null,
+        "her_alt_ref": "SU14SW521",
+        "he_list_entry": 1009130,
+        "he_url": "https://historicengland.org.uk/listing/the-list/list-entry/1009130",
+        "status": "certain",
+        "scheduled": true,
+        "notes": "Added 2026-09-08: Roberts et al. IA 47 DUR76 / Grinsell Durrington 76, adjacent to the Cuckoo Stone. NHLE 1009130 (levelled long barrow, NE-SW, 40 x 28 m from 1990 parchmark survey). NMR SU 14 SW 521. Not the Wheatley seed SU14SW10W (South of Fargo Road), which sits 393 m south and shares a HER id that Roberts listed for this monument. Mound ploughed out (height 0). LiDAR chip lidar/chips/web/SU14SW521.jpg.",
+        "source_urls": [
+          "https://historicengland.org.uk/listing/the-list/list-entry/1009130",
+          "https://intarch.ac.uk/journal/issue47/7/subpages/DUR76.html",
+          "https://doi.org/10.11141/ia.47.7"
+        ],
+        "cluster": "Stonehenge / Salisbury Plain",
+        "barrow_type": "earthen",
+        "display_name": "Cuckoo Stone long barrow",
+        "azimuth_lidar_deg": 54.1,
+        "azimuth_lidar_conf": 0.317,
+        "azimuth_lidar_method": "dtm_local_relief_pca",
+        "azimuth_lidar_indistinct": true,
+        "delta_vs_nhle_deg": null,
+        "azimuth_prefer": "leave_indistinct",
+        "azimuth_prefer_note": "New 2026-09-08. Auto LiDAR 54.1° (conf 0.317, below 0.40 floor) is NE-SW-ish, matching NHLE/Roberts class, but chip is a ploughed slope — needs eye review before a display axis. No display until then."
       }
     },
     {

@@ -463,6 +463,9 @@
     "SU14SW128": {
       "prefer": "eye",
       "azimuth_eye_deg": 21.5
+    },
+    "SU14SW521": {
+      "prefer": "leave_indistinct"
     }
   },
   "all": {
@@ -926,6 +929,9 @@
     "SU14SW128": {
       "prefer": "eye",
       "azimuth_eye_deg": 21.5
+    },
+    "SU14SW521": {
+      "prefer": "leave_indistinct"
     }
   }
 }

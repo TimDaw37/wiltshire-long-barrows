@@ -76,6 +76,7 @@ South Street / Longstones are excavated **earthen** monuments.
 
 ## Gaps
 
+- Cuckoo Stone long barrow `SU14SW521` (NHLE 1009130 / Roberts DUR76) added 2026-09-08 at SU 14652 43241; LiDAR chip present, auto axis below refuse floor — needs eye review. Distinct from Wheatley seed `SU14SW10W` 393 m south.
 - Incomplete naming; many HER-only IDs
 - Possible HER rows include oval barrows / uncertain cropmarks — keep `status`
 - Two seed rows dropped for impossible OSGB (outside chalk envelope)
