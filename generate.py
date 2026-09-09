@@ -399,6 +399,22 @@ def html_page(
     </div>
   </div>
 
+  <div class="orientation-findings" id="skyline">
+    <img src="docs/analysis/assets/kitchen-barrow-skyline-2026-09-09.jpg" width="1200" height="800"
+         alt="Kitchen Barrow as a distant ridge silhouette against sky, photographed from a lower southern approach">
+    <div>
+      <h2>Do they stand on the skyline?</h2>
+      <p>
+        <strong>No</strong> — not as a shared design. Some do (Adam’s Grave class).
+        Many famous ones do not. Being visible on a ridge is not the rule; length-shows
+        approaches and a proper skyline test matter more than a pretty photograph alone.
+      </p>
+      <p class="more">
+        <a href="docs/analysis/wiltshire-long-barrows-skyline.html" target="_blank" rel="noopener noreferrer">Short note on skyline-from-below</a>
+      </p>
+    </div>
+  </div>
+
   <section class="notes">
     <h2>Long axis</h2>
     <p>

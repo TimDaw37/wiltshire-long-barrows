@@ -135,7 +135,7 @@ We are not saying topography did not matter. We are saying it mattered **locally
 
 We are not measuring façades, forecourts, or “which end is the front”. For a Cotswold–Severn tomb that is a different question, and a different paper.
 
-And we are not done. Ashbee’s and Kinnes’s printed lists, and a true viewshed against a wooded or bare horizon, are still sitting on the shelf. The [map](https://timdaw37.github.io/wiltshire-long-barrows/) will move as the gazetteer does.
+And we are not done. Ashbee’s and Kinnes’s printed lists, and a true viewshed against a wooded or bare horizon, are still sitting on the shelf. A first cut at skyline-from-below is a companion note: [Do Wiltshire’s long barrows stand on the skyline?](wiltshire-long-barrows-skyline.html). The [map](https://timdaw37.github.io/wiltshire-long-barrows/) will move as the gazetteer does.
 
 ---
 
