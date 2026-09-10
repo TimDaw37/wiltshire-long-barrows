@@ -127,13 +127,27 @@ If a name you love has no arrow, that is the honest state of the earthwork on th
 
 ---
 
+## Which end is the front?
+
+The undirected long **axis** is still the main result above. A separate, lighter pass asked a different question: where a façade, forecourt, chambered end, or clearly broader/higher end can be named, **which way does that end point?**
+
+NHLE and published notes give a firm label for only fourteen mounds. An eye pass on the same LiDAR chips used for the axes — looking for taper and labelled ends, not inventing fronts — raised a further twenty-one as broader-end candidates and left ninety-four undecided. So at best about a **quarter** of the gazetteer has a directed call. That is not the same sample as the eighty-six axes.
+
+Among those thirty-five directed calls, **twenty-eight** sit in the eastern half of the compass (E, NE, or SE), **five** in the western half, and **two** due N or S. That is an eastern-hemisphere lean once a front is readable. It is **not** “they all face east,” and it is **not** a solstice spike: many of those fronts are simply the easterly end of an already east–west mound. Two labelled cases are higher or broader toward the **west**. Cotswold–Severn chambered façades are still not the mound long axis.
+
+Treat this as a hedged aside, not a second solar paper. Readable taper and published labels are a biased subset. Broader-end calls are eye judgment on chips, not excavation. The undirected-axis result above does not change: the eighty-six still spread, without a shared midsummer or midwinter aim.
+
+**More research is needed** before any directed façade claim can carry the county: fuller HER and excavation labels, a clearer rule for broader-end calls, and an honest test of whether the readable subset is biased toward already east–west mounds.
+
+---
+
 ## What we are not saying
 
 We are not saying Neolithic people never watched the sky. We are saying **this set of mound long axes does not show a shared solstitial aim**.
 
 We are not saying topography did not matter. We are saying it mattered **locally and variously**, which is what the people who walked these downs already told us.
 
-We are not measuring façades, forecourts, or “which end is the front”. For a Cotswold–Severn tomb that is a different question, and a different paper.
+We are not promoting broader-end eye calls into a county façade catalogue. Where NHLE or excavation already names an end, that stands; the rest wait for better evidence.
 
 And we are not done. Ashbee’s and Kinnes’s printed lists, and a true viewshed against a wooded or bare horizon, are still sitting on the shelf. A first cut at skyline-from-below is a companion note: [Do Wiltshire’s long barrows stand on the skyline?](wiltshire-long-barrows-skyline.html). The [map](https://timdaw37.github.io/wiltshire-long-barrows/) will move as the gazetteer does.
 

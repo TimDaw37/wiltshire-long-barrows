@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Wiltshire long-barrow long axes</title>
+<title>Wiltshire long-barrow long axes: a human-curated sample, ridges, and the solar overlay</title>
 <style>
   :root {
     --bg: #141210;
@@ -99,13 +99,16 @@
   article table {
     width: 100%;
     border-collapse: collapse;
-    font-size: .92rem;
+    font-size: .88rem;
     margin: 1rem 0;
+    display: block;
+    overflow-x: auto;
   }
   article th, article td {
     border: 1px solid var(--line);
     padding: .4rem .55rem;
     text-align: left;
+    white-space: nowrap;
   }
   article th { background: var(--panel); color: var(--gold); }
 
@@ -121,11 +124,7 @@
 <hr />
 <p>Wiltshire’s long barrows have been claimed for the sun, the moon, and the lie of the land. The claims are usually stronger than the <strong>axes</strong>. This paper uses a new sample: <strong>86 undirected long axes</strong> from a chip-by-chip review of the Wiltshire gazetteer. NHLE scheduling-polygon PCA and auto LiDAR stay as evidence, not as the analysis set.</p>
 <p><strong>Three results.</strong></p>
-<ol>
-<li><strong>The axes are not a solar design.</strong> Midsummer sunrise is indistinguishable from chance. Scoring the <em>nearest</em> of midsummer and midwinter looks tight until chance is given the same two targets.</li>
-<li><strong>They are not just built along ridges either.</strong> A local DTM plane (mound excluded) puts axes closer to the contour than chance (median mismatch 30° against 45°), but half the sample is still more than 30° off the ground.</li>
-<li><strong>Where Historic England has already published a compass class, the eye sample agrees.</strong> After one aerial correction (Amesbury 140), 12 of 13 overlapping Stonehenge-WHS sites sit in the same quadrant as Roberts <em>et al.</em> (<em>Internet Archaeology</em> 47).</li>
-</ol>
+<p>1. <strong>The axes are not a solar design.</strong> Midsummer sunrise is indistinguishable from chance. Scoring the <em>nearest</em> of midsummer and midwinter looks tight until chance is given the same two targets. 2. <strong>They are not just built along ridges either.</strong> A local DTM plane (mound excluded) puts axes closer to the contour than chance (median mismatch 30° against 45°), but half the sample is still more than 30° off the ground. 3. <strong>Where Historic England has already published a compass class, the eye sample agrees.</strong> After one aerial correction (Amesbury 140), 12 of 13 overlapping Stonehenge-WHS sites sit in the same quadrant as Roberts <em>et al.</em> (<em>Internet Archaeology</em> 47).</p>
 <p>The pooled 86 are consistent with uniformity (Rayleigh <em>p</em> = 0.088). A weak east–west excess survives among HER-certain rows only. That is not a solstice, and it is not a tight cluster.</p>
 <p><img alt="Display long-axis rose" src="fig-01-rose-display.svg" /></p>
 <p><em>Figure 1. The 86 display axes, each drawn both ways. Dashed lines are flat-horizon sunrise at about 51.2°N: midsummer ~50°, equinox ~90°, midwinter ~129°. Descriptive overlays, not a claim of intent.</em></p>
@@ -133,60 +132,28 @@
 <p>Public axes in this gazetteer began as <strong>NHLE scheduling-polygon PCA</strong> (<code>azimuth_deg</code>). A scheduling outline is not the mound crest. It can pick up access land, twin mounds, tracks, or a near-orthogonal side of the polygon. Whitebarrow is the textbook case: NHLE ~4°, LiDAR mound ~92°.</p>
 <p>A parallel <strong>LiDAR</strong> pipeline (EA Composite DTM 1 m chip → local-relief mound mask → PCA) writes <code>azimuth_lidar_*</code> and refuses scores below about 0.40. That still follows plough, dual mounds, and noise.</p>
 <p>The <strong>display</strong> axis (<code>azimuth_display_deg</code>) is the human prefer decision: eye, lidar, or nhle, promoted without destroying NHLE. Rows marked <code>not_barrow</code> or <code>leave_indistinct</code> have no display axis and no NHLE fallback on the map.</p>
-<p>Convention: image top = north, +x = east. Azimuth <strong>undirected</strong>, folded to <strong>0–180°</strong>. Front or façade end is not asserted. For Cotswold–Severn sites the façade is not the mound long axis (Darvill 2004; Corcoran 1969). This paper measures the mound axis only.</p>
+<p>Convention: image top = north, +x = east. Azimuth <strong>undirected</strong>, folded to <strong>0–180°</strong>. Front or façade end is not asserted. A later light inventory + eye review of labelled / broader ends (Sep 2026) is summarised as a hedged aside in <a href="wiltshire-long-barrows-facing-the-land.html#which-end-is-the-front">facing-the-land</a> — not folded into the undirected statistics here. For Cotswold–Severn sites the façade is not the mound long axis (Darvill 2004; Corcoran 1969). This paper measures the mound axis only.</p>
 <p><code>MODERN_ALL_CANNINGS</code> is excluded as a Neolithic azimuth.</p>
 <h2>2. Sample</h2>
 <p>Gazetteer <strong>n = 129</strong> (128 Wheatley/HER/NHLE seed rows plus the Cuckoo Stone long barrow, added 8 September 2026). Prefer on the 129:</p>
 <table>
-<thead>
-<tr>
-<th>prefer</th>
-<th>n</th>
-<th>In this paper’s axis sample?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>eye</td>
-<td>77</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>lidar</td>
-<td>5</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>nhle</td>
-<td>4</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>leave_indistinct</td>
-<td>23</td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>not_barrow</td>
-<td>20</td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td><strong>display</strong></td>
-<td><strong>86</strong></td>
-<td></td>
-</tr>
-</tbody>
+<tr><th>prefer</th><th>n</th><th>In this paper’s axis sample?</th></tr>
+<tr><td>eye</td><td>77</td><td>yes</td></tr>
+<tr><td>lidar</td><td>5</td><td>yes</td></tr>
+<tr><td>nhle</td><td>4</td><td>yes</td></tr>
+<tr><td>leave_indistinct</td><td>23</td><td><strong>no</strong></td></tr>
+<tr><td>not_barrow</td><td>20</td><td><strong>no</strong></td></tr>
+<tr><td><strong>display</strong></td><td><strong>86</strong></td><td></td></tr>
 </table>
 <p><code>not_barrow</code> means the chip does not show a usable long-barrow axis. It is not a verdict on the HER record. <code>leave_indistinct</code> means the mound is too weak to measure.</p>
 <p>Display split: 75 HER certain, 11 possible; 80 earthen, 6 Cotswold–Severn (Millbarrow indistinct). Clusters among the 86: Stonehenge / Salisbury Plain 35, Wiltshire chalk 19, Avebury / Pewsey 13, North Wiltshire chalk 12, South Wiltshire / Chase fringe 7.</p>
 <p><img alt="Prefer counts" src="fig-09-prefer-counts.svg" /></p>
-<p><em>Figure 2. Prefer decisions on the original 128. Display = eye + lidar + nhle. Cuckoo Stone (<code>SU14SW521</code>) is a later 129th row, also <code>leave_indistinct</code>.</em></p>
+<p><em>Figure 2. Prefer decisions on the original 128. Display = eye + lidar + nhle. Cuckoo Stone (</em><code>SU14SW521</code>) is a later 129th row, also <code>leave_indistinct</code>.<em></em></p>
 <h3>Cuckoo Stone long barrow (<code>SU14SW521</code>)</h3>
 <p>Roberts <em>et al.</em> DUR76 / Grinsell Durrington 76 / <strong>NHLE 1009130</strong>, “Long barrow 450 m WSW of Woodhenge”, NGR <strong>SU 14652 43241</strong>. Levelled; published class <strong>NE–SW</strong>; 40 × 28 m from the 1990 parchmark survey. Adjacent to the Cuckoo Stone sarsen, not the same monument.</p>
 <p>It is <strong>not</strong> Wheatley seed <code>SU14SW10W</code> (South of Fargo Road), which sits 393 m south. A 1 m chip was fetched. Auto PCA 54.1° (conf 0.317) is below the refuse floor. <strong>Eye review of the chip sees nothing usable.</strong> Prefer stays <code>leave_indistinct</code>. It is <strong>not</strong> in the 86. Published NE–SW remains on the record; it is not treated as a measured axis here.</p>
 <h2>3. Methods</h2>
-<p><strong>Statistics.</strong> Undirected axes are axial data. Angles in [0, 180) are doubled before circular summaries. Reported: axial mean and mean resultant length (\bar{R}) of doubled angles; Rayleigh test (Mardia–Jupp <em>p</em>); V-test toward specified directions as a descriptive check; bootstrap 95% intervals (10 000 resamples, seed 20260908). If bootstrap spread of the mean covers ≥ 90° of the axial circle, the mean is unidentified. Histograms use 10° and 15° bins. Pairwise undirected difference: (|\Delta| = \min(|a-b|,\,180-|a-b|)). Naive means of degrees are not used.</p>
+<p><strong>Statistics.</strong> Undirected axes are axial data. Angles in [0, 180) are doubled before circular summaries. Reported: axial mean and mean resultant length \(\bar{R}\) of doubled angles; Rayleigh test (Mardia–Jupp <em>p</em>); V-test toward specified directions as a descriptive check; bootstrap 95% intervals (10 000 resamples, seed 20260908). If bootstrap spread of the mean covers ≥ 90° of the axial circle, the mean is unidentified. Histograms use 10° and 15° bins. Pairwise undirected difference: \(|\Delta| = \min(|a-b|,\,180-|a-b|)\). Naive means of degrees are not used.</p>
 <p><strong>Solar overlays.</strong> Geometric sunrise at 51.2°N, true solar, no refraction, no local horizon. Values as on the map (<code>generate.py</code>): midsummer 50.2°, equinox 89.7°, midwinter 129.0°. On an undirected 0–180° axis, midsummer sunrise is the same line as midwinter sunset. An east–west peak is not a unique solar event.</p>
 <p><strong>Ridge test.</strong> For each of the 86: 1.2 km EA Composite DTM chip at ~10 m; plane fit on an annulus <strong>60–350 m</strong> from the point (mound excluded). Ridge/contour = downslope + 90°, folded 0–180°. Chance median mismatch to one random undirected axis is 45°. Chance median to the <em>nearest</em> of the two solstice directions is about 22°.</p>
 <p><strong>Literature axes.</strong> Roberts <em>et al.</em> 2018 Table 1 (CC BY) compass classes, matched on SMR / OSGB. Agreement = display within 22.5° of the class midpoint.</p>
@@ -201,40 +168,12 @@
 <h3>In the gazetteer, no axis</h3>
 <p>HER (and in several cases excavation) treats these as long barrows. The chips are too weak. They stay as points.</p>
 <table>
-<thead>
-<tr>
-<th>Roberts</th>
-<th>Gazetteer</th>
-<th>Record</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AM14</td>
-<td><code>SU14SW127</code></td>
-<td>NHLE <strong>1008953</strong> long barrow, NNW–SSE, mound to 1.8 m</td>
-</tr>
-<tr>
-<td>WS86</td>
-<td><code>MWI75694</code></td>
-<td>Levelled long barrow (2015–16 confirmation)</td>
-</tr>
-<tr>
-<td>WOO2</td>
-<td><code>SU13NW151</code></td>
-<td>Excavated (Vatchers 1963 / Harding and Gingell 1986). Prefer <code>leave_indistinct</code>, not <code>not_barrow</code></td>
-</tr>
-<tr>
-<td>AM7 / AM10a</td>
-<td><code>SU14SW105</code></td>
-<td>Oval / dubious long (Field <em>et al.</em> 2014)</td>
-</tr>
-<tr>
-<td>DUR76</td>
-<td><code>SU14SW521</code></td>
-<td><strong>Cuckoo Stone long barrow</strong>, NHLE 1009130. Eye: indistinct. Chip and published NE–SW on file; no display</td>
-</tr>
-</tbody>
+<tr><th>Roberts</th><th>Gazetteer</th><th>Record</th></tr>
+<tr><td>AM14</td><td><code>SU14SW127</code></td><td>NHLE <strong>1008953</strong> long barrow, NNW–SSE, mound to 1.8 m</td></tr>
+<tr><td>WS86</td><td><code>MWI75694</code></td><td>Levelled long barrow (2015–16 confirmation)</td></tr>
+<tr><td>WOO2</td><td><code>SU13NW151</code></td><td>Excavated (Vatchers 1963 / Harding and Gingell 1986). Prefer <code>leave_indistinct</code>, not <code>not_barrow</code></td></tr>
+<tr><td>AM7 / AM10a</td><td><code>SU14SW105</code></td><td>Oval / dubious long (Field <em>et al.</em> 2014)</td></tr>
+<tr><td>DUR76</td><td><code>SU14SW521</code></td><td><strong>Cuckoo Stone long barrow</strong>, NHLE 1009130. Eye: indistinct. Chip and published NE–SW on file; no display</td></tr>
 </table>
 <h3>WS71 and the bowl-barrow scheduling</h3>
 <p><code>SU14SW997</code> is in the list because HER <strong>MWI13159 / SU14SW997</strong> is titled Neolithic long barrow (Roberts WS71; excavated 2015–16; NE–SW; unscheduled as a long barrow).</p>
@@ -244,46 +183,12 @@
 <p><img alt="Ridge vs solstice" src="fig-11-ridge-vs-solstice.svg" /></p>
 <p><em>Figure 4. Mismatch of each display axis to three hypotheses. Dotted = chance. Right-hand panel: chance is allowed both solstice targets.</em></p>
 <table>
-<thead>
-<tr>
-<th>Hypothesis</th>
-<th>Median |Δ|</th>
-<th>Chance median</th>
-<th>Within 15° (chance)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Local ridge</td>
-<td><strong>30°</strong></td>
-<td>45°</td>
-<td>27% (17%)</td>
-</tr>
-<tr>
-<td>Ridge, slope ≥ 1° (n=57)</td>
-<td><strong>26°</strong></td>
-<td>45°</td>
-<td>33% (17%)</td>
-</tr>
-<tr>
-<td>Midsummer sunrise ~50°</td>
-<td>40°</td>
-<td>45°</td>
-<td>16% (17%)</td>
-</tr>
-<tr>
-<td>Nearest of the two solstices</td>
-<td>21°</td>
-<td><strong>22°</strong></td>
-<td>30% (33%)</td>
-</tr>
-<tr>
-<td>Equinox ~90°</td>
-<td>37°</td>
-<td>45°</td>
-<td>26% (17%)</td>
-</tr>
-</tbody>
+<tr><th>Hypothesis</th><th>Median \</th><th>Δ\</th><th></th><th>Chance median</th><th>Within 15° (chance)</th></tr>
+<tr><td>Local ridge</td><td><strong>30°</strong></td><td>45°</td><td>27% (17%)</td></tr>
+<tr><td>Ridge, slope ≥ 1° (n=57)</td><td><strong>26°</strong></td><td>45°</td><td>33% (17%)</td></tr>
+<tr><td>Midsummer sunrise ~50°</td><td>40°</td><td>45°</td><td>16% (17%)</td></tr>
+<tr><td>Nearest of the two solstices</td><td>21°</td><td><strong>22°</strong></td><td>30% (33%)</td></tr>
+<tr><td>Equinox ~90°</td><td>37°</td><td>45°</td><td>26% (17%)</td></tr>
 </table>
 <p>Ridge-following is real and modest. Axes prefer the contour to the fall line (only 12 of 86 within 22.5° of downslope). They are not a ridge atlas.</p>
 <p>Solstice is not an effect. Midsummer hits 15° as often as a random direction. Nearest-of-two is the fair null for “some solstice”; the data do not beat it.</p>
@@ -294,51 +199,17 @@
 <h2>6. The 86 after Amesbury 140</h2>
 <p>Moving Amesbury 140 from a LiDAR-guessed 91° to aerial NNW–SSE 157.5° takes a spurious east–west point out of a possible cropmark. Pooled Rayleigh <em>p</em> moves from 0.046 to <strong>0.088</strong>.</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">(\bar{R})</th>
-<th style="text-align: right;">Rayleigh <em>p</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>All display</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: right;">0.17</td>
-<td style="text-align: right;"><strong>0.088</strong></td>
-</tr>
-<tr>
-<td>Earthen only</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">0.14</td>
-<td style="text-align: right;">0.20</td>
-</tr>
-<tr>
-<td>HER certain only</td>
-<td style="text-align: right;">75</td>
-<td style="text-align: right;">0.21</td>
-<td style="text-align: right;">0.031</td>
-</tr>
-<tr>
-<td>Stonehenge / Salisbury Plain</td>
-<td style="text-align: right;">35</td>
-<td style="text-align: right;">0.15</td>
-<td style="text-align: right;">0.46</td>
-</tr>
-<tr>
-<td>Cotswold–Severn</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0.73</td>
-<td style="text-align: right;">0.034</td>
-</tr>
-</tbody>
+<tr><th></th><th>n</th><th>\(\bar{R}\)</th><th>Rayleigh <em>p</em></th></tr>
+<tr><td>All display</td><td>86</td><td>0.17</td><td><strong>0.088</strong></td></tr>
+<tr><td>Earthen only</td><td>80</td><td>0.14</td><td>0.20</td></tr>
+<tr><td>HER certain only</td><td>75</td><td>0.21</td><td>0.031</td></tr>
+<tr><td>Stonehenge / Salisbury Plain</td><td>35</td><td>0.15</td><td>0.46</td></tr>
+<tr><td>Cotswold–Severn</td><td>6</td><td>0.73</td><td>0.034</td></tr>
 </table>
 <p>The pooled sample is consistent with uniformity. Earthen majority likewise. HER-certain still shows a <strong>weak east–west excess</strong> (<em>p</em> = 0.031): not a solstice, and not tight (bootstrap mean CI still ~47° wide). Cotswold–Severn n=6 is too small; four of the six sit near E–W as mound long axes, not as façades.</p>
 <p><img alt="Histogram 10°" src="fig-02-histogram-10deg.svg" /></p>
 <p><em>Figure 6. 10° bins, n=86. Peak 90–100° (10; uniform expectation 4.8). Spread, not a design.</em></p>
-<p>Axial mean 86.9° (bootstrap 95% CI 59–117°). Display tracks LiDAR (median |Δ| 2.2°, n=47) more closely than NHLE (6.6°, n=58). NHLE still produces near-orthogonal footprint failures. That is why the chips were reviewed.</p>
+<p>Axial mean 86.9° (bootstrap 95% CI 59–117°). Display tracks LiDAR (median \|Δ\| 2.2°, n=47) more closely than NHLE (6.6°, n=58). NHLE still produces near-orthogonal footprint failures. That is why the chips were reviewed.</p>
 <p><img alt="Display vs NHLE and LiDAR" src="fig-05-display-vs-nhle-lidar.svg" /></p>
 <p><em>Figure 7. Paired axes. Solid = identity; dotted = 90° offset. NHLE has more orthogonal outliers than LiDAR.</em></p>
 <h2>7. Caveats</h2>

@@ -28,7 +28,7 @@ A parallel **LiDAR** pipeline (EA Composite DTM 1 m chip → local-relief mound 
 
 The **display** axis (`azimuth_display_deg`) is the human prefer decision: eye, lidar, or nhle, promoted without destroying NHLE. Rows marked `not_barrow` or `leave_indistinct` have no display axis and no NHLE fallback on the map.
 
-Convention: image top = north, +x = east. Azimuth **undirected**, folded to **0–180°**. Front or façade end is not asserted. For Cotswold–Severn sites the façade is not the mound long axis (Darvill 2004; Corcoran 1969). This paper measures the mound axis only.
+Convention: image top = north, +x = east. Azimuth **undirected**, folded to **0–180°**. Front or façade end is not asserted. A later light inventory + eye review of labelled / broader ends (Sep 2026) is summarised as a hedged aside in [facing-the-land](wiltshire-long-barrows-facing-the-land.html#which-end-is-the-front) — not folded into the undirected statistics here. For Cotswold–Severn sites the façade is not the mound long axis (Darvill 2004; Corcoran 1969). This paper measures the mound axis only.
 
 `MODERN_ALL_CANNINGS` is excluded as a Neolithic azimuth.
 
