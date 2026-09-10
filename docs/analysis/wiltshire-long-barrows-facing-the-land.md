@@ -107,6 +107,16 @@ If the computer and the eye disagree on a celebrity barrow, believe the eye and 
 
 ---
 
+## Same chalk, different seats
+
+Positioning is not only axis versus ridge. A separate overlay of the gazetteer against Wiltshire's hillforts asks a coarser question: do the two traditions sit on the same kind of ground?
+
+They share the chalk. They barely share sites. Hillforts hug the scarps — higher, and much more locally proud. Long barrows sit back on the plateaux and gentle rises. The empty space between the pins looks like avoidance; geography explains most of it. The traditions are also about three thousand years apart, and several forts sit on or beside a barrow — the opposite of a taboo.
+
+That comparison is a companion note (map + write-up): [Do Wiltshire hillforts avoid long barrows?](https://timdaw37.github.io/wiltshire-hillforts-long-barrows/).
+
+---
+
 ## Agreement with the surveyors
 
 On the Stonehenge World Heritage Site, Historic England and Roberts *et al.* had already classed the long **axes** (NE–SW, W–E, and so on). Where we both measured the same mound, **we land in the same quadrant**. Winterbourne Stoke 1, Amesbury 42, the Wilsford and Figheldean groups, Netheravon Bake: the eye on the LiDAR chip is seeing what the earthwork survey saw.
@@ -149,7 +159,7 @@ We are not saying topography did not matter. We are saying it mattered **locally
 
 We are not promoting broader-end eye calls into a county façade catalogue. Where NHLE or excavation already names an end, that stands; the rest wait for better evidence.
 
-And we are not done. Ashbee’s and Kinnes’s printed lists, and a true viewshed against a wooded or bare horizon, are still sitting on the shelf. A first cut at skyline-from-below is a companion note: [Do Wiltshire’s long barrows stand on the skyline?](wiltshire-long-barrows-skyline.html). The [map](https://timdaw37.github.io/wiltshire-long-barrows/) will move as the gazetteer does.
+And we are not done. Ashbee’s and Kinnes’s printed lists, and a true viewshed against a wooded or bare horizon, are still sitting on the shelf. A first cut at skyline-from-below is a companion note: [Do Wiltshire’s long barrows stand on the skyline?](wiltshire-long-barrows-skyline.html). The hillforts overlay is a positioning addendum: [Do Wiltshire hillforts avoid long barrows?](https://timdaw37.github.io/wiltshire-hillforts-long-barrows/). The [map](https://timdaw37.github.io/wiltshire-long-barrows/) will move as the gazetteer does.
 
 ---
 

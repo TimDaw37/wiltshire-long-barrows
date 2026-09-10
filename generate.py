@@ -415,6 +415,21 @@ def html_page(
     </div>
   </div>
 
+  <div class="orientation-findings" id="hillforts">
+    <img src="docs/analysis/assets/hillforts-long-barrows-overlay.png" width="1176" height="1065"
+         alt="Map overlay of Wiltshire hillforts and long barrows on the chalk: forts on scarps, barrows on plateaux">
+    <div>
+      <h2>Same chalk, different seats?</h2>
+      <p>
+        Hillforts hug the scarps; long barrows sit back on the plateaux and gentle rises.
+        The empty space between the pins is geography more than avoidance.
+      </p>
+      <p class="more">
+        <a href="https://timdaw37.github.io/wiltshire-hillforts-long-barrows/" target="_blank" rel="noopener noreferrer">Do Wiltshire hillforts avoid long barrows?</a>
+      </p>
+    </div>
+  </div>
+
   <section class="notes">
     <h2>Long axis</h2>
     <p>

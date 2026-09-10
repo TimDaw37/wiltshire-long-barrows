@@ -236,7 +236,7 @@ Technical notes (pilot methods):
 
 Contour maps used in the note live under [`assets/`](assets/). Larger GIS exports stay local under `analysis/skyline_pilot*` until a later push.
 
-Orientation / ridge companion: [Do Wiltshire’s long barrows face the sun?](wiltshire-long-barrows-facing-the-land.html) · [technical note](wiltshire-long-barrow-orientations.html).
+Orientation / ridge companion: [Do Wiltshire’s long barrows face the sun?](wiltshire-long-barrows-facing-the-land.html) · [technical note](wiltshire-long-barrow-orientations.html). Hillforts comparison: [Do Wiltshire hillforts avoid long barrows?](https://timdaw37.github.io/wiltshire-hillforts-long-barrows/).
 
 Compilation © Tim Daw / sarsen.org · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).  
 Photographs © Tim Daw.  
